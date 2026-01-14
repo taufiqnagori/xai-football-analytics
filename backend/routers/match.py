@@ -11,6 +11,40 @@ import numpy as np
 
 router = APIRouter(tags=["Match"])
 
+@router.get("/teams")
+def get_teams(request: Request):
+    """
+    Returns list of all available teams
+    """
+    from backend.data_access import get_teams
+    return get_teams()
+
+@router.get("/teams/{team_name}/players")
+def get_team_players(team_name: str, request: Request):
+    """
+    Returns all players for a specific team with their details
+    """
+    from backend.data_access import get_team_players_list
+    players = get_team_players_list(team_name)
+    if not players:
+        raise HTTPException(status_code=404, detail=f"Team '{team_name}' not found")
+    return players
+
+@router.get("/teams/{team_name}/squad")
+def get_default_squad(team_name: str, request: Request):
+    """
+    Returns default Playing XI (11 players) for a team
+    """
+    from backend.data_access import get_default_squad
+    squad = get_default_squad(team_name)
+    if not squad:
+        raise HTTPException(status_code=404, detail=f"Team '{team_name}' not found or has no players")
+    return {
+        "team": team_name,
+        "squad": squad,
+        "squad_size": len(squad)
+    }
+
 @router.get("/players")
 def get_players(request: Request):
     """

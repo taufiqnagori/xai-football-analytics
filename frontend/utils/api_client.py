@@ -23,12 +23,35 @@ def get_players() -> List[str]:
 def get_teams() -> List[str]:
     """Get list of all teams"""
     try:
-        # Teams are derived from players, so we'll get unique teams from dataset
-        # For now, return empty list - teams will be derived from player data
+        r = requests.get(f"{BASE}/match/teams", timeout=5)
+        r.raise_for_status()
+        return r.json()
+    except requests.exceptions.ConnectionError:
+        print(f"Connection Error: Could not connect to backend at {BASE}")
         return []
     except Exception as e:
         print(f"Error fetching teams: {e}")
         return []
+
+def get_team_players(team_name: str) -> List[Dict[str, Any]]:
+    """Get all players for a team"""
+    try:
+        r = requests.get(f"{BASE}/match/teams/{team_name}/players", timeout=5)
+        r.raise_for_status()
+        return r.json()
+    except Exception as e:
+        print(f"Error fetching team players: {e}")
+        return []
+
+def get_default_squad(team_name: str) -> Dict[str, Any]:
+    """Get default Playing XI for a team"""
+    try:
+        r = requests.get(f"{BASE}/match/teams/{team_name}/squad", timeout=5)
+        r.raise_for_status()
+        return r.json()
+    except Exception as e:
+        print(f"Error fetching default squad: {e}")
+        return {"team": team_name, "squad": [], "squad_size": 0}
 
 def predict_performance(player_name: str) -> Dict[str, Any]:
     """Predict player performance"""

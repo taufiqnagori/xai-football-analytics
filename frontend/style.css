@@ -1,115 +1,504 @@
 /* ================================
-   GLOBAL PAGE STYLING
+   MODERN FOOTBALL XAI SUITE STYLING
+   Professional Dark Theme with Accents
 ================================ */
-body {
-    background-color: #0e1117;
-    color: #ffffff;
-    font-family: "Segoe UI", sans-serif;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ================================
+   GLOBAL STYLING
+================================ */
+* {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Dark theme background */
+.stApp {
+    background: linear-gradient(135deg, #0a0818 0%, #1f1a3d 50%, #1a162e 100%);
+    background-attachment: fixed;
+}
+
+/* Light theme background */
+.stApp[data-theme="light"],
+.stApp:has([data-theme="light"]) {
+    background: #f8f9fa !important;
+    background-attachment: fixed;
+}
+
+/* Theme-aware text colors */
+.hero-subtitle, .page-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* ================================
-   HEADINGS
+   TYPOGRAPHY
 ================================ */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     color: #ffffff !important;
-    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 /* ================================
-   MAIN CARD DESIGN
+   MODERN CARD DESIGN
 ================================ */
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    color: #000000;
-    margin-bottom: 25px;
+.main-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Fix text visibility inside cards */
-.card h3,
-.card p,
-.card span {
-    color: #000000 !important;
+.main-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
 }
 
-/* ================================
-   METRIC CARDS
-================================ */
-.metric-card {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    text-align: center;
-    margin-bottom: 25px;
-    color: #000000;
+.feature-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.metric-card h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-}
-
-.metric-card p {
-    font-size: 16px;
-}
-
-/* ================================
-   FACTOR / EXPLANATION BOX
-================================ */
-.factor-box {
-    background: #f2f7ff;
-    padding: 12px;
-    border-left: 4px solid #1e90ff;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    color: #000000;
-}
-
-/* ================================
-   DROPDOWN / INPUT FIXES
-================================ */
-div[data-baseweb="select"] {
-    background-color: white !important;
-    color: black !important;
-}
-
-div[data-baseweb="select"] * {
-    color: black !important;
+.feature-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
 }
 
 /* ================================
    BUTTONS
 ================================ */
-button {
-    background-color: #1e90ff !important;
+.stButton > button {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%) !important;
     color: white !important;
-    border-radius: 8px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
     font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35) !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Primary Button */
+.primary-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Secondary Button */
+.secondary-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
 }
 
 /* ================================
-   STREAMLIT FIXES
+   METRICS & STATS
 ================================ */
+.metric-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ================================
+   INPUTS & SELECTBOXES
+   (Dark theme defaults - light theme handled in theme.py)
+================================ */
+.stSelectbox > div > div {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.stSelectbox > div > div:hover {
+    border-color: rgba(102, 126, 234, 0.5) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.stSelectbox > div > div:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2) !important;
+}
+
+/* ================================
+   SIDEBAR
+   Force collapsed by default
+================================ */
+/* Ensure sidebar starts collapsed - handled by initial_sidebar_state="collapsed" */
+
+/* Dark theme sidebar - smooth dark shade */
+.css-1d391kg,
+section[data-testid="stSidebar"] > div,
+section[data-testid="stSidebar"] {
+    background: rgba(20, 18, 45, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Sidebar text colors - dark theme */
+.css-1d391kg *,
+section[data-testid="stSidebar"] * {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ================================
+   LOADING & ANIMATIONS
+================================ */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* ================================
+   TEAM CARDS
+================================ */
+.team-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    border-color: rgba(102, 126, 234, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+/* ================================
+   PLAYER CARDS
+================================ */
+.player-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* ================================
+   PREDICTION RESULT
+================================ */
+.prediction-result {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+    animation: slideIn 0.6s ease-out;
+}
+
+.prediction-result h2 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   CHARTS & VISUALIZATIONS
+================================ */
+.chart-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   INFO BOXES
+================================ */
+.info-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #93c5fd;
+}
+
+.warning-box {
+    background: rgba(251, 191, 36, 0.1);
+    border-left: 4px solid #fbbf24;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #fde68a;
+}
+
+.error-box {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #fca5a5;
+}
+
+.success-box {
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 4px solid #22c55e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #86efac;
+}
+
+/* ================================
+   NAVIGATION CARDS
+================================ */
+.nav-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    margin: 1rem;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(102, 126, 234, 0.6);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+    text-decoration: none;
+}
+
+.nav-card-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.nav-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.nav-card-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* ================================
+   HIDE UNWANTED UI ELEMENTS
+================================ */
+/* Hide link icon/button after text */
+.stApp a[href^="#"] {
+    display: none !important;
+}
+
+/* Completely remove black horizontal line at top */
+header[data-testid="stHeader"],
+.stApp > header,
+.stApp > header > div,
+div[data-testid="stHeader"],
+header {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Remove any top border/line */
+.stApp::before,
+.stApp::after {
+    display: none !important;
+}
+
+/* Ensure no top margin/padding */
 .stApp {
-    background-color: #0e1117;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-/* Sidebar */
-.css-1d391kg {
-    background-color: #111827 !important;
+/* Hide Deploy button */
+.stDeployButton {
+    display: none !important;
 }
 
-/* Fix selectbox text */
-.css-1cpxqw2 {
-    color: black !important;
+button[kind="header"] {
+    display: none !important;
+}
+
+/* Hide Streamlit menu button */
+#MainMenu {
+    visibility: hidden;
 }
 
 /* ================================
-   FOOTER / SMALL TEXT
+   THEME TOGGLE BUTTON
+   Fixed position at top-right
 ================================ */
-small, label {
-    color: #cccccc !important;
+/* Theme toggle button - fixed at top-right, works on all pages */
+button[key="theme_toggle"] {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 9999 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    /* Dark theme default */
+    background: rgba(0, 0, 0, 0.4) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+button[key="theme_toggle"]:hover {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .main-card {
+        padding: 1.5rem;
+    }
+    
+    .nav-card {
+        padding: 2rem;
+    }
+}
+
+/* ================================
+   UTILITY CLASSES
+================================ */
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
 }

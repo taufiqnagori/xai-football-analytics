@@ -4,14 +4,54 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-st.title("🩺 Injury Risk Prediction")
-st.markdown("Predict injury risk for players using ML models with XAI explanations")
+# Page config
+st.set_page_config(
+    page_title="Injury Risk Analysis",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Load CSS
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CSS_PATH = os.path.join(BASE_DIR, "style.css")
+with open(CSS_PATH, encoding='utf-8') as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Theme toggle
+from utils.theme import init_theme, render_theme_toggle, get_theme_styles
+init_theme()
+
+# Theme toggle button - fixed position
+col1, col2, col3 = st.columns([1, 1, 1])
+with col3:
+    render_theme_toggle()
+
+st.markdown(get_theme_styles(), unsafe_allow_html=True)
+
+# Header
+st.markdown("""
+    <div style="text-align: center; padding: 2rem 0;">
+        <h1>🩺 Injury Risk Prediction</h1>
+        <p class="page-subtitle" style="font-size: 1.2rem;">
+            Assess injury risk for players using ML models with XAI explanations
+        </p>
+    </div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
 
 # Get players list
-players = get_players()
+with st.spinner("Loading players..."):
+    players = get_players()
 
 if not players:
-    st.error("⚠️ Could not load players. Make sure the backend API is running.")
+    st.markdown("""
+        <div class="error-box">
+            <h3>⚠️ Connection Error</h3>
+            <p>Could not load players. Make sure the backend API is running.</p>
+        </div>
+    """, unsafe_allow_html=True)
     st.info("""
     **To start the backend:**
     1. Open a new terminal
@@ -21,67 +61,172 @@ if not players:
     """)
     st.stop()
 
-player = st.selectbox("Select Player", players, key="injury_player_select")
+# Main Content
+col1, col2 = st.columns([1, 2])
 
-if st.button("Predict Injury Risk", key="injury_predict_btn"):
-    with st.spinner("Predicting injury risk..."):
+with col1:
+    st.markdown("""
+        <div class="main-card">
+            <h3>🔍 Select Player</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    player = st.selectbox(
+        "Choose a player",
+        players,
+        key="injury_player_select",
+        help="Select a player to assess their injury risk"
+    )
+    
+    predict_btn = st.button(
+        "🚀 Predict Injury Risk",
+        key="injury_predict_btn",
+        type="primary",
+        use_container_width=True
+    )
+
+with col2:
+    st.markdown("""
+        <div class="info-box">
+            <h4>ℹ️ How It Works</h4>
+            <p>Select a player and click "Predict Injury Risk" to get:</p>
+            <ul>
+                <li>Injury risk percentage (0-100%)</li>
+                <li>Risk level classification</li>
+                <li>SHAP feature importance analysis</li>
+                <li>Key risk factors</li>
+            </ul>
+        </div>
+    """, unsafe_allow_html=True)
+
+# Prediction Results
+if predict_btn:
+    with st.spinner("🔮 Analyzing injury risk..."):
         result = predict_injury(player)
     
     if "error" in result:
-        st.error(f"❌ Error: {result['error']}")
+        st.markdown(f"""
+            <div class="error-box">
+                <h3>❌ Error</h3>
+                <p>{result['error']}</p>
+            </div>
+        """, unsafe_allow_html=True)
     else:
         # Display prediction
+        st.markdown("---")
+        st.markdown("""
+            <div class="prediction-result slide-in">
+                <h2>🎯 Prediction Results</h2>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        risk_percentage = result.get("injury_risk_percentage", 0)
+        
+        # Metrics Row
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Player", result.get("player", "N/A"))
+            st.markdown(f"""
+                <div class="metric-container">
+                    <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Player</div>
+                    <div style="font-size: 1.5rem; font-weight: 600; color: white;">{result.get('player', 'N/A')}</div>
+                </div>
+            """, unsafe_allow_html=True)
         
         with col2:
-            risk_percentage = result.get("injury_risk_percentage", 0)
-            st.metric("Injury Risk", f"{risk_percentage:.2f}%")
+            st.markdown(f"""
+                <div class="metric-container">
+                    <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Injury Risk</div>
+                    <div class="metric-value">{risk_percentage:.2f}%</div>
+                </div>
+            """, unsafe_allow_html=True)
         
         with col3:
-            # Risk level
             if risk_percentage >= 70:
                 risk_level = "🔴 High Risk"
+                risk_color = "#ef4444"
             elif risk_percentage >= 40:
                 risk_level = "🟡 Medium Risk"
+                risk_color = "#fbbf24"
             else:
                 risk_level = "🟢 Low Risk"
-            st.metric("Risk Level", risk_level)
+                risk_color = "#22c55e"
+            
+            st.markdown(f"""
+                <div class="metric-container">
+                    <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Risk Level</div>
+                    <div style="font-size: 1.5rem; font-weight: 600; color: {risk_color};">{risk_level}</div>
+                </div>
+            """, unsafe_allow_html=True)
         
-        # Visual gauge
-        st.subheader("Risk Gauge")
+        # Visual gauge - Simple and Professional
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("""
+            <div class="main-card">
+                <h3>📊 Risk Gauge</h3>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        # Determine risk color based on percentage
+        if risk_percentage >= 70:
+            gauge_color = "#dc2626"  # Soft red
+            bg_color = "rgba(220, 38, 38, 0.1)"
+        elif risk_percentage >= 40:
+            gauge_color = "#ea580c"  # Soft orange
+            bg_color = "rgba(234, 88, 12, 0.1)"
+        else:
+            gauge_color = "#16a34a"  # Soft green
+            bg_color = "rgba(22, 163, 74, 0.1)"
+        
+        # Simple progress bar style gauge
         fig = go.Figure(go.Indicator(
-            mode = "gauge+number+delta",
+            mode = "gauge+number",
             value = risk_percentage,
             domain = {'x': [0, 1], 'y': [0, 1]},
-            title = {'text': "Injury Risk (%)"},
-            delta = {'reference': 50},
+            title = {'text': "Injury Risk (%)", 'font': {'color': 'rgba(255, 255, 255, 0.9)', 'size': 18}},
             gauge = {
-                'axis': {'range': [None, 100]},
-                'bar': {'color': "darkblue"},
+                'axis': {'range': [None, 100], 'tickcolor': 'rgba(255, 255, 255, 0.5)', 'tickwidth': 1},
+                'bar': {'color': gauge_color, 'line': {'width': 0}},
                 'steps': [
-                    {'range': [0, 40], 'color': "lightgreen"},
-                    {'range': [40, 70], 'color': "yellow"},
-                    {'range': [70, 100], 'color': "red"}
+                    {'range': [0, 40], 'color': 'rgba(22, 163, 74, 0.2)'},
+                    {'range': [40, 70], 'color': 'rgba(234, 88, 12, 0.2)'},
+                    {'range': [70, 100], 'color': 'rgba(220, 38, 38, 0.2)'}
                 ],
                 'threshold': {
-                    'line': {'color': "red", 'width': 4},
-                    'thickness': 0.75,
-                    'value': 70
-                }
-            }
+                    'line': {'color': gauge_color, 'width': 2},
+                    'thickness': 0.6,
+                    'value': risk_percentage
+                },
+                'bgcolor': 'rgba(0, 0, 0, 0)',
+                'borderwidth': 1,
+                'bordercolor': 'rgba(255, 255, 255, 0.1)'
+            },
+            number = {'font': {'color': 'rgba(255, 255, 255, 0.9)', 'size': 32}}
         ))
         
-        fig.update_layout(height=300)
+        fig.update_layout(
+            height=280,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='rgba(255, 255, 255, 0.9)'),
+            margin=dict(l=20, r=20, t=40, b=20)
+        )
+        
         st.plotly_chart(fig, use_container_width=True)
         
         # SHAP Explanation
         explanation = result.get("explanation", {})
         
         if explanation:
-            st.subheader("🔍 XAI Explanation (SHAP)")
+            st.markdown("<br>", unsafe_allow_html=True)
+            st.markdown("""
+                <div class="main-card">
+                    <h3>🔍 XAI Explanation (SHAP)</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7);">
+                        Understanding which factors contribute to injury risk
+                    </p>
+                </div>
+            """, unsafe_allow_html=True)
             
             top_features = explanation.get("top_features", {})
             key_factors = explanation.get("key_factors", [])
@@ -100,7 +245,7 @@ if st.button("Predict Injury Risk", key="injury_predict_btn"):
                 # Create horizontal bar chart
                 fig = go.Figure()
                 
-                colors = ['#e74c3c' if x > 0 else '#2ecc71' for x in df_shap["SHAP Value"]]
+                colors = ['#ef4444' if x > 0 else '#22c55e' for x in df_shap["SHAP Value"]]
                 
                 fig.add_trace(go.Bar(
                     y=df_shap["Feature"],
@@ -108,22 +253,46 @@ if st.button("Predict Injury Risk", key="injury_predict_btn"):
                     orientation='h',
                     marker_color=colors,
                     text=[f"{x:.3f}" for x in df_shap["SHAP Value"]],
-                    textposition='outside'
+                    textposition='outside',
+                    textfont=dict(color='white', size=12)
                 ))
                 
                 fig.update_layout(
-                    title="Feature Importance (SHAP Values)",
-                    xaxis_title="SHAP Value (Positive = Increases Risk)",
+                    title="Feature Importance (SHAP Values) - Positive = Increases Risk",
+                    xaxis_title="SHAP Value",
                     yaxis_title="Feature",
                     height=400,
-                    showlegend=False
+                    showlegend=False,
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    font=dict(color='white'),
+                    xaxis=dict(gridcolor='rgba(255, 255, 255, 0.1)'),
+                    yaxis=dict(gridcolor='rgba(255, 255, 255, 0.1)')
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
             
             if key_factors:
-                st.subheader("📊 Key Factors")
+                st.markdown("""
+                    <div class="main-card">
+                        <h3>📊 Key Factors</h3>
+                    </div>
+                """, unsafe_allow_html=True)
+                
                 for factor in key_factors:
-                    st.write(f"• {factor}")
+                    st.markdown(f"""
+                        <div class="player-card">
+                            <p style="margin: 0; color: white;">• {factor}</p>
+                        </div>
+                    """, unsafe_allow_html=True)
         else:
-            st.info("ℹ️ No explanation data available")
+            st.markdown("""
+                <div class="info-box">
+                    <p>ℹ️ No explanation data available</p>
+                </div>
+            """, unsafe_allow_html=True)
+
+# Back to Home
+st.markdown("<br>", unsafe_allow_html=True)
+if st.button("🏠 Back to Home", use_container_width=True):
+    st.switch_page("app.py")
