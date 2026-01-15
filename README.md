@@ -238,40 +238,6 @@ Key Factors for Team A:
 
 This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details
 
-### Why MIT License?
-
-The MIT License was chosen for this project for several important reasons:
-
-#### ✅ **Permissive & Open Source**
-- Allows anyone to freely use, modify, and distribute the software
-- Encourages collaboration and community contributions
-- Promotes open-source development principles
-
-#### ✅ **Business-Friendly**
-- Allows commercial use without restrictions
-- Can be used in proprietary projects
-- No requirement to open-source derivative works
-
-#### ✅ **Simple & Clear**
-- One of the shortest and easiest to understand licenses
-- Minimal legal complexity
-- Clear permissions and limitations
-
-#### ✅ **No Warranty**
-- Users understand the software is provided "as-is"
-- Protects developers from liability
-- Realistic expectations for experimental/research projects
-
-#### ✅ **Industry Standard**
-- Widely used by major projects (Node.js, Rails, React, etc.)
-- Well-understood by developers
-- Trusted and recognized globally
-
-### MIT License Key Points:
-- ✅ **YOU CAN**: Use commercially, modify, distribute, and private use
-- ❌ **YOU CANNOT**: Hold liable or use trademark
-- ⚠️ **YOU MUST**: Include license and copyright notice
-
 ### Full License Text:
 ```
 MIT License
