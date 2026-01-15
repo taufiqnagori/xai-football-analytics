@@ -1,6 +1,6 @@
 # ⚽ XAI Football Analytics Suite
 
-AI-Powered Player Performance, Injury Risk & Match Outcome Prediction with Explainable AI (XAI)
+XAI Powered Sports Analytics suite for Player performance, Injury Risk and Match outcome.
 
 ## 🎯 Overview
 
@@ -234,16 +234,6 @@ Key Factors for Team A:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
----
 
 ## 📝 License
 
@@ -255,7 +245,7 @@ This project is licensed under the MIT License - see LICENSE file for details
 
 **Taufiq Nagori**
 - GitHub: [@taufiqnagori](https://github.com/taufiqnagori)
-- Email: taufiqnagori@example.com
+- Email: taufiqnagori99@gmail.com
 
 ---
 
@@ -274,24 +264,6 @@ For issues, questions, or suggestions, please:
 - Open an issue on GitHub
 - Contact the development team
 - Check existing documentation
-
----
-
-## 🚀 Roadmap
-
-- [ ] Mobile app version
-- [ ] Real-time player tracking
-- [ ] Advanced ensemble models
-- [ ] Historical trend analysis
-- [ ] Team analytics dashboard
-- [ ] API public access
-- [ ] Multi-league support
-
----
-
-**Last Updated**: January 15, 2026
-
-**Status**: ✅ Active Development
 
 ---
 
