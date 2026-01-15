@@ -19,14 +19,35 @@ with open(CSS_PATH, encoding='utf-8') as f:
 # ================================
 # THEME TOGGLE
 # ================================
-from utils.theme import init_theme, render_theme_toggle, get_theme_styles
+from utils.theme import init_theme, render_sidebar_theme_toggle, get_theme_styles
 
 init_theme()
 
-# Theme toggle button - fixed position
-col1, col2, col3 = st.columns([1, 1, 1])
-with col3:
-    render_theme_toggle()
+# Sidebar navigation and theme toggle
+with st.sidebar:
+    # Navigation heading
+    st.markdown("<div style='text-align: center; margin: 1rem 0;'><b>Navigation</b></div>", unsafe_allow_html=True)
+    st.markdown("---")
+    
+    # Buttons in exact order with updated labels
+    if st.button("🏠 Home", use_container_width=True, key="nav_home_sidebar"):
+        st.switch_page("app.py")
+    
+    if st.button("📈 Player Performance", use_container_width=True, key="nav_perf_sidebar"):
+        st.switch_page("pages/1_Performance_Analysis.py")
+    
+    if st.button("🩺 Injury Risk", use_container_width=True, key="nav_injury_sidebar"):
+        st.switch_page("pages/2_Injury_Risk_Analysis.py")
+    
+    if st.button("🏆 Match Prediction", use_container_width=True, key="nav_match_sidebar"):
+        st.switch_page("pages/3_Match_Outcome_Prediction.py")
+    
+    # Add spacing to push theme button to bottom
+    st.markdown("<div style='margin-top: 2rem;'></div>", unsafe_allow_html=True)
+    st.markdown("---")
+    
+    # Theme toggle at bottom
+    render_sidebar_theme_toggle()
 
 st.markdown(get_theme_styles(), unsafe_allow_html=True)
 
@@ -36,9 +57,9 @@ st.markdown(get_theme_styles(), unsafe_allow_html=True)
 
 # Hero Section
 st.markdown("""
-    <div style="text-align: center; padding: 3rem 0;">
-        <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">⚽ XAI Football Analytics Suite</h1>
-        <p class="hero-subtitle" style="font-size: 1.3rem; margin-bottom: 2rem;">
+    <div style="text-align: center; padding: 0.2rem 0 0.3rem 0;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 0.3rem;">⚽ XAI Football Analytics Suite</h1>
+        <p class="hero-subtitle" style="font-size: 1.3rem; margin-bottom: 0.5rem;">
             AI-Powered Player Performance, Injury Risk & Match Outcome Prediction<br>
             <span style="color: #667eea;">Powered by SHAP & LIME Explanations</span>
         </p>
@@ -139,6 +160,23 @@ st.markdown("---")
 st.markdown("""
     <div style="text-align: center; padding: 2rem 0; color: rgba(255, 255, 255, 0.6);">
         <p class="footer-text">Built with ❤️ using Streamlit, FastAPI, and XAI Technologies</p>
-        <p class="footer-text" style="font-size: 0.9rem;">© 2024 XAI Football Analytics Suite</p>
+        <p class="footer-text" style="font-size: 0.9rem;">© 2026 XAI Football Analytics Suite</p>
     </div>
+""", unsafe_allow_html=True)
+
+# JavaScript to manage sidebar visibility
+st.markdown("""
+<script>
+    // Keep sidebar collapsed by default
+    const observer = new MutationObserver(() => {
+        const sidebar = document.querySelector('section[data-testid="stSidebar"]');
+        const button = document.querySelector('button[aria-label="Close sidebar"]');
+        
+        if (sidebar && sidebar.style.display !== 'none') {
+            // Sidebar is open, this is fine - Streamlit's hamburger menu controls it
+        }
+    });
+    
+    observer.observe(document.body, { subtree: true, attributes: true });
+</script>
 """, unsafe_allow_html=True)

@@ -9,14 +9,23 @@ def init_theme():
         st.session_state.theme = 'dark'
 
 def render_theme_toggle():
-    """Render theme toggle button fixed at top-right"""
+    """Render theme toggle button - now in sidebar by default"""
+    init_theme()
+    
+    # This is the old function for backward compatibility
+    # The actual toggle is now in the sidebar (see sidebar setup in main pages)
+    pass
+
+def render_sidebar_theme_toggle():
+    """Render theme toggle in the sidebar"""
     init_theme()
     
     # Create button with unique key per page
+    # Note: This function is called within a st.sidebar context, so use st.button() not st.sidebar.button()
     theme_toggle = st.button(
         "🌙 Dark" if st.session_state.theme == 'dark' else "☀️ Light",
-        key="theme_toggle",
-        help="Toggle between Light and Dark theme"
+        key="theme_toggle_sidebar",
+        use_container_width=True
     )
     
     if theme_toggle:
@@ -30,142 +39,139 @@ def get_theme_styles():
     if theme == 'light':
         return """
         <style>
-            /* Light Theme Styles - Global */
-            .stApp {
-                background: #f8f9fa !important;
-            }
-            .stApp[data-theme] {
-                background: #f8f9fa !important;
+            /* Light Theme Styles - Global Override */
+            * {
+                color: #1a1a1a !important;
             }
             
-            /* Text colors */
-            h1, h2, h3, h4, h5, h6 {
+            .stApp {
+                background: white !important;
                 color: #1a1a1a !important;
             }
-            p, span, div, label, li {
+            
+            /* All text elements - force black */
+            body, body * {
                 color: #1a1a1a !important;
             }
-            .stMarkdown p, .stMarkdown span, .stMarkdown div {
+            
+            /* Headings */
+            h1 {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            h2, h3, h4, h5, h6 {
+                color: #1a1a1a !important;
+            }
+            
+            /* Paragraphs and text */
+            p, span, div, label, li, a {
                 color: #1a1a1a !important;
             }
             
             /* Cards */
-            .main-card {
+            .main-card, .nav-card, .feature-card, .team-card, .player-card, .metric-container {
                 background: rgba(255, 255, 255, 0.95) !important;
                 color: #1a1a1a !important;
                 border: 1px solid rgba(0, 0, 0, 0.1) !important;
             }
-            .main-card p, .main-card h3, .main-card h2, .main-card h1 {
+            
+            .main-card *, .nav-card *, .feature-card *, .team-card *, .player-card *, .metric-container * {
                 color: #1a1a1a !important;
             }
             
-            .nav-card {
-                background: rgba(255, 255, 255, 0.95) !important;
-                color: #1a1a1a !important;
-                border: 1px solid rgba(0, 0, 0, 0.1) !important;
-            }
-            .nav-card-title, .nav-card-desc {
-                color: #1a1a1a !important;
-            }
-            
-            .feature-card {
-                background: rgba(255, 255, 255, 0.95) !important;
-                color: #1a1a1a !important;
-                border: 1px solid rgba(0, 0, 0, 0.1) !important;
-            }
-            .feature-card h3, .feature-card p {
+            /* Selectbox/Dropdown - Light theme */
+            .stSelectbox > div > div,
+            .stSelectbox > div > div > button,
+            div[data-baseweb="select"] > div,
+            div[data-baseweb="select"] button {
+                background-color: white !important;
+                border: 1px solid rgba(0, 0, 0, 0.15) !important;
                 color: #1a1a1a !important;
             }
             
-            .team-card {
-                background: rgba(255, 255, 255, 0.95) !important;
-                color: #1a1a1a !important;
-                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            .stSelectbox > div > div:hover,
+            .stSelectbox > div > div > button:hover,
+            div[data-baseweb="select"] > div:hover,
+            div[data-baseweb="select"] button:hover {
+                background-color: #f5f5f5 !important;
+                border-color: rgba(0, 0, 0, 0.25) !important;
             }
-            .team-card h3 {
+            
+            .stSelectbox label, div[data-baseweb="select"] label {
                 color: #1a1a1a !important;
             }
             
-            .player-card {
-                background: rgba(255, 255, 255, 0.8) !important;
-                color: #1a1a1a !important;
-                border-left: 4px solid #667eea !important;
+            /* Dropdown options popup - Light theme */
+            ul[role="listbox"],
+            div[role="listbox"],
+            div[data-baseweb="popover"],
+            div[data-baseweb="listbox"],
+            div[data-baseweb="menu"] {
+                background-color: white !important;
+                border: 1px solid rgba(0, 0, 0, 0.15) !important;
             }
-            .player-card p {
+            
+            ul[role="listbox"] li,
+            ul[role="listbox"] > li,
+            div[role="listbox"] li,
+            div[role="listbox"] span,
+            div[data-baseweb="popover"] li,
+            div[data-baseweb="popover"] > div,
+            div[data-baseweb="listbox"] li,
+            div[data-baseweb="listbox"] > div,
+            div[data-baseweb="option"],
+            div[data-baseweb="option"] span,
+            div[data-baseweb="menuListItem"] {
+                background-color: white !important;
                 color: #1a1a1a !important;
             }
             
-            .metric-container {
-                background: rgba(255, 255, 255, 0.95) !important;
+            ul[role="listbox"] li:hover,
+            ul[role="listbox"] > li:hover,
+            div[role="listbox"] li:hover,
+            div[role="listbox"] > div:hover,
+            div[data-baseweb="popover"] li:hover,
+            div[data-baseweb="popover"] > div:hover,
+            div[data-baseweb="listbox"] li:hover,
+            div[data-baseweb="listbox"] > div:hover,
+            div[data-baseweb="option"]:hover,
+            div[data-baseweb="menuListItem"]:hover {
+                background-color: rgba(102, 126, 234, 0.1) !important;
                 color: #1a1a1a !important;
-                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            /* Ensure dropdown text stays black - all child elements */
+            ul[role="listbox"] li *,
+            div[role="listbox"] li *,
+            div[role="listbox"] *,
+            div[data-baseweb="popover"] *,
+            div[data-baseweb="listbox"] *,
+            div[data-baseweb="option"] *,
+            div[data-baseweb="menuListItem"] * {
+                color: #1a1a1a !important;
+                background: transparent !important;
+            }
+            
+            /* Buttons */
+            .stButton > button {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+                color: white !important;
+                border: none !important;
+            }
+            
+            .stButton > button:hover {
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35) !important;
             }
             
             /* Info boxes */
             .info-box, .warning-box, .error-box, .success-box {
                 color: #1a1a1a !important;
             }
-            .info-box p, .warning-box p, .error-box p, .success-box p {
-                color: #1a1a1a !important;
-            }
             
-            /* Buttons - keep gradient but ensure visibility */
-            .stButton > button {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-                color: white !important;
-            }
-            
-            /* Theme toggle button - light theme */
-            button[key="theme_toggle"] {
-                background: rgba(255, 255, 255, 0.9) !important;
-                color: #1a1a1a !important;
-                border: 1px solid rgba(0, 0, 0, 0.2) !important;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-            }
-            
-            button[key="theme_toggle"]:hover {
-                background: rgba(255, 255, 255, 1) !important;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-            }
-            
-            /* Selectbox/Dropdown - Light theme */
-            .stSelectbox > div > div,
-            div[data-baseweb="select"] > div {
-                background-color: rgba(255, 255, 255, 0.95) !important;
-                border: 1px solid rgba(0, 0, 0, 0.15) !important;
-                color: #1a1a1a !important;
-            }
-            
-            .stSelectbox > div > div:hover,
-            div[data-baseweb="select"] > div:hover {
-                background-color: rgba(255, 255, 255, 1) !important;
-                border-color: rgba(0, 0, 0, 0.25) !important;
-            }
-            
-            .stSelectbox label,
-            div[data-baseweb="select"] label {
-                color: #1a1a1a !important;
-            }
-            
-            /* Dropdown options */
-            ul[role="listbox"],
-            div[data-baseweb="popover"] {
-                background-color: rgba(255, 255, 255, 0.98) !important;
-                border: 1px solid rgba(0, 0, 0, 0.15) !important;
-            }
-            
-            ul[role="listbox"] li,
-            div[data-baseweb="popover"] li {
-                color: #1a1a1a !important;
-            }
-            
-            ul[role="listbox"] li:hover,
-            div[data-baseweb="popover"] li:hover {
-                background-color: rgba(102, 126, 234, 0.1) !important;
-            }
-            
-            /* Selectbox text */
-            .stSelectbox label {
+            .info-box *, .warning-box *, .error-box *, .success-box * {
                 color: #1a1a1a !important;
             }
             
@@ -178,18 +184,88 @@ def get_theme_styles():
                 color: rgba(26, 26, 26, 0.6) !important;
             }
             
-            /* Light theme sidebar */
+            /* Sidebar */
             section[data-testid="stSidebar"] > div,
             section[data-testid="stSidebar"],
             .css-1d391kg {
                 background: rgba(248, 249, 250, 0.98) !important;
-                backdrop-filter: blur(10px) !important;
                 border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
             }
             
             section[data-testid="stSidebar"] *,
             .css-1d391kg * {
                 color: rgba(26, 26, 26, 0.9) !important;
+            }
+            
+            /* Theme toggle button - light theme - SIMPLE & DIRECT */
+            button[key="theme_toggle_sidebar"] {
+                background-color: white !important;
+                background: white !important;
+                color: #1a1a1a !important;
+                border: 1px solid rgba(0, 0, 0, 0.2) !important;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            button[key="theme_toggle_sidebar"]:hover {
+                background-color: #f5f5f5 !important;
+                background: #f5f5f5 !important;
+                color: #1a1a1a !important;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+            }
+            
+            button[key="theme_toggle_sidebar"] * {
+                color: #1a1a1a !important;
+            }
+            
+            /* Streamlit tooltip/popover styling */
+            div[role="tooltip"] {
+                background: white !important;
+            }
+            
+            div[role="tooltip"] p,
+            div[role="tooltip"] span,
+            div[role="tooltip"] div {
+                color: #1a1a1a !important;
+                background: transparent !important;
+            }
+            
+            /* Plotly charts - comprehensive text color override for light theme */
+            svg text, svg tspan {
+                fill: #1a1a1a !important;
+                color: #1a1a1a !important;
+            }
+            
+            .plotly-graph-div text,
+            .plotly-graph-div tspan {
+                fill: #1a1a1a !important;
+                color: #1a1a1a !important;
+            }
+            
+            .plotly-graph-div .xaxislayer-above text,
+            .plotly-graph-div .yaxislayer-above text,
+            .plotly-graph-div .zaxislayer text,
+            .plotly-graph-div .xtick text,
+            .plotly-graph-div .ytick text,
+            .plotly-graph-div .ztick text,
+            .plotly-graph-div .gtitle,
+            .plotly-graph-div .g-xtitle,
+            .plotly-graph-div .g-ytitle,
+            .plotly-graph-div .legendtext,
+            .plotly-graph-div .hovertext {
+                fill: #1a1a1a !important;
+                color: #1a1a1a !important;
+            }
+            
+            /* Input fields */
+            input, textarea, select {
+                background: white !important;
+                color: #1a1a1a !important;
+                border: 1px solid rgba(0, 0, 0, 0.15) !important;
+            }
+            
+            input:focus, textarea:focus, select:focus {
+                background: #f5f5f5 !important;
+                color: #1a1a1a !important;
             }
         </style>
         """

@@ -79,9 +79,14 @@ h1 {
     border: 1px solid rgba(102, 126, 234, 0.3);
     border-radius: 16px;
     padding: 2rem;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .feature-card:hover {
@@ -172,6 +177,12 @@ h1 {
    Force collapsed by default
 ================================ */
 /* Ensure sidebar starts collapsed - handled by initial_sidebar_state="collapsed" */
+
+/* Sidebar styling - let Streamlit handle positioning */
+section[data-testid="stSidebar"] {
+    width: 280px !important;
+    transition: all 0.3s ease !important;
+}
 
 /* Dark theme sidebar - smooth dark shade */
 .css-1d391kg,
@@ -333,13 +344,18 @@ section[data-testid="stSidebar"] * {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
     border: 2px solid rgba(102, 126, 234, 0.3);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-    display: block;
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto 1rem auto;
 }
 
 .nav-card:hover {
@@ -350,13 +366,13 @@ section[data-testid="stSidebar"] * {
 }
 
 .nav-card-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
     display: block;
 }
 
 .nav-card-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: white;
     margin-bottom: 0.5rem;
@@ -364,7 +380,22 @@ section[data-testid="stSidebar"] * {
 
 .nav-card-desc {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Column gap spacing for three-column layout */
+.stColumns {
+    gap: 1.5rem !important;
+}
+
+.stColumns > div {
+    padding: 0 0.75rem !important;
+}
+.stButton > button {
+    margin-top: 1.2rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    height: auto !important;
 }
 
 /* ================================
@@ -395,19 +426,24 @@ section[data-testid="stSidebar"] * {
     display: none !important;
 }
 
-/* Completely remove black horizontal line at top */
-header[data-testid="stHeader"],
-.stApp > header,
-.stApp > header > div,
-div[data-testid="stHeader"],
-header {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
+/* Hide the black line at top but keep hamburger button accessible */
+header[data-testid="stHeader"] {
     background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+header[data-testid="stHeader"] > div {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Hide Streamlit's automatic navigation menu only */
+/* Target specifically the nav element, not all first-child divs */
+[data-testid="stSidebarNav"] {
+    display: none !important;
 }
 
 /* Remove any top border/line */
@@ -416,7 +452,7 @@ header {
     display: none !important;
 }
 
-/* Ensure no top margin/padding */
+/* Ensure no excessive top margin/padding */
 .stApp {
     padding-top: 0 !important;
     margin-top: 0 !important;
@@ -437,33 +473,22 @@ button[kind="header"] {
 }
 
 /* ================================
-   THEME TOGGLE BUTTON
-   Fixed position at top-right
+   THEME TOGGLE BUTTON - SIDEBAR VERSION
+   Now in sidebar instead of fixed position
 ================================ */
-/* Theme toggle button - fixed at top-right, works on all pages */
-button[key="theme_toggle"] {
-    position: fixed !important;
-    top: 1rem !important;
-    right: 1rem !important;
-    z-index: 9999 !important;
+/* Theme toggle button in sidebar - default dark theme styling */
+button[key="theme_toggle_sidebar"] {
     border-radius: 8px !important;
-    padding: 0.5rem 1rem !important;
-    font-size: 0.9rem !important;
     font-weight: 600 !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-    /* Dark theme default */
     background: rgba(0, 0, 0, 0.4) !important;
     color: white !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
 }
 
-button[key="theme_toggle"]:hover {
+button[key="theme_toggle_sidebar"]:hover {
     background: rgba(0, 0, 0, 0.5) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
 }
 
 /* ================================
