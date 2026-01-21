@@ -1,125 +1,125 @@
 player_name,team,position,age,minutes_played,matches_played,goals,assists,passes,shots,tackles,injuries_last_season,performance_score,injury_risk,is_starting_xi
 Erling Haaland,Man City,FW,24,3100,36,32,6,1200,220,25,1,92.5,0.35,1
 Kevin De Bruyne,Man City,MF,33,2800,32,9,21,2600,120,40,2,93.0,0.55,1
-Phil Foden,Man City,MF,24,2600,34,14,10,2100,140,35,1,88.5,0.30,1
+Phil Foden,Man City,MF,24,2600,34,14,10,2100,140,35,1,88.5,0.3,1
 Bernardo Silva,Man City,MF,30,2700,35,8,9,2300,110,45,0,87.5,0.22,1
 Rodri,Man City,MF,28,3200,38,7,8,3000,90,85,1,91.0,0.28,1
 Ruben Dias,Man City,DF,27,3000,36,3,2,2100,35,160,1,89.0,0.32,1
 John Stones,Man City,DF,30,2500,30,2,3,1800,40,140,2,84.0,0.45,1
-Kyle Walker,Man City,DF,34,2400,32,1,4,1700,30,120,1,82.0,0.50,1
-Josko Gvardiol,Man City,DF,23,2600,34,4,2,1900,45,150,0,86.0,0.20,1
+Kyle Walker,Man City,DF,34,2400,32,1,4,1700,30,120,1,82.0,0.5,1
+Josko Gvardiol,Man City,DF,23,2600,34,4,2,1900,45,150,0,86.0,0.2,1
 Jeremy Doku,Man City,FW,22,2200,30,9,8,1500,160,30,1,84.5,0.25,1
 Ederson,Man City,GK,30,3300,38,0,0,1100,0,15,0,88.0,0.18,1
 Julian Alvarez,Man City,FW,24,1800,28,10,6,900,120,25,0,82.0,0.22,0
 Mateo Kovacic,Man City,MF,30,1600,22,2,4,1400,40,50,1,78.0,0.35,0
 Matheus Nunes,Man City,MF,26,1400,20,1,3,1200,35,45,0,76.5,0.25,0
-Nathan Ake,Man City,DF,29,1700,24,1,1,1300,25,110,2,79.0,0.40,0
+Nathan Ake,Man City,DF,29,1700,24,1,1,1300,25,110,2,79.0,0.4,0
 Manuel Akanji,Man City,DF,29,1600,22,2,1,1400,30,115,1,80.0,0.33,0
 Oscar Bobb,Man City,FW,21,900,15,3,2,500,70,10,0,72.0,0.15,0
-Stefan Ortega,Man City,GK,31,600,8,0,0,300,0,5,0,70.0,0.20,0
+Stefan Ortega,Man City,GK,31,600,8,0,0,300,0,5,0,70.0,0.2,0
 Rico Lewis,Man City,DF,19,1200,18,1,2,900,25,80,0,75.0,0.18,0
 Kalvin Phillips,Man City,MF,29,800,12,0,1,600,20,40,1,68.0,0.42,0
 Jack Grealish,Man City,FW,29,1900,26,5,7,1400,90,30,2,81.0,0.48,0
 Sergio Gomez,Man City,DF,24,700,10,0,2,500,15,60,0,69.5,0.22,0
-Scott Carson,Man City,GK,38,100,2,0,0,50,0,2,0,62.0,0.60,0
+Scott Carson,Man City,GK,38,100,2,0,0,50,0,2,0,62.0,0.6,0
 Matheus Luiz,Man City,MF,23,600,9,1,1,450,18,25,0,68.5,0.18,0
-Jude Bellingham,Real Madrid,MF,21,3200,38,19,9,2500,160,60,0,94.0,0.20,1
-Vinicius Junior,Real Madrid,FW,24,2900,34,18,12,1800,200,35,1,91.0,0.30,1
+Jude Bellingham,Real Madrid,MF,21,3200,38,19,9,2500,160,60,0,94.0,0.2,1
+Vinicius Junior,Real Madrid,FW,24,2900,34,18,12,1800,200,35,1,91.0,0.3,1
 Rodrygo,Real Madrid,FW,24,2600,35,15,8,1600,180,30,1,88.5,0.28,1
 Federico Valverde,Real Madrid,MF,26,3100,38,7,10,2800,120,90,0,90.0,0.22,1
-Toni Kroos,Real Madrid,MF,34,2700,32,4,9,2900,60,40,0,88.0,0.40,1
-Eduardo Camavinga,Real Madrid,MF,22,2500,33,3,4,2100,70,85,1,84.0,0.30,1
+Toni Kroos,Real Madrid,MF,34,2700,32,4,9,2900,60,40,0,88.0,0.4,1
+Eduardo Camavinga,Real Madrid,MF,22,2500,33,3,4,2100,70,85,1,84.0,0.3,1
 Antonio Rudiger,Real Madrid,DF,31,3000,36,2,1,2000,35,170,0,87.0,0.35,1
-David Alaba,Real Madrid,DF,32,2200,28,1,2,1700,30,130,2,82.0,0.50,1
+David Alaba,Real Madrid,DF,32,2200,28,1,2,1700,30,130,2,82.0,0.5,1
 Dani Carvajal,Real Madrid,DF,32,2600,34,3,5,1800,45,140,1,85.0,0.45,1
 Ferland Mendy,Real Madrid,DF,29,2300,30,0,3,1600,25,135,2,80.0,0.48,1
 Thibaut Courtois,Real Madrid,GK,32,3400,38,0,0,900,0,10,1,90.0,0.42,1
 Brahim Diaz,Real Madrid,FW,25,1400,22,6,4,800,90,20,0,77.0,0.22,0
 Luka Modric,Real Madrid,MF,38,1600,24,2,5,1500,50,55,1,80.0,0.55,0
 Nacho Fernandez,Real Madrid,DF,34,1500,20,1,1,1200,20,110,0,78.0,0.38,0
-Lucas Vazquez,Real Madrid,DF,33,1400,21,1,3,1100,30,95,1,76.0,0.40,0
+Lucas Vazquez,Real Madrid,DF,33,1400,21,1,3,1100,30,95,1,76.0,0.4,0
 Arda Guler,Real Madrid,MF,19,900,14,3,2,700,60,25,0,73.5,0.18,0
 Fran Garcia,Real Madrid,DF,25,1200,18,0,2,900,20,85,0,72.0,0.22,0
-Joselu,Real Madrid,FW,34,1100,19,7,1,600,95,15,0,75.0,0.40,0
-Andriy Lunin,Real Madrid,GK,25,400,6,0,0,200,0,5,0,68.0,0.20,0
-Dani Ceballos,Real Madrid,MF,27,1000,16,1,2,850,30,40,1,71.0,0.30,0
+Joselu,Real Madrid,FW,34,1100,19,7,1,600,95,15,0,75.0,0.4,0
+Andriy Lunin,Real Madrid,GK,25,400,6,0,0,200,0,5,0,68.0,0.2,0
+Dani Ceballos,Real Madrid,MF,27,1000,16,1,2,850,30,40,1,71.0,0.3,0
 Eder Militao,Real Madrid,DF,26,800,10,1,0,600,15,70,3,70.0,0.65,0
 Jesus Vallejo,Real Madrid,DF,27,300,5,0,0,250,5,30,1,65.0,0.35,0
 Kepa Arrizabalaga,Real Madrid,GK,30,900,12,0,0,350,0,6,1,72.0,0.38,0
 Bukayo Saka,Arsenal,FW,23,3100,38,16,9,1800,190,35,0,91.0,0.22,1
 Martin Odegaard,Arsenal,MF,25,3000,37,11,10,2600,140,55,0,90.0,0.24,1
-Declan Rice,Arsenal,MF,26,3300,38,7,8,2900,110,120,0,92.0,0.20,1
+Declan Rice,Arsenal,MF,26,3300,38,7,8,2900,110,120,0,92.0,0.2,1
 Kai Havertz,Arsenal,FW,25,2800,35,13,7,1700,160,40,1,86.5,0.32,1
-Gabriel Martinelli,Arsenal,FW,23,2600,34,15,6,1500,180,30,1,87.0,0.30,1
+Gabriel Martinelli,Arsenal,FW,23,2600,34,15,6,1500,180,30,1,87.0,0.3,1
 William Saliba,Arsenal,DF,23,3300,38,2,1,2200,30,180,0,91.5,0.18,1
 Gabriel Magalhaes,Arsenal,DF,27,3200,37,4,1,2100,35,175,1,89.0,0.28,1
 Ben White,Arsenal,DF,27,3100,36,2,4,2000,40,160,0,88.0,0.26,1
 Oleksandr Zinchenko,Arsenal,DF,28,2400,30,1,5,1900,45,120,2,82.0,0.45,1
 Takehiro Tomiyasu,Arsenal,DF,26,2200,28,1,2,1700,25,135,2,80.5,0.48,1
 David Raya,Arsenal,GK,29,3400,38,0,0,950,0,12,0,89.0,0.22,1
-Leandro Trossard,Arsenal,FW,29,1800,26,8,6,1000,120,25,0,80.0,0.30,0
+Leandro Trossard,Arsenal,FW,29,1800,26,8,6,1000,120,25,0,80.0,0.3,0
 Emile Smith Rowe,Arsenal,MF,24,1200,18,4,3,900,70,35,1,74.0,0.35,0
 Jorginho,Arsenal,MF,32,1400,20,1,2,1200,30,45,1,75.5,0.42,0
 Thomas Partey,Arsenal,MF,31,1000,15,2,1,850,40,55,3,72.0,0.65,0
 Reiss Nelson,Arsenal,FW,24,900,14,3,2,600,80,15,0,71.0,0.25,0
-Fabio Vieira,Arsenal,MF,24,800,12,2,3,700,60,25,1,70.5,0.30,0
+Fabio Vieira,Arsenal,MF,24,800,12,2,3,700,60,25,1,70.5,0.3,0
 Jakub Kiwior,Arsenal,DF,24,900,13,1,0,700,15,75,0,71.5,0.22,0
-Aaron Ramsdale,Arsenal,GK,26,400,6,0,0,200,0,6,0,68.0,0.20,0
-Cedric Soares,Arsenal,DF,33,500,8,0,1,400,10,45,1,66.0,0.40,0
-Mohamed Salah,Liverpool,FW,32,3200,38,20,11,1700,210,30,0,93.0,0.30,1
+Aaron Ramsdale,Arsenal,GK,26,400,6,0,0,200,0,6,0,68.0,0.2,0
+Cedric Soares,Arsenal,DF,33,500,8,0,1,400,10,45,1,66.0,0.4,0
+Mohamed Salah,Liverpool,FW,32,3200,38,20,11,1700,210,30,0,93.0,0.3,1
 Darwin Nunez,Liverpool,FW,25,2800,36,18,8,1300,220,35,1,87.5,0.35,1
 Luis Diaz,Liverpool,FW,28,2600,34,13,6,1400,190,30,1,85.0,0.32,1
 Alexis Mac Allister,Liverpool,MF,26,3000,37,7,8,2500,120,85,0,89.0,0.24,1
-Dominik Szoboszlai,Liverpool,MF,24,2800,35,6,9,2300,140,70,1,86.0,0.30,1
+Dominik Szoboszlai,Liverpool,MF,24,2800,35,6,9,2300,140,70,1,86.0,0.3,1
 Curtis Jones,Liverpool,MF,23,2400,32,4,5,2100,90,75,0,82.0,0.22,1
 Virgil van Dijk,Liverpool,DF,33,3300,38,5,2,2000,45,190,0,91.0,0.34,1
 Ibrahima Konate,Liverpool,DF,25,2800,33,2,1,1800,30,165,1,86.5,0.28,1
-Trent Alexander-Arnold,Liverpool,DF,26,2900,34,3,10,2600,80,95,1,89.5,0.30,1
+Trent Alexander-Arnold,Liverpool,DF,26,2900,34,3,10,2600,80,95,1,89.5,0.3,1
 Andrew Robertson,Liverpool,DF,30,2700,33,2,7,2400,60,130,2,85.0,0.45,1
 Alisson Becker,Liverpool,GK,31,3400,38,0,0,900,0,15,0,92.0,0.25,1
 Diogo Jota,Liverpool,FW,28,1700,25,10,4,900,130,25,2,80.0,0.48,0
 Cody Gakpo,Liverpool,FW,25,1600,24,7,5,1000,110,20,1,78.5,0.32,0
 Wataru Endo,Liverpool,MF,31,1500,22,1,2,1300,40,90,0,77.0,0.38,0
-Joe Gomez,Liverpool,DF,27,1400,20,1,1,1100,20,100,1,76.0,0.30,0
-Harvey Elliott,Liverpool,MF,21,1200,20,3,4,1000,80,35,0,75.0,0.20,0
+Joe Gomez,Liverpool,DF,27,1400,20,1,1,1100,20,100,1,76.0,0.3,0
+Harvey Elliott,Liverpool,MF,21,1200,20,3,4,1000,80,35,0,75.0,0.2,0
 Ryan Gravenberch,Liverpool,MF,22,1100,18,2,3,950,70,40,0,74.0,0.22,0
 Kostas Tsimikas,Liverpool,DF,28,900,14,0,3,800,25,70,1,71.0,0.35,0
 Caoimhin Kelleher,Liverpool,GK,25,300,5,0,0,150,0,5,0,67.0,0.18,0
-Thiago Alcantara,Liverpool,MF,33,600,10,1,2,700,30,30,3,69.0,0.60,0
+Thiago Alcantara,Liverpool,MF,33,600,10,1,2,700,30,30,3,69.0,0.6,0
 Kylian Mbappe,PSG,FW,26,3100,36,29,8,1500,240,30,1,94.0,0.32,1
 Ousmane Dembele,PSG,FW,27,2600,33,8,12,1700,180,25,2,86.0,0.45,1
-Randal Kolo Muani,PSG,FW,26,2400,30,12,6,1100,160,35,1,83.0,0.30,1
+Randal Kolo Muani,PSG,FW,26,2400,30,12,6,1100,160,35,1,83.0,0.3,1
 Marco Asensio,PSG,MF,29,2100,28,7,7,1600,120,30,1,80.5,0.38,1
 Vitinha,PSG,MF,25,2900,35,6,9,2600,90,85,0,88.0,0.22,1
 Warren Zaire-Emery,PSG,MF,19,2700,34,5,6,2400,80,95,0,87.0,0.18,1
-Manuel Ugarte,PSG,MF,23,2500,32,2,4,2200,60,110,0,84.0,0.20,1
-Achraf Hakimi,PSG,DF,26,2800,34,6,8,2000,90,140,1,88.0,0.30,1
+Manuel Ugarte,PSG,MF,23,2500,32,2,4,2200,60,110,0,84.0,0.2,1
+Achraf Hakimi,PSG,DF,26,2800,34,6,8,2000,90,140,1,88.0,0.3,1
 Marquinhos,PSG,DF,30,2900,35,3,2,2100,40,160,1,86.5,0.35,1
 Nuno Mendes,PSG,DF,22,2300,28,2,4,1800,60,130,2,82.0,0.42,1
-Gianluigi Donnarumma,PSG,GK,26,3300,38,0,0,850,0,12,1,90.0,0.30,1
+Gianluigi Donnarumma,PSG,GK,26,3300,38,0,0,850,0,12,1,90.0,0.3,1
 Lucas Hernandez,PSG,DF,28,1800,22,1,1,1400,25,120,2,78.0,0.48,0
-Danilo Pereira,PSG,DF,32,1700,24,1,1,1300,20,115,1,77.0,0.40,0
+Danilo Pereira,PSG,DF,32,1700,24,1,1,1300,20,115,1,77.0,0.4,0
 Lee Kang-in,PSG,MF,23,1500,22,3,5,1200,70,40,0,76.0,0.22,0
 Carlos Soler,PSG,MF,28,1400,21,2,3,1100,60,35,0,74.5,0.28,0
-Goncalo Ramos,PSG,FW,23,1300,20,9,2,700,110,20,1,77.5,0.30,0
+Goncalo Ramos,PSG,FW,23,1300,20,9,2,700,110,20,1,77.5,0.3,0
 Milan Skriniar,PSG,DF,29,1200,18,1,0,900,15,95,1,74.0,0.35,0
 Fabian Ruiz,PSG,MF,28,1600,24,2,4,1400,65,55,1,76.5,0.32,0
 Keylor Navas,PSG,GK,38,200,4,0,0,100,0,4,0,66.0,0.55,0
 Presnel Kimpembe,PSG,DF,29,600,9,0,0,450,10,60,3,68.0,0.65,0
-Harry Kane,Bayern Munich,FW,31,3200,38,28,9,1400,230,30,0,94.0,0.30,1
-Jamal Musiala,Bayern Munich,MF,22,2900,35,15,10,2400,160,45,0,91.0,0.20,1
+Harry Kane,Bayern Munich,FW,31,3200,38,28,9,1400,230,30,0,94.0,0.3,1
+Jamal Musiala,Bayern Munich,MF,22,2900,35,15,10,2400,160,45,0,91.0,0.2,1
 Leroy Sane,Bayern Munich,FW,29,2700,33,12,9,1600,180,25,1,87.0,0.32,1
 Kingsley Coman,Bayern Munich,FW,28,2400,30,10,8,1500,170,20,2,84.0,0.45,1
 Joshua Kimmich,Bayern Munich,MF,30,3300,38,6,11,3100,90,95,0,92.0,0.28,1
 Leon Goretzka,Bayern Munich,MF,30,2600,32,7,6,2100,120,80,1,86.0,0.35,1
 Aleksandar Pavlovic,Bayern Munich,MF,20,2200,30,3,4,1900,70,85,0,82.0,0.18,1
 Matthijs de Ligt,Bayern Munich,DF,25,2800,34,3,1,1900,35,170,0,88.0,0.25,1
-Kim Min-jae,Bayern Munich,DF,28,3000,36,2,1,2000,30,180,1,89.0,0.30,1
+Kim Min-jae,Bayern Munich,DF,28,3000,36,2,1,2000,30,180,1,89.0,0.3,1
 Alphonso Davies,Bayern Munich,DF,24,2700,33,3,6,2100,70,130,1,86.5,0.32,1
-Manuel Neuer,Bayern Munich,GK,38,3100,35,0,0,800,0,10,1,88.0,0.50,1
+Manuel Neuer,Bayern Munich,GK,38,3100,35,0,0,800,0,10,1,88.0,0.5,1
 Thomas Muller,Bayern Munich,FW,35,1800,26,8,9,1200,110,30,1,82.0,0.48,0
 Serge Gnabry,Bayern Munich,FW,29,1700,24,7,4,1000,120,20,2,79.0,0.42,0
-Raphael Guerreiro,Bayern Munich,DF,31,1600,23,2,5,1500,60,95,1,78.5,0.40,0
+Raphael Guerreiro,Bayern Munich,DF,31,1600,23,2,5,1500,60,95,1,78.5,0.4,0
 Dayot Upamecano,Bayern Munich,DF,26,1500,20,1,0,1200,20,110,2,76.0,0.38,0
 Eric Maxim Choupo-Moting,Bayern Munich,FW,35,900,15,4,1,500,70,10,0,72.0,0.45,0
 Konrad Laimer,Bayern Munich,MF,27,1400,21,1,3,1300,50,90,0,75.5,0.28,0
@@ -128,51 +128,51 @@ Mathys Tel,Bayern Munich,FW,19,800,14,5,2,450,90,15,0,73.0,0.18,0
 Noussair Mazraoui,Bayern Munich,DF,27,1100,17,1,2,900,25,85,1,74.0,0.32,0
 Robert Lewandowski,Barcelona,FW,36,3000,36,24,7,1200,210,25,1,91.0,0.48,1
 Lamine Yamal,Barcelona,FW,17,2400,33,7,11,1500,160,20,0,85.0,0.18,1
-Raphinha,Barcelona,FW,28,2600,34,12,9,1600,180,30,0,86.5,0.30,1
+Raphinha,Barcelona,FW,28,2600,34,12,9,1600,180,30,0,86.5,0.3,1
 Pedri,Barcelona,MF,22,2300,30,4,6,2100,70,45,2,83.0,0.45,1
 Frenkie de Jong,Barcelona,MF,27,2800,35,3,5,2600,60,70,1,87.5,0.32,1
 Ilkay Gundogan,Barcelona,MF,34,3000,36,6,10,2800,90,55,0,89.0,0.38,1
-Gavi,Barcelona,MF,20,1800,25,2,3,1600,50,65,3,78.0,0.60,0
-Ronald Araujo,Barcelona,DF,25,2900,35,2,1,1900,35,170,1,88.0,0.30,1
+Gavi,Barcelona,MF,20,1800,25,2,3,1600,50,65,3,78.0,0.6,0
+Ronald Araujo,Barcelona,DF,25,2900,35,2,1,1900,35,170,1,88.0,0.3,1
 Jules Kounde,Barcelona,DF,26,3000,36,1,3,2100,40,155,0,87.5,0.25,1
 Alejandro Balde,Barcelona,DF,21,2400,30,0,4,1800,30,130,1,82.0,0.28,1
 Marc-Andre ter Stegen,Barcelona,GK,32,3400,38,0,0,950,0,12,0,91.0,0.22,1
 Ferran Torres,Barcelona,FW,24,1700,25,8,4,900,120,20,1,79.0,0.32,0
-Joao Felix,Barcelona,FW,25,1600,24,7,5,1000,110,15,1,78.5,0.30,0
-Oriol Romeu,Barcelona,MF,32,1400,20,1,1,1200,30,75,1,74.0,0.40,0
+Joao Felix,Barcelona,FW,25,1600,24,7,5,1000,110,15,1,78.5,0.3,0
+Oriol Romeu,Barcelona,MF,32,1400,20,1,1,1200,30,75,1,74.0,0.4,0
 Inigo Martinez,Barcelona,DF,33,1300,18,1,0,1000,20,95,1,73.5,0.42,0
 Sergi Roberto,Barcelona,MF,32,1200,19,2,3,950,40,60,1,74.5,0.38,0
 Andreas Christensen,Barcelona,DF,28,1500,22,1,1,1100,25,100,2,76.0,0.35,0
-Vitor Roque,Barcelona,FW,19,800,14,4,1,450,90,10,0,72.0,0.20,0
+Vitor Roque,Barcelona,FW,19,800,14,4,1,450,90,10,0,72.0,0.2,0
 Inaki Pena,Barcelona,GK,25,300,5,0,0,150,0,4,0,67.0,0.18,0
 Hector Fort,Barcelona,DF,18,500,9,0,1,400,10,45,0,68.5,0.15,0
 Marc Casado,Barcelona,MF,20,600,10,0,2,500,20,35,0,69.0,0.18,0
-Pau Victor,Barcelona,FW,22,400,8,2,0,250,40,8,0,66.5,0.20,0
+Pau Victor,Barcelona,FW,22,400,8,2,0,250,40,8,0,66.5,0.2,0
 Lautaro Martinez,Inter,FW,27,3100,38,23,6,1300,210,35,0,92.0,0.28,1
 Marcus Thuram,Inter,FW,27,2900,36,15,9,1400,180,40,0,88.5,0.26,1
 Hakan Calhanoglu,Inter,MF,31,3000,37,11,8,2700,110,70,0,90.0,0.35,1
 Nicolo Barella,Inter,MF,28,3100,38,6,7,2600,90,95,0,89.5,0.24,1
 Henrikh Mkhitaryan,Inter,MF,35,2600,34,5,6,2300,80,65,1,85.0,0.45,1
 Alessandro Bastoni,Inter,DF,25,3000,36,1,4,2200,30,160,0,88.0,0.25,1
-Benjamin Pavard,Inter,DF,28,2700,33,2,2,1900,35,140,1,84.5,0.30,1
+Benjamin Pavard,Inter,DF,28,2700,33,2,2,1900,35,140,1,84.5,0.3,1
 Francesco Acerbi,Inter,DF,36,2600,34,1,1,1800,20,150,0,83.0,0.48,1
-Federico Dimarco,Inter,DF,27,2800,35,3,8,2100,70,130,1,87.0,0.30,1
+Federico Dimarco,Inter,DF,27,2800,35,3,8,2100,70,130,1,87.0,0.3,1
 Denzel Dumfries,Inter,DF,28,2600,33,4,5,1700,90,120,1,84.0,0.32,1
-Yann Sommer,Inter,GK,35,3400,38,0,0,900,0,10,0,90.0,0.40,1
-Alexis Sanchez,Inter,FW,36,1200,20,5,3,700,80,15,1,74.0,0.50,0
+Yann Sommer,Inter,GK,35,3400,38,0,0,900,0,10,0,90.0,0.4,1
+Alexis Sanchez,Inter,FW,36,1200,20,5,3,700,80,15,1,74.0,0.5,0
 Davide Frattesi,Inter,MF,25,1500,24,4,2,1100,60,55,0,78.0,0.22,0
 Carlos Augusto,Inter,DF,26,1400,22,1,3,1200,30,90,0,76.0,0.25,0
 Stefan de Vrij,Inter,DF,32,1600,24,1,0,1300,20,110,1,77.0,0.35,0
-Kristjan Asllani,Inter,MF,22,900,15,1,2,800,30,40,0,71.0,0.20,0
+Kristjan Asllani,Inter,MF,22,900,15,1,2,800,30,40,0,71.0,0.2,0
 Marko Arnautovic,Inter,FW,35,800,14,4,1,450,70,10,1,70.0,0.48,0
 Juan Cuadrado,Inter,DF,36,700,12,0,2,600,25,60,2,68.0,0.55,0
 Emil Audero,Inter,GK,28,300,5,0,0,150,0,5,0,67.5,0.22,0
 Matteo Darmian,Inter,DF,34,1100,18,0,1,900,15,85,0,73.0,0.38,0
-Sebastiano Esposito,Inter,FW,22,600,11,2,1,350,50,8,0,66.5,0.20,0
+Sebastiano Esposito,Inter,FW,22,600,11,2,1,350,50,8,0,66.5,0.2,0
 Dusan Vlahovic,Juventus,FW,25,3000,37,20,5,1100,210,25,0,90.0,0.28,1
 Federico Chiesa,Juventus,FW,27,2600,33,11,7,1400,180,30,1,85.5,0.35,1
 Kenan Yildiz,Juventus,FW,19,2200,30,8,6,1200,150,20,0,83.0,0.18,1
-Adrien Rabiot,Juventus,MF,29,2900,36,5,6,2400,90,95,0,87.0,0.30,1
+Adrien Rabiot,Juventus,MF,29,2900,36,5,6,2400,90,95,0,87.0,0.3,1
 Manuel Locatelli,Juventus,MF,27,3100,38,3,4,2700,70,110,0,88.5,0.25,1
 Weston McKennie,Juventus,MF,26,2700,34,6,5,2200,100,85,0,86.0,0.28,1
 Danilo,Juventus,DF,33,3000,36,2,2,2000,35,160,1,86.0,0.38,1
@@ -181,17 +181,17 @@ Alex Sandro,Juventus,DF,34,2600,32,1,3,1800,30,140,1,82.0,0.45,1
 Andrea Cambiaso,Juventus,DF,24,2400,30,2,4,1700,45,130,0,83.5,0.25,1
 Wojciech Szczesny,Juventus,GK,34,3400,38,0,0,900,0,12,0,90.0,0.35,1
 Arkadiusz Milik,Juventus,FW,31,1400,22,7,2,700,110,15,1,76.0,0.42,0
-Fabio Miretti,Juventus,MF,21,1200,20,2,3,950,50,45,0,73.5,0.20,0
+Fabio Miretti,Juventus,MF,21,1200,20,2,3,950,50,45,0,73.5,0.2,0
 Nicolo Fagioli,Juventus,MF,23,900,16,1,2,800,40,40,0,71.0,0.22,0
-Samuel Iling-Junior,Juventus,FW,21,800,14,3,2,500,90,15,0,70.5,0.20,0
+Samuel Iling-Junior,Juventus,FW,21,800,14,3,2,500,90,15,0,70.5,0.2,0
 Daniele Rugani,Juventus,DF,30,1000,15,1,0,800,15,85,1,72.0,0.35,0
-Mattia De Sciglio,Juventus,DF,31,600,10,0,1,500,10,60,2,68.0,0.50,0
+Mattia De Sciglio,Juventus,DF,31,600,10,0,1,500,10,60,2,68.0,0.5,0
 Carlo Pinsoglio,Juventus,GK,34,100,2,0,0,60,0,2,0,62.0,0.45,0
 Rafael Leao,AC Milan,FW,25,3100,38,17,9,1600,210,30,0,91.0,0.28,1
 Olivier Giroud,AC Milan,FW,38,2400,34,15,7,900,160,20,0,86.0,0.45,1
 Christian Pulisic,AC Milan,FW,26,2800,35,12,8,1400,180,25,1,87.5,0.32,1
 Theo Hernandez,AC Milan,DF,27,3000,36,5,7,2100,80,140,0,89.0,0.26,1
-Mike Maignan,AC Milan,GK,29,3300,37,0,0,850,0,10,1,90.0,0.30,1
+Mike Maignan,AC Milan,GK,29,3300,37,0,0,850,0,10,1,90.0,0.3,1
 Ismael Bennacer,AC Milan,MF,27,2600,33,3,5,2300,70,100,1,85.0,0.35,1
 Tijjani Reijnders,AC Milan,MF,26,3100,38,6,6,2700,90,85,0,89.0,0.25,1
 Davide Calabria,AC Milan,DF,28,2500,32,1,3,1900,40,120,1,82.5,0.32,1
@@ -200,38 +200,38 @@ Malick Thiaw,AC Milan,DF,23,2400,30,1,0,1700,20,145,0,83.0,0.22,1
 Yunus Musah,AC Milan,MF,22,1900,28,2,3,1600,60,75,0,78.5,0.22,0
 Ruben Loftus-Cheek,AC Milan,MF,29,2100,30,4,2,1800,90,70,1,81.0,0.35,0
 Samuel Chukwueze,AC Milan,FW,25,1600,24,6,3,900,140,20,0,77.5,0.25,0
-Alessandro Florenzi,AC Milan,DF,34,1400,22,1,2,1200,30,95,1,75.0,0.40,0
+Alessandro Florenzi,AC Milan,DF,34,1400,22,1,2,1200,30,95,1,75.0,0.4,0
 Luka Jovic,AC Milan,FW,27,900,16,4,1,450,70,10,0,71.0,0.28,0
-Marco Sportiello,AC Milan,GK,32,300,5,0,0,150,0,5,0,67.5,0.30,0
+Marco Sportiello,AC Milan,GK,32,300,5,0,0,150,0,5,0,67.5,0.3,0
 Victor Osimhen,Napoli,FW,26,2800,32,22,4,1000,210,30,1,91.0,0.35,1
 Khvicha Kvaratskhelia,Napoli,FW,24,3000,36,14,10,1700,200,35,0,90.0,0.28,1
-Matteo Politano,Napoli,FW,31,2600,34,8,7,1500,160,25,0,84.0,0.30,1
+Matteo Politano,Napoli,FW,31,2600,34,8,7,1500,160,25,0,84.0,0.3,1
 Stanislav Lobotka,Napoli,MF,30,3200,38,2,4,2900,60,120,0,90.0,0.25,1
-Piotr Zielinski,Napoli,MF,30,2700,34,6,8,2300,100,70,0,87.0,0.30,1
+Piotr Zielinski,Napoli,MF,30,2700,34,6,8,2300,100,70,0,87.0,0.3,1
 Andre-Frank Zambo Anguissa,Napoli,MF,29,3000,36,4,5,2400,80,130,1,88.0,0.32,1
 Giovanni Di Lorenzo,Napoli,DF,31,3300,38,3,4,2100,40,160,0,89.0,0.28,1
-Amir Rrahmani,Napoli,DF,30,3200,37,2,1,2000,25,175,0,88.5,0.30,1
+Amir Rrahmani,Napoli,DF,30,3200,37,2,1,2000,25,175,0,88.5,0.3,1
 Mathias Olivera,Napoli,DF,27,2600,32,1,3,1800,30,140,1,83.0,0.32,1
-Juan Jesus,Napoli,DF,33,2100,28,0,1,1600,15,130,1,79.0,0.40,1
+Juan Jesus,Napoli,DF,33,2100,28,0,1,1600,15,130,1,79.0,0.4,1
 Alex Meret,Napoli,GK,28,3400,38,0,0,900,0,12,0,90.0,0.25,1
 Giacomo Raspadori,Napoli,FW,24,1500,24,6,4,800,120,20,0,77.5,0.25,0
 Eljif Elmas,Napoli,MF,25,1300,22,3,2,1000,60,45,0,74.0,0.22,0
 Leo Ostigard,Napoli,DF,25,900,14,1,0,700,15,80,0,71.0,0.22,0
 Pierluigi Gollini,Napoli,GK,30,300,5,0,0,150,0,4,0,67.0,0.28,0
 Antoine Griezmann,Atletico Madrid,FW,33,3100,38,21,8,1700,190,40,0,92.0,0.32,1
-Alvaro Morata,Atletico Madrid,FW,32,2600,34,16,3,900,170,25,1,85.0,0.40,1
+Alvaro Morata,Atletico Madrid,FW,32,2600,34,16,3,900,170,25,1,85.0,0.4,1
 Angel Correa,Atletico Madrid,FW,29,2200,30,9,6,1200,140,30,0,82.5,0.28,1
-Rodrigo De Paul,Atletico Madrid,MF,30,3000,37,5,9,2600,110,85,0,89.0,0.30,1
+Rodrigo De Paul,Atletico Madrid,MF,30,3000,37,5,9,2600,110,85,0,89.0,0.3,1
 Koke,Atletico Madrid,MF,32,2800,35,2,6,2500,70,90,0,86.0,0.35,1
 Marcos Llorente,Atletico Madrid,MF,29,2900,36,6,5,2400,120,95,1,88.0,0.32,1
 Axel Witsel,Atletico Madrid,DF,35,2600,33,1,2,2100,25,150,0,83.0,0.45,1
 Jose Gimenez,Atletico Madrid,DF,29,2700,34,2,0,1900,30,165,1,85.0,0.35,1
 Nahuel Molina,Atletico Madrid,DF,26,2800,35,3,6,2000,80,130,0,87.0,0.28,1
 Reinildo Mandava,Atletico Madrid,DF,30,2400,30,0,2,1700,20,140,1,81.0,0.38,1
-Jan Oblak,Atletico Madrid,GK,31,3400,38,0,0,900,0,12,0,91.0,0.30,1
+Jan Oblak,Atletico Madrid,GK,31,3400,38,0,0,900,0,12,0,91.0,0.3,1
 Saul Niguez,Atletico Madrid,MF,30,1500,22,2,2,1300,50,60,1,75.0,0.38,0
 Memphis Depay,Atletico Madrid,FW,30,1400,20,7,3,700,120,15,2,77.0,0.48,0
-Cesar Azpilicueta,Atletico Madrid,DF,34,1200,18,0,1,1000,15,95,1,73.0,0.40,0
+Cesar Azpilicueta,Atletico Madrid,DF,34,1200,18,0,1,1000,15,95,1,73.0,0.4,0
 Samuel Lino,Atletico Madrid,FW,24,1300,21,4,3,900,110,25,0,74.5,0.22,0
 Mario Hermoso,Atletico Madrid,DF,29,1600,24,1,1,1300,20,110,1,76.0,0.32,0
 Rodrigo Riquelme,Atletico Madrid,FW,24,900,15,3,2,600,80,20,0,71.0,0.22,0
@@ -247,8 +247,8 @@ Nico Schlotterbeck,Borussia Dortmund,DF,25,3000,37,2,2,2100,35,175,0,88.5,0.28,1
 Julian Ryerson,Borussia Dortmund,DF,27,2600,33,1,3,1900,40,140,0,84.0,0.26,1
 Ian Maatsen,Borussia Dortmund,DF,22,2400,30,2,4,1800,60,120,0,83.0,0.22,1
 Gregor Kobel,Borussia Dortmund,GK,27,3400,38,0,0,850,0,10,0,91.0,0.25,1
-Youssoufa Moukoko,Borussia Dortmund,FW,20,1200,20,6,2,600,110,15,0,74.0,0.20,0
-Karim Adeyemi,Borussia Dortmund,FW,23,1400,22,5,4,800,130,20,1,75.5,0.30,0
+Youssoufa Moukoko,Borussia Dortmund,FW,20,1200,20,6,2,600,110,15,0,74.0,0.2,0
+Karim Adeyemi,Borussia Dortmund,FW,23,1400,22,5,4,800,130,20,1,75.5,0.3,0
 Felix Nmecha,Borussia Dortmund,MF,24,1300,21,2,2,1100,50,55,0,73.0,0.25,0
 Niklas Sule,Borussia Dortmund,DF,29,1500,22,1,0,1200,20,115,1,75.0,0.35,0
 Sebastien Haller,Borussia Dortmund,FW,30,900,15,4,1,450,80,10,2,70.0,0.45,0
@@ -267,17 +267,17 @@ Robert Sanchez,Chelsea,GK,27,3400,38,0,0,900,0,12,0,88.0,0.25,1
 Mykhailo Mudryk,Chelsea,FW,24,1500,24,4,4,900,140,20,0,75.0,0.25,0
 Christopher Nkunku,Chelsea,FW,27,900,14,5,2,500,100,15,3,72.0,0.55,0
 Noni Madueke,Chelsea,FW,22,1200,20,3,3,700,120,18,0,73.0,0.22,0
-Marc Cucurella,Chelsea,DF,26,1600,24,0,2,1300,20,100,1,74.0,0.30,0
-Lesley Ugochukwu,Chelsea,MF,21,800,14,1,1,700,30,60,0,69.0,0.20,0
+Marc Cucurella,Chelsea,DF,26,1600,24,0,2,1300,20,100,1,74.0,0.3,0
+Lesley Ugochukwu,Chelsea,MF,21,800,14,1,1,700,30,60,0,69.0,0.2,0
 Djordje Petrovic,Chelsea,GK,25,300,5,0,0,150,0,5,0,67.0,0.18,0
 Cristiano Ronaldo,Al Nassr,FW,39,3000,38,28,6,1200,220,20,1,88.0,0.55,1
-Sadio Mane,Al Nassr,FW,32,2800,36,15,8,1500,180,30,1,85.0,0.40,1
+Sadio Mane,Al Nassr,FW,32,2800,36,15,8,1500,180,30,1,85.0,0.4,1
 Talisca,Al Nassr,FW,31,2600,34,19,4,1100,200,25,0,87.0,0.35,1
 Marcelo Brozovic,Al Nassr,MF,32,3000,37,4,7,2700,90,100,0,89.0,0.32,1
 Otavio,Al Nassr,MF,29,2900,36,6,9,2600,120,85,0,88.0,0.28,1
 Abdulrahman Ghareeb,Al Nassr,FW,27,2400,32,7,6,1300,150,35,0,82.0,0.25,1
-Alex Telles,Al Nassr,DF,32,2700,34,3,7,2100,60,120,1,84.0,0.40,1
-Aymeric Laporte,Al Nassr,DF,30,3000,36,4,2,2000,35,160,0,88.0,0.30,1
+Alex Telles,Al Nassr,DF,32,2700,34,3,7,2100,60,120,1,84.0,0.4,1
+Aymeric Laporte,Al Nassr,DF,30,3000,36,4,2,2000,35,160,0,88.0,0.3,1
 Ali Lajami,Al Nassr,DF,28,2600,33,1,1,1800,20,140,0,82.0,0.28,1
 Sultan Al Ghannam,Al Nassr,DF,30,2500,32,1,3,1700,30,130,1,80.0,0.35,1
 David Ospina,Al Nassr,GK,35,3200,36,0,0,800,0,10,1,86.0,0.45,1
@@ -285,26 +285,26 @@ Anderson Talisca Junior,Al Nassr,FW,20,1200,18,4,2,600,90,15,0,72.0,0.22,0
 Sami Al Najei,Al Nassr,MF,28,1400,22,2,3,1100,50,60,0,74.0,0.28,0
 Abdullah Al Khaibari,Al Nassr,MF,27,1300,20,1,2,1000,40,65,0,72.5,0.25,0
 Nawaf Al Boushail,Al Nassr,DF,26,1200,19,0,1,900,15,80,0,71.0,0.22,0
-Mohammed Maran,Al Nassr,FW,23,900,15,3,1,500,70,12,0,69.5,0.20,0
-Wesley Teixeira,Al Nassr,DF,22,800,14,0,0,600,10,70,0,68.0,0.20,0
+Mohammed Maran,Al Nassr,FW,23,900,15,3,1,500,70,12,0,69.5,0.2,0
+Wesley Teixeira,Al Nassr,DF,22,800,14,0,0,600,10,70,0,68.0,0.2,0
 Amin Al Bukhari,Al Nassr,GK,27,300,5,0,0,150,0,5,0,66.5,0.22,0
 Lionel Messi,Inter Miami,FW,37,2900,34,25,18,2100,180,35,2,92.0,0.55,1
-Luis Suarez,Inter Miami,FW,38,2600,32,20,9,1200,190,25,1,87.0,0.50,1
+Luis Suarez,Inter Miami,FW,38,2600,32,20,9,1200,190,25,1,87.0,0.5,1
 Jordi Alba,Inter Miami,DF,35,2800,35,3,12,2300,70,110,1,86.0,0.45,1
 Sergio Busquets,Inter Miami,MF,36,3000,36,2,6,2800,60,95,0,88.0,0.48,1
 Diego Gomez,Inter Miami,MF,21,2500,33,6,5,2000,110,85,0,84.0,0.22,1
 Benjamin Cremaschi,Inter Miami,MF,19,2300,31,4,4,1900,90,80,0,82.0,0.18,1
 Leonardo Campana,Inter Miami,FW,24,2200,30,10,3,900,160,20,0,80.0,0.25,1
-Tomas Aviles,Inter Miami,DF,20,2600,34,1,1,1700,25,140,0,83.0,0.20,1
+Tomas Aviles,Inter Miami,DF,20,2600,34,1,1,1700,25,140,0,83.0,0.2,1
 David Ruiz,Inter Miami,DF,21,2400,32,1,2,1600,30,135,0,81.5,0.22,1
 DeAndre Yedlin,Inter Miami,DF,31,2700,35,0,4,1800,40,120,1,82.0,0.35,1
 Drake Callender,Inter Miami,GK,26,3400,38,0,0,900,0,12,0,89.0,0.25,1
 Robert Taylor,Inter Miami,FW,29,1600,24,6,4,900,120,18,0,76.0,0.28,0
-Facundo Farias,Inter Miami,FW,22,1400,22,5,3,800,110,15,1,74.5,0.30,0
-Victor Ulloa,Inter Miami,MF,32,1200,20,1,1,1000,30,70,1,72.0,0.40,0
+Facundo Farias,Inter Miami,FW,22,1400,22,5,3,800,110,15,1,74.5,0.3,0
+Victor Ulloa,Inter Miami,MF,32,1200,20,1,1,1000,30,70,1,72.0,0.4,0
 Kamala Miller,Inter Miami,DF,27,1300,21,0,1,1100,20,90,0,73.0,0.25,0
 Ryan Sailor,Inter Miami,DF,26,900,15,0,0,700,10,75,0,70.0,0.22,0
-CJ Dos Santos,Inter Miami,GK,23,300,5,0,0,150,0,5,0,66.0,0.20,0
+CJ Dos Santos,Inter Miami,GK,23,300,5,0,0,150,0,5,0,66.0,0.2,0
 Angel Di Maria,Benfica,FW,36,2600,34,12,14,1700,160,25,1,86.0,0.48,1
 Rafa Silva,Benfica,FW,31,2800,36,18,7,1500,190,30,0,89.0,0.32,1
 Joao Mario,Benfica,MF,31,3000,37,9,8,2600,110,70,0,88.0,0.35,1
@@ -315,43 +315,43 @@ Nicolas Otamendi,Benfica,DF,36,3000,36,4,1,1900,35,170,0,87.0,0.45,1
 Alexander Bah,Benfica,DF,27,2600,33,1,4,1800,40,135,1,82.0,0.32,1
 Juan Bernat,Benfica,DF,31,2400,30,0,3,1700,30,120,1,80.0,0.38,1
 Morato,Benfica,DF,23,2300,30,1,0,1600,20,145,0,81.0,0.22,1
-Anatoliy Trubin,Benfica,GK,23,3400,38,0,0,850,0,10,0,89.0,0.20,1
+Anatoliy Trubin,Benfica,GK,23,3400,38,0,0,850,0,10,0,89.0,0.2,1
 Casper Tengstedt,Benfica,FW,24,1400,22,6,2,700,110,15,0,74.5,0.25,0
-David Neres,Benfica,FW,27,1500,24,5,5,900,120,20,1,76.0,0.30,0
+David Neres,Benfica,FW,27,1500,24,5,5,900,120,20,1,76.0,0.3,0
 Chiquinho,Benfica,MF,29,1200,20,2,3,1000,40,60,0,73.0,0.28,0
 Samuel Soares,Benfica,GK,22,300,5,0,0,150,0,5,0,66.5,0.18,0
-Pepe,Porto,DF,41,2800,34,2,1,1900,25,170,1,85.0,0.60,1
-Evanilson,Porto,FW,25,2600,33,16,5,1100,190,25,0,87.0,0.30,1
+Pepe,Porto,DF,41,2800,34,2,1,1900,25,170,1,85.0,0.6,1
+Evanilson,Porto,FW,25,2600,33,16,5,1100,190,25,0,87.0,0.3,1
 Galeno,Porto,FW,27,2800,36,14,9,1600,200,35,0,88.5,0.28,1
 Otavio Ataide,Porto,MF,29,3000,37,6,8,2600,110,80,0,89.0,0.32,1
 Alan Varela,Porto,MF,23,3100,38,2,4,2800,60,130,0,88.0,0.22,1
 Stephen Eustaquio,Porto,MF,27,2700,34,4,3,2300,70,95,0,84.0,0.25,1
 Wendell,Porto,DF,31,2500,32,1,4,1800,40,120,1,81.0,0.35,1
 Joao Mario Costa,Porto,DF,24,2600,33,2,5,1900,50,130,0,83.0,0.25,1
-Fabio Cardoso,Porto,DF,30,2400,30,1,0,1700,20,150,0,82.0,0.30,1
+Fabio Cardoso,Porto,DF,30,2400,30,1,0,1700,20,150,0,82.0,0.3,1
 Diogo Costa,Porto,GK,25,3400,38,0,0,900,0,12,0,90.0,0.22,1
 Toni Martinez,Porto,FW,27,1300,22,6,1,650,110,15,0,74.0,0.28,0
 Nico Gonzalez,Porto,MF,23,1500,24,3,3,1200,60,65,0,75.5,0.22,0
 Samuel Portugal,Porto,GK,30,300,5,0,0,150,0,5,0,66.0,0.25,0
-Steven Bergwijn,Ajax,FW,27,2800,34,18,7,1500,190,30,0,88.0,0.30,1
+Steven Bergwijn,Ajax,FW,27,2800,34,18,7,1500,190,30,0,88.0,0.3,1
 Brian Brobbey,Ajax,FW,23,2600,33,17,4,900,200,25,0,87.0,0.25,1
 Steven Berghuis,Ajax,MF,32,2900,36,8,10,2400,120,70,0,88.5,0.35,1
 Kenneth Taylor,Ajax,MF,22,3000,37,6,6,2600,90,85,0,87.0,0.22,1
 Jordan Henderson,Ajax,MF,34,2700,34,2,4,2500,50,110,1,84.0,0.45,1
 Jorrel Hato,Ajax,DF,18,3100,38,2,3,2000,25,170,0,89.0,0.18,1
 Devyne Rensch,Ajax,DF,22,2600,33,1,2,1800,30,135,0,82.5,0.22,1
-Josip Sutalo,Ajax,DF,24,2800,35,1,1,1900,25,160,1,84.0,0.30,1
+Josip Sutalo,Ajax,DF,24,2800,35,1,1,1900,25,160,1,84.0,0.3,1
 Borna Sosa,Ajax,DF,26,2400,30,0,5,1700,40,120,1,80.0,0.32,1
-Diant Ramaj,Ajax,GK,23,3400,38,0,0,850,0,10,0,88.0,0.20,1
-Carlos Forbs,Ajax,FW,20,1200,20,4,3,700,110,15,0,72.5,0.20,0
+Diant Ramaj,Ajax,GK,23,3400,38,0,0,850,0,10,0,88.0,0.2,1
+Carlos Forbs,Ajax,FW,20,1200,20,4,3,700,110,15,0,72.5,0.2,0
 Silvano Vos,Ajax,MF,19,900,16,1,1,750,40,55,0,70.0,0.18,0
 Geronimo Rulli,Ajax,GK,32,400,6,0,0,200,0,6,0,68.0,0.35,0
 Harry Maguire,Man United,DF,32,3000,37,3,1,2100,35,170,0,86.0,0.34,1
 Bruno Fernandes,Man United,MF,30,3300,38,10,12,2800,140,95,0,91.0,0.28,1
 Marcus Rashford,Man United,FW,27,2900,36,17,6,1500,190,30,0,88.0,0.26,1
 Rasmus Hojlund,Man United,FW,22,2600,34,14,4,900,180,25,0,85.0,0.22,1
-Alejandro Garnacho,Man United,FW,20,2400,33,9,7,1200,160,28,0,83.5,0.20,1
-Casemiro,Man United,MF,33,2700,34,5,4,2300,90,120,1,85.5,0.40,1
+Alejandro Garnacho,Man United,FW,20,2400,33,9,7,1200,160,28,0,83.5,0.2,1
+Casemiro,Man United,MF,33,2700,34,5,4,2300,90,120,1,85.5,0.4,1
 Kobbie Mainoo,Man United,MF,19,2200,30,3,4,2000,70,85,0,82.0,0.18,1
 Lisandro Martinez,Man United,DF,27,2500,31,1,1,1800,25,155,1,84.0,0.32,1
 Diogo Dalot,Man United,DF,26,3000,37,2,4,2100,45,140,0,86.5,0.25,1
@@ -359,18 +359,18 @@ Luke Shaw,Man United,DF,29,2100,28,1,5,1700,40,110,2,80.0,0.45,1
 Andre Onana,Man United,GK,28,3400,38,0,0,950,0,12,0,89.0,0.25,1
 Christian Eriksen,Man United,MF,33,1600,24,2,5,1400,60,55,1,77.0,0.42,0
 Antony,Man United,FW,25,1700,26,4,3,900,140,20,0,75.0,0.28,0
-Mason Mount,Man United,MF,26,1200,20,2,2,1000,50,60,2,73.0,0.50,0
+Mason Mount,Man United,MF,26,1200,20,2,2,1000,50,60,2,73.0,0.5,0
 Victor Lindelof,Man United,DF,30,1500,22,1,0,1200,20,110,1,76.0,0.35,0
 Jadon Sancho,Man United,FW,24,900,16,3,3,600,110,15,0,71.0,0.25,0
 Altay Bayindir,Man United,GK,26,300,5,0,0,150,0,5,0,66.5,0.22,0
-Son Heung-min,Tottenham,FW,32,3100,38,21,9,1600,200,30,0,92.0,0.30,1
+Son Heung-min,Tottenham,FW,32,3100,38,21,9,1600,200,30,0,92.0,0.3,1
 James Maddison,Tottenham,MF,28,2900,36,10,12,2500,130,70,0,90.0,0.28,1
 Dejan Kulusevski,Tottenham,FW,24,2800,35,8,9,1700,170,35,0,86.5,0.24,1
 Richarlison,Tottenham,FW,27,2500,32,14,4,1100,180,25,1,84.0,0.35,1
 Yves Bissouma,Tottenham,MF,28,3000,37,3,4,2600,80,120,0,88.0,0.25,1
 Pape Matar Sarr,Tottenham,MF,22,2700,34,4,5,2200,90,110,0,85.0,0.22,1
-Cristian Romero,Tottenham,DF,26,2900,35,3,1,1900,40,180,1,87.5,0.30,1
-Micky van de Ven,Tottenham,DF,23,3000,36,2,2,2000,35,170,0,89.0,0.20,1
+Cristian Romero,Tottenham,DF,26,2900,35,3,1,1900,40,180,1,87.5,0.3,1
+Micky van de Ven,Tottenham,DF,23,3000,36,2,2,2000,35,170,0,89.0,0.2,1
 Pedro Porro,Tottenham,DF,25,2800,34,4,7,2100,80,120,0,87.0,0.25,1
 Destiny Udogie,Tottenham,DF,22,2600,32,2,5,1900,60,140,0,84.5,0.22,1
 Guglielmo Vicario,Tottenham,GK,27,3400,38,0,0,900,0,12,0,90.0,0.24,1
@@ -378,21 +378,21 @@ Brennan Johnson,Tottenham,FW,23,1600,24,6,4,900,120,20,0,76.0,0.22,0
 Giovani Lo Celso,Tottenham,MF,28,1400,22,3,4,1200,60,55,1,75.5,0.32,0
 Ben Davies,Tottenham,DF,31,1500,24,1,2,1300,20,110,1,76.0,0.38,0
 Fraser Forster,Tottenham,GK,36,300,5,0,0,150,0,5,0,66.0,0.45,0
-Florian Wirtz,Bayer Leverkusen,MF,21,3100,38,11,14,2700,140,75,0,92.0,0.20,1
-Victor Boniface,Bayer Leverkusen,FW,24,2600,32,18,6,1100,190,30,1,88.0,0.30,1
+Florian Wirtz,Bayer Leverkusen,MF,21,3100,38,11,14,2700,140,75,0,92.0,0.2,1
+Victor Boniface,Bayer Leverkusen,FW,24,2600,32,18,6,1100,190,30,1,88.0,0.3,1
 Jeremie Frimpong,Bayer Leverkusen,DF,24,3000,37,9,10,2200,120,140,0,90.0,0.24,1
 Granit Xhaka,Bayer Leverkusen,MF,32,3300,38,4,7,3000,80,125,0,91.0,0.35,1
-Alex Grimaldo,Bayer Leverkusen,DF,29,3100,38,10,13,2400,110,120,0,91.5,0.30,1
+Alex Grimaldo,Bayer Leverkusen,DF,29,3100,38,10,13,2400,110,120,0,91.5,0.3,1
 Jonathan Tah,Bayer Leverkusen,DF,28,3200,38,2,1,2100,25,185,0,89.0,0.26,1
 Edmond Tapsoba,Bayer Leverkusen,DF,26,3000,36,1,1,2000,20,175,0,88.0,0.24,1
 Piero Hincapie,Bayer Leverkusen,DF,22,2800,35,1,2,1900,30,160,0,85.5,0.22,1
 Exequiel Palacios,Bayer Leverkusen,MF,26,2700,34,3,5,2300,70,95,0,86.0,0.25,1
 Amine Adli,Bayer Leverkusen,FW,24,2400,32,7,6,1400,150,25,0,83.0,0.24,1
-Lukas Hradecky,Bayer Leverkusen,GK,35,3400,38,0,0,900,0,12,0,89.0,0.40,1
+Lukas Hradecky,Bayer Leverkusen,GK,35,3400,38,0,0,900,0,12,0,89.0,0.4,1
 Patrik Schick,Bayer Leverkusen,FW,29,1400,22,8,2,650,120,15,1,76.5,0.35,0
 Jonas Hofmann,Bayer Leverkusen,MF,32,1500,24,4,4,1300,80,45,1,77.0,0.38,0
 Nathan Tella,Bayer Leverkusen,FW,25,1200,20,5,3,700,110,18,0,74.5,0.25,0
-Matej Kovar,Bayer Leverkusen,GK,24,300,5,0,0,150,0,5,0,66.5,0.20,0
+Matej Kovar,Bayer Leverkusen,GK,24,300,5,0,0,150,0,5,0,66.5,0.2,0
 Youssef En-Nesyri,Sevilla,FW,27,3000,37,18,4,900,200,30,0,88.0,0.28,1
 Lucas Ocampos,Sevilla,FW,30,2800,35,10,7,1400,170,45,1,84.5,0.35,1
 Suso,Sevilla,FW,31,2400,32,6,8,1600,140,35,1,82.0,0.38,1
@@ -400,21 +400,21 @@ Ivan Rakitic,Sevilla,MF,36,3000,36,5,9,2700,90,75,0,88.0,0.45,1
 Boubakary Soumare,Sevilla,MF,25,2900,35,3,4,2400,70,120,0,86.0,0.24,1
 Joan Jordan,Sevilla,MF,30,2700,34,4,6,2300,85,95,0,85.0,0.32,1
 Jesus Navas,Sevilla,DF,38,2600,33,1,7,2100,40,110,1,83.0,0.55,1
-Sergio Ramos,Sevilla,DF,38,2800,34,4,1,1800,35,170,1,86.0,0.60,1
+Sergio Ramos,Sevilla,DF,38,2800,34,4,1,1800,35,170,1,86.0,0.6,1
 Loic Bade,Sevilla,DF,24,3000,36,1,0,2000,25,180,0,87.5,0.22,1
 Marcos Acuna,Sevilla,DF,32,2700,34,1,5,2200,50,140,1,84.0,0.38,1
-Orjan Nyland,Sevilla,GK,34,3400,38,0,0,900,0,12,0,89.0,0.40,1
+Orjan Nyland,Sevilla,GK,34,3400,38,0,0,900,0,12,0,89.0,0.4,1
 Rafa Mir,Sevilla,FW,27,1200,20,5,1,500,90,15,0,73.5,0.28,0
 Adnan Januzaj,Sevilla,FW,29,900,15,3,3,600,80,12,1,71.0,0.35,0
-Nemanja Gudelj,Sevilla,MF,32,1500,22,2,2,1300,40,85,1,75.0,0.40,0
+Nemanja Gudelj,Sevilla,MF,32,1500,22,2,2,1300,40,85,1,75.0,0.4,0
 Gonzalo Montiel,Sevilla,DF,27,1100,18,0,2,900,20,90,0,72.0,0.25,0
 Alberto Flores,Sevilla,GK,21,300,5,0,0,150,0,5,0,66.0,0.18,0
 Ciro Immobile,Lazio,FW,34,3000,36,20,5,900,210,20,1,89.0,0.45,1
 Felipe Anderson,Lazio,FW,31,2800,35,8,10,1600,160,35,0,86.0,0.32,1
-Mattia Zaccagni,Lazio,FW,29,2600,33,11,7,1500,180,30,0,86.5,0.30,1
+Mattia Zaccagni,Lazio,FW,29,2600,33,11,7,1500,180,30,0,86.5,0.3,1
 Luis Alberto,Lazio,MF,32,2900,36,6,12,2700,110,70,0,89.0,0.35,1
 Matteo Guendouzi,Lazio,MF,25,3100,38,4,6,2600,90,120,0,88.5,0.24,1
-Danilo Cataldi,Lazio,MF,30,2700,34,2,4,2300,60,110,0,85.0,0.30,1
+Danilo Cataldi,Lazio,MF,30,2700,34,2,4,2300,60,110,0,85.0,0.3,1
 Alessio Romagnoli,Lazio,DF,29,3000,36,2,1,2000,30,170,0,87.0,0.28,1
 Mario Gila,Lazio,DF,24,2900,35,1,0,1900,25,160,0,85.5,0.22,1
 Elseid Hysaj,Lazio,DF,30,2600,33,0,3,1800,20,135,1,82.0,0.35,1
@@ -424,27 +424,27 @@ Valentin Castellanos,Lazio,FW,26,1500,24,6,2,700,120,18,0,76.0,0.25,0
 Pedro Rodriguez,Lazio,FW,37,1200,20,5,4,800,100,15,1,75.0,0.48,0
 Nicolo Rovella,Lazio,MF,23,1300,22,1,3,1100,50,70,0,73.5,0.22,0
 Patric,Lazio,DF,31,900,15,0,0,750,15,95,1,70.0,0.35,0
-Luigi Sepe,Lazio,GK,33,300,5,0,0,150,0,5,0,66.5,0.30,0
+Luigi Sepe,Lazio,GK,33,300,5,0,0,150,0,5,0,66.5,0.3,0
 Lois Openda,RB Leipzig,FW,25,3000,36,24,6,1200,220,30,0,91.0,0.26,1
-Benjamin Sesko,RB Leipzig,FW,21,2600,34,17,5,900,190,25,0,86.0,0.20,1
+Benjamin Sesko,RB Leipzig,FW,21,2600,34,17,5,900,190,25,0,86.0,0.2,1
 Xavi Simons,RB Leipzig,MF,21,2900,35,9,13,2400,140,55,0,90.0,0.22,1
 Dani Olmo,RB Leipzig,MF,26,2700,32,8,9,2200,120,60,1,88.0,0.35,1
 Kevin Kampl,RB Leipzig,MF,34,2500,33,3,5,2300,70,95,0,84.0,0.42,1
 Nicolas Seiwald,RB Leipzig,MF,23,2600,34,2,4,2400,60,110,0,85.0,0.24,1
 Willi Orban,RB Leipzig,DF,32,3000,36,3,1,2000,30,180,0,88.0,0.35,1
 Mohamed Simakan,RB Leipzig,DF,24,2900,35,2,2,1900,35,165,0,86.0,0.24,1
-David Raum,RB Leipzig,DF,26,2800,34,2,8,2100,60,135,1,86.5,0.30,1
+David Raum,RB Leipzig,DF,26,2800,34,2,8,2100,60,135,1,86.5,0.3,1
 Lukas Klostermann,RB Leipzig,DF,28,2600,32,1,2,1800,25,140,1,83.0,0.32,1
 Peter Gulacsi,RB Leipzig,GK,34,3400,38,0,0,900,0,12,1,89.0,0.45,1
 Christoph Baumgartner,RB Leipzig,MF,25,1500,24,5,3,1200,90,45,0,77.5,0.25,0
 Yussuf Poulsen,RB Leipzig,FW,30,1400,22,6,3,700,120,20,1,76.0,0.35,0
-Castello Lukeba,RB Leipzig,DF,21,1300,20,0,1,1000,15,95,0,74.0,0.20,0
+Castello Lukeba,RB Leipzig,DF,21,1300,20,0,1,1000,15,95,0,74.0,0.2,0
 Benjamin Henrichs,RB Leipzig,DF,27,1200,18,1,1,950,20,85,0,73.5,0.22,0
 Janis Blaswich,RB Leipzig,GK,33,300,5,0,0,150,0,5,0,66.5,0.35,0
 Paulo Dybala,AS Roma,FW,31,2800,34,16,8,1500,180,25,1,89.0,0.38,1
 Romelu Lukaku,AS Roma,FW,31,3000,36,21,6,1100,210,30,0,90.0,0.32,1
 Lorenzo Pellegrini,AS Roma,MF,28,2900,35,8,10,2500,120,85,0,88.5,0.28,1
-Bryan Cristante,AS Roma,MF,30,3100,38,4,5,2700,80,120,0,89.0,0.30,1
+Bryan Cristante,AS Roma,MF,30,3100,38,4,5,2700,80,120,0,89.0,0.3,1
 Leandro Paredes,AS Roma,MF,30,2700,34,2,6,2600,60,95,0,86.0,0.32,1
 Edoardo Bove,AS Roma,MF,22,2400,32,3,3,2100,70,110,0,82.5,0.22,1
 Gianluca Mancini,AS Roma,DF,28,3000,36,3,1,2000,35,170,0,87.0,0.28,1
@@ -454,7 +454,7 @@ Leonardo Spinazzola,AS Roma,DF,31,2500,31,1,6,2000,50,130,1,83.5,0.38,1
 Mile Svilar,AS Roma,GK,25,3400,38,0,0,900,0,12,0,90.0,0.25,1
 Stephan El Shaarawy,AS Roma,FW,32,1600,24,5,4,900,120,20,0,76.5,0.32,0
 Sardar Azmoun,AS Roma,FW,29,1200,20,6,2,650,110,15,1,74.5,0.35,0
-Houssem Aouar,AS Roma,MF,26,1400,22,3,3,1200,60,55,1,75.0,0.30,0
+Houssem Aouar,AS Roma,MF,26,1400,22,3,3,1200,60,55,1,75.0,0.3,0
 Rick Karsdorp,AS Roma,DF,29,1300,20,0,2,1100,25,90,1,73.0,0.35,0
 Rui Patricio,AS Roma,GK,36,300,5,0,0,150,0,5,0,66.0,0.45,0
 Alexander Isak,Newcastle,FW,25,3000,37,22,5,1100,210,25,0,91.0,0.28,1
@@ -467,9 +467,9 @@ Kieran Trippier,Newcastle,DF,34,3100,37,1,9,2600,70,130,0,89.0,0.38,1
 Fabian Schar,Newcastle,DF,32,3000,36,4,1,2000,40,170,0,88.0,0.34,1
 Sven Botman,Newcastle,DF,25,2900,35,2,0,1900,25,180,1,87.0,0.32,1
 Dan Burn,Newcastle,DF,32,2600,33,1,1,1700,20,150,0,82.5,0.35,1
-Nick Pope,Newcastle,GK,32,3400,38,0,0,900,0,12,1,90.0,0.40,1
+Nick Pope,Newcastle,GK,32,3400,38,0,0,900,0,12,1,90.0,0.4,1
 Callum Wilson,Newcastle,FW,33,1400,22,8,2,650,120,15,2,76.0,0.55,0
-Joe Willock,Newcastle,MF,25,1500,24,3,4,1200,60,75,1,75.5,0.30,0
+Joe Willock,Newcastle,MF,25,1500,24,3,4,1200,60,75,1,75.5,0.3,0
 Lewis Miley,Newcastle,MF,18,1200,20,2,3,1000,50,65,0,73.0,0.18,0
 Jamaal Lascelles,Newcastle,DF,31,900,14,1,0,700,15,85,1,71.0,0.38,0
 Martin Dubravka,Newcastle,GK,35,300,5,0,0,150,0,5,0,66.0,0.45,0
@@ -478,47 +478,47 @@ Leon Bailey,Aston Villa,FW,26,2700,34,10,9,1500,170,35,0,86.0,0.25,1
 Moussa Diaby,Aston Villa,FW,25,2600,33,8,7,1400,180,25,0,84.0,0.24,1
 Douglas Luiz,Aston Villa,MF,26,3300,38,9,6,2900,100,120,0,91.0,0.25,1
 Boubacar Kamara,Aston Villa,MF,25,3000,36,2,4,2600,60,140,0,88.5,0.24,1
-John McGinn,Aston Villa,MF,30,3100,37,6,7,2500,110,115,0,89.0,0.30,1
+John McGinn,Aston Villa,MF,30,3100,37,6,7,2500,110,115,0,89.0,0.3,1
 Lucas Digne,Aston Villa,DF,31,2700,34,1,6,2200,50,120,1,84.0,0.38,1
 Pau Torres,Aston Villa,DF,28,3200,38,2,1,2100,30,170,0,89.0,0.26,1
 Ezri Konsa,Aston Villa,DF,27,3100,37,1,1,2000,25,165,0,88.0,0.25,1
 Matty Cash,Aston Villa,DF,27,2600,33,2,4,1900,60,130,1,83.5,0.32,1
-Emiliano Martinez,Aston Villa,GK,32,3400,38,0,0,900,0,12,0,91.0,0.30,1
+Emiliano Martinez,Aston Villa,GK,32,3400,38,0,0,900,0,12,0,91.0,0.3,1
 Youri Tielemans,Aston Villa,MF,27,1600,25,3,4,1400,70,60,0,77.0,0.28,0
-Jhon Duran,Aston Villa,FW,20,900,16,4,1,450,90,12,0,70.5,0.20,0
+Jhon Duran,Aston Villa,FW,20,900,16,4,1,450,90,12,0,70.5,0.2,0
 Diego Carlos,Aston Villa,DF,31,1200,18,1,0,900,15,95,1,73.0,0.38,0
 Robin Olsen,Aston Villa,GK,34,300,5,0,0,150,0,5,0,66.0,0.45,0
 Joao Pedro,Brighton,FW,23,2800,35,17,6,1200,190,25,0,88.0,0.24,1
-Kaoru Mitoma,Brighton,FW,27,2600,32,9,8,1400,170,30,1,85.0,0.30,1
+Kaoru Mitoma,Brighton,FW,27,2600,32,9,8,1400,170,30,1,85.0,0.3,1
 Simon Adingra,Brighton,FW,22,2400,31,7,6,1300,160,25,0,82.5,0.22,1
 Pascal Gross,Brighton,MF,33,3200,38,6,11,2800,120,95,0,90.0,0.34,1
 Billy Gilmour,Brighton,MF,23,3000,37,2,5,2600,60,110,0,86.5,0.22,1
-Carlos Baleba,Brighton,MF,21,2600,34,3,3,2200,80,125,0,84.0,0.20,1
-Pervis Estupinan,Brighton,DF,26,2800,35,2,7,2100,60,140,1,86.0,0.30,1
+Carlos Baleba,Brighton,MF,21,2600,34,3,3,2200,80,125,0,84.0,0.2,1
+Pervis Estupinan,Brighton,DF,26,2800,35,2,7,2100,60,140,1,86.0,0.3,1
 Lewis Dunk,Brighton,DF,33,3300,38,3,1,2200,35,185,0,90.0,0.35,1
 Jan Paul van Hecke,Brighton,DF,24,3000,36,1,0,2000,20,170,0,87.0,0.24,1
 Tariq Lamptey,Brighton,DF,24,2500,32,1,4,1900,50,120,1,82.0,0.35,1
 Bart Verbruggen,Brighton,GK,22,3400,38,0,0,900,0,12,0,89.0,0.22,1
 Danny Welbeck,Brighton,FW,34,1300,22,5,2,700,100,15,1,74.0,0.45,0
-Julio Enciso,Brighton,FW,21,1100,18,3,3,600,90,18,1,72.0,0.30,0
+Julio Enciso,Brighton,FW,21,1100,18,3,3,600,90,18,1,72.0,0.3,0
 Igor Julio,Brighton,DF,26,900,14,0,0,700,10,85,0,70.0,0.25,0
 Jason Steele,Brighton,GK,33,300,5,0,0,150,0,5,0,66.0,0.35,0
 Victor Gyokeres,Sporting CP,FW,26,3200,38,29,10,1200,230,35,0,93.0,0.26,1
 Pedro Goncalves,Sporting CP,MF,26,3000,37,18,12,2400,160,70,0,91.0,0.25,1
 Francisco Trincao,Sporting CP,FW,24,2800,35,10,9,1600,180,30,0,86.0,0.24,1
-Marcus Edwards,Sporting CP,FW,26,2600,33,11,8,1500,170,28,1,85.0,0.30,1
+Marcus Edwards,Sporting CP,FW,26,2600,33,11,8,1500,170,28,1,85.0,0.3,1
 Morten Hjulmand,Sporting CP,MF,25,3100,38,3,4,2800,70,140,0,89.0,0.24,1
 Daniel Braganca,Sporting CP,MF,25,2500,32,4,6,2200,90,85,0,84.0,0.25,1
-Goncalo Inacio,Sporting CP,DF,23,3200,38,3,2,2100,30,180,0,90.0,0.20,1
-Sebastian Coates,Sporting CP,DF,34,3000,36,5,1,1900,40,170,0,88.0,0.40,1
+Goncalo Inacio,Sporting CP,DF,23,3200,38,3,2,2100,30,180,0,90.0,0.2,1
+Sebastian Coates,Sporting CP,DF,34,3000,36,5,1,1900,40,170,0,88.0,0.4,1
 Jerry St Juste,Sporting CP,DF,28,2600,32,1,1,1800,25,150,1,82.5,0.35,1
-Nuno Santos,Sporting CP,DF,29,2700,34,2,6,2000,60,135,0,85.0,0.30,1
+Nuno Santos,Sporting CP,DF,29,2700,34,2,6,2000,60,135,0,85.0,0.3,1
 Antonio Adan,Sporting CP,GK,37,3300,37,0,0,850,0,10,1,87.0,0.48,1
 Paulinho,Sporting CP,FW,31,1400,22,6,3,700,110,15,0,74.0,0.35,0
-Hidemasa Morita,Sporting CP,MF,29,1600,24,2,3,1400,50,80,0,76.0,0.30,0
+Hidemasa Morita,Sporting CP,MF,29,1600,24,2,3,1400,50,80,0,76.0,0.3,0
 Ricardo Esgaio,Sporting CP,DF,31,1200,20,0,2,1000,20,90,1,72.0,0.38,0
-Franco Israel,Sporting CP,GK,24,300,5,0,0,150,0,5,0,66.5,0.20,0
-Serhou Guirassy,Stuttgart,FW,28,3000,36,28,5,900,220,25,0,92.0,0.30,1
+Franco Israel,Sporting CP,GK,24,300,5,0,0,150,0,5,0,66.5,0.2,0
+Serhou Guirassy,Stuttgart,FW,28,3000,36,28,5,900,220,25,0,92.0,0.3,1
 Chris Fuhrich,Stuttgart,FW,26,2800,35,10,11,1600,170,35,0,87.0,0.25,1
 Enzo Millot,Stuttgart,MF,22,2700,34,6,7,2300,110,85,0,85.0,0.22,1
 Angelo Stiller,Stuttgart,MF,23,3100,38,3,5,2700,70,130,0,89.0,0.22,1
@@ -531,9 +531,9 @@ Alexander Nubel,Stuttgart,GK,27,3400,38,0,0,900,0,12,0,90.0,0.25,1
 Silas Katompa Mvumpa,Stuttgart,FW,26,1500,24,5,4,800,120,18,1,76.0,0.32,0
 Jamie Leweling,Stuttgart,FW,23,1300,22,4,3,700,110,20,0,74.0,0.22,0
 Anthony Rouault,Stuttgart,DF,23,900,15,0,0,700,15,90,0,70.5,0.22,0
-Fabian Bredlow,Stuttgart,GK,29,300,5,0,0,150,0,5,0,66.0,0.30,0
+Fabian Bredlow,Stuttgart,GK,29,300,5,0,0,150,0,5,0,66.0,0.3,0
 Wissam Ben Yedder,Monaco,FW,34,2900,36,20,6,1100,190,25,1,88.0,0.42,1
-Takumi Minamino,Monaco,FW,30,2600,34,9,7,1500,160,30,0,84.0,0.30,1
+Takumi Minamino,Monaco,FW,30,2600,34,9,7,1500,160,30,0,84.0,0.3,1
 Breel Embolo,Monaco,FW,27,2400,31,11,5,1200,170,35,1,83.0,0.32,1
 Aleksandr Golovin,Monaco,MF,28,3000,37,8,10,2600,120,85,0,89.0,0.28,1
 Youssouf Fofana,Monaco,MF,26,3200,38,4,5,2800,80,140,0,90.0,0.24,1
@@ -545,11 +545,11 @@ Vanderson,Monaco,DF,23,2700,33,2,4,2000,60,135,0,84.0,0.22,1
 Philipp Kohn,Monaco,GK,26,3400,38,0,0,900,0,12,0,89.0,0.25,1
 Folarin Balogun,Monaco,FW,23,1500,24,7,2,700,120,18,0,76.0,0.22,0
 Mohamed Camara,Monaco,MF,24,1400,22,1,2,1200,40,90,0,73.5,0.22,0
-Ismail Jakobs,Monaco,DF,25,1200,19,0,2,1000,20,95,1,72.0,0.30,0
+Ismail Jakobs,Monaco,DF,25,1200,19,0,2,1000,20,95,1,72.0,0.3,0
 Radoslaw Majecki,Monaco,GK,25,300,5,0,0,150,0,5,0,66.5,0.22,0
 Jonathan David,Lille,FW,24,3200,38,19,6,1200,210,30,0,91.0,0.24,1
 Edon Zhegrova,Lille,FW,25,2800,35,11,8,1500,180,35,0,86.0,0.25,1
-Remy Cabella,Lille,MF,34,2600,34,7,9,2400,110,70,0,86.5,0.40,1
+Remy Cabella,Lille,MF,34,2600,34,7,9,2400,110,70,0,86.5,0.4,1
 Benjamin Andre,Lille,MF,33,3300,38,3,5,2800,70,150,0,90.0,0.35,1
 Angel Gomes,Lille,MF,23,3000,37,4,7,2600,100,95,0,88.0,0.22,1
 Nabil Bentaleb,Lille,MF,30,2700,34,3,4,2300,80,120,1,84.0,0.38,1
@@ -559,23 +559,23 @@ Ismaily,Lille,DF,34,2400,30,0,5,1800,40,120,1,80.0,0.45,1
 Bafode Diakite,Lille,DF,24,2600,33,1,2,1900,30,140,0,83.5,0.22,1
 Lucas Chevalier,Lille,GK,23,3400,38,0,0,900,0,12,0,90.0,0.22,1
 Adam Ounas,Lille,FW,27,1300,22,4,3,700,100,15,1,73.5,0.32,0
-Ignacio Miramon,Lille,MF,21,1100,18,1,2,900,40,65,0,71.0,0.20,0
+Ignacio Miramon,Lille,MF,21,1100,18,1,2,900,40,65,0,71.0,0.2,0
 Samuel Umtiti,Lille,DF,31,900,14,0,0,750,10,90,2,69.0,0.48,0
 Vito Mannone,Lille,GK,36,300,5,0,0,150,0,5,0,66.0,0.45,0
 Randal Kolo Muani,Eintracht Frankfurt,FW,26,3100,37,20,6,1100,210,30,0,90.0,0.28,1
 Mario Gotze,Eintracht Frankfurt,MF,32,2800,35,6,9,2400,100,70,0,86.0,0.35,1
 Omar Marmoush,Eintracht Frankfurt,FW,25,2900,36,17,8,1400,190,35,0,88.5,0.26,1
 Ansgar Knauff,Eintracht Frankfurt,FW,23,2600,33,8,6,1300,160,30,0,83.0,0.22,1
-Ellyes Skhiri,Eintracht Frankfurt,MF,29,3200,38,4,5,2800,80,145,0,90.0,0.30,1
-Hugo Larsson,Eintracht Frankfurt,MF,20,3000,37,3,4,2600,70,130,0,88.0,0.20,1
+Ellyes Skhiri,Eintracht Frankfurt,MF,29,3200,38,4,5,2800,80,145,0,90.0,0.3,1
+Hugo Larsson,Eintracht Frankfurt,MF,20,3000,37,3,4,2600,70,130,0,88.0,0.2,1
 Robin Koch,Eintracht Frankfurt,DF,28,3100,37,2,1,2000,25,180,0,89.0,0.26,1
 Tuta,Eintracht Frankfurt,DF,25,2900,35,1,1,1900,20,165,0,86.0,0.24,1
 Niels Nkounkou,Eintracht Frankfurt,DF,23,2600,33,2,5,2000,60,140,0,85.0,0.22,1
 Aurelio Buta,Eintracht Frankfurt,DF,27,2500,32,1,3,1800,40,130,1,82.0,0.32,1
 Kevin Trapp,Eintracht Frankfurt,GK,33,3400,38,0,0,900,0,12,0,90.0,0.35,1
 Farès Chaïbi,Eintracht Frankfurt,MF,21,1500,24,4,4,1200,80,55,0,76.0,0.22,0
-Paxten Aaronson,Eintracht Frankfurt,MF,21,1200,20,2,3,1000,60,45,0,73.5,0.20,0
-Makoto Hasebe,Eintracht Frankfurt,DF,40,1100,18,0,1,900,10,95,1,71.0,0.60,0
+Paxten Aaronson,Eintracht Frankfurt,MF,21,1200,20,2,3,1000,60,45,0,73.5,0.2,0
+Makoto Hasebe,Eintracht Frankfurt,DF,40,1100,18,0,1,900,10,95,1,71.0,0.6,0
 Jens Grahl,Eintracht Frankfurt,GK,36,300,5,0,0,150,0,5,0,66.0,0.45,0
 Cody Gakpo-PSV,PSV,FW,25,3000,37,21,8,1300,200,25,0,90.0,0.26,1
 Luuk de Jong,PSV,FW,33,2900,36,23,9,900,210,20,0,89.0,0.38,1
@@ -585,8 +585,8 @@ Joey Veerman,PSV,MF,26,3100,38,8,12,2800,120,85,0,91.0,0.25,1
 Jerdy Schouten,PSV,MF,27,3200,38,3,5,2900,70,140,0,90.0,0.24,1
 Olivier Boscagli,PSV,DF,26,3000,36,2,4,2200,30,170,0,88.0,0.26,1
 Jordan Teze,PSV,DF,25,2900,35,1,3,2100,35,160,0,86.5,0.24,1
-Sergino Dest,PSV,DF,24,2700,34,2,6,2000,60,130,1,85.0,0.30,1
-Patrick van Aanholt,PSV,DF,33,2600,33,1,5,1900,45,120,1,82.0,0.40,1
+Sergino Dest,PSV,DF,24,2700,34,2,6,2000,60,130,1,85.0,0.3,1
+Patrick van Aanholt,PSV,DF,33,2600,33,1,5,1900,45,120,1,82.0,0.4,1
 Walter Benitez,PSV,GK,31,3400,38,0,0,900,0,12,0,90.0,0.28,1
 Ricardo Pepi,PSV,FW,21,1400,22,7,2,650,110,15,0,75.5,0.22,0
 Guus Til,PSV,MF,26,1600,24,5,3,1200,80,60,0,77.0,0.25,0
@@ -604,25 +604,25 @@ Aihen Munoz,Real Sociedad,DF,27,2600,33,0,4,1800,30,140,1,82.0,0.32,1
 Hamari Traore,Real Sociedad,DF,32,2400,30,1,5,1900,40,130,1,81.0,0.38,1
 Alex Remiro,Real Sociedad,GK,29,3400,38,0,0,900,0,12,0,90.0,0.25,1
 Andre Silva,Real Sociedad,FW,29,1200,20,5,2,650,110,15,1,73.5,0.32,0
-Arsen Zakharyan,Real Sociedad,MF,21,1400,22,2,4,1200,60,55,0,74.0,0.20,0
+Arsen Zakharyan,Real Sociedad,MF,21,1400,22,2,4,1200,60,55,0,74.0,0.2,0
 Jon Pacheco,Real Sociedad,DF,23,1000,16,0,0,800,10,95,0,71.0,0.22,0
 Unai Marrero,Real Sociedad,GK,22,300,5,0,0,150,0,5,0,66.0,0.18,0
 Martin Terrier,Rennes,FW,27,3000,36,18,7,1400,200,30,0,89.0,0.26,1
 Amine Gouiri,Rennes,FW,24,2800,34,12,8,1500,180,35,0,86.0,0.24,1
-Benjamin Bourigeaud,Rennes,MF,30,3200,38,9,11,2800,120,110,0,91.0,0.30,1
+Benjamin Bourigeaud,Rennes,MF,30,3200,38,9,11,2800,120,110,0,91.0,0.3,1
 Baptiste Santamaria,Rennes,MF,29,2900,35,2,4,2500,60,135,0,86.0,0.28,1
 Enzo Le Fee,Rennes,MF,24,2700,33,4,7,2300,90,95,0,85.0,0.24,1
 Arthur Theate,Rennes,DF,24,3100,37,2,1,2100,25,180,0,89.0,0.24,1
 Christopher Wooh,Rennes,DF,22,2800,34,1,0,1900,20,165,0,85.0,0.22,1
 Adrien Truffert,Rennes,DF,23,2600,33,1,6,2000,45,140,0,84.0,0.22,1
-Guela Doue,Rennes,DF,21,2400,31,0,3,1800,30,130,0,81.0,0.20,1
+Guela Doue,Rennes,DF,21,2400,31,0,3,1800,30,130,0,81.0,0.2,1
 Steve Mandanda,Rennes,GK,39,3200,36,0,0,850,0,10,1,86.0,0.55,1
 Desire Doue,Rennes,FW,19,1600,24,5,4,900,120,20,0,76.0,0.18,0
-Bertug Yildirim,Rennes,FW,21,900,15,3,1,500,80,12,0,69.5,0.20,0
+Bertug Yildirim,Rennes,FW,21,900,15,3,1,500,80,12,0,69.5,0.2,0
 Fabien Centonze,Rennes,DF,28,1100,18,0,1,900,15,95,1,72.0,0.32,0
 Gauthier Gallon,Rennes,GK,31,300,5,0,0,150,0,5,0,66.0,0.35,0
 Moussa Dembele,Atletico Madrid,FW,28,1500,24,7,3,700,130,20,1,76.0,0.32,0
-Lautaro Giannetti,Udinese,DF,30,3000,36,2,1,2000,25,175,0,86.0,0.30,1
+Lautaro Giannetti,Udinese,DF,30,3000,36,2,1,2000,25,175,0,86.0,0.3,1
 Beto,Udinese,FW,26,2900,35,14,4,900,200,30,0,85.0,0.28,1
 Florian Thauvin,Udinese,FW,31,2700,34,8,7,1500,160,35,1,83.0,0.35,1
 Lazar Samardzic,Udinese,MF,22,2800,35,6,8,2400,120,85,0,87.0,0.22,1
@@ -638,7 +638,7 @@ Oier Zarraga,Udinese,MF,24,1400,22,2,3,1200,50,75,0,74.0,0.22,0
 Adam Masina,Udinese,DF,30,900,15,0,1,750,15,95,1,70.0,0.35,0
 Daniele Padelli,Udinese,GK,39,300,5,0,0,150,0,5,0,66.0,0.55,0
 Gerard Moreno,Villarreal,FW,32,3000,36,18,9,1400,200,30,1,90.0,0.38,1
-Alexander Sorloth,Villarreal,FW,28,2900,35,20,6,1000,210,25,0,89.0,0.30,1
+Alexander Sorloth,Villarreal,FW,28,2900,35,20,6,1000,210,25,0,89.0,0.3,1
 Yeremy Pino,Villarreal,FW,21,2600,33,7,6,1300,160,40,0,84.0,0.22,1
 Dani Parejo,Villarreal,MF,35,3100,38,4,11,2900,90,85,0,89.0,0.45,1
 Etienne Capoue,Villarreal,MF,36,2700,34,3,4,2400,70,130,0,85.0,0.48,1
@@ -649,11 +649,11 @@ Juan Foyth,Villarreal,DF,26,2900,35,1,2,1900,25,160,0,87.0,0.24,1
 Alfonso Pedraza,Villarreal,DF,28,2600,33,1,5,2000,45,135,1,84.0,0.32,1
 Filip Jorgensen,Villarreal,GK,22,3400,38,0,0,900,0,12,0,89.0,0.22,1
 Jose Luis Morales,Villarreal,FW,36,1400,22,6,3,700,110,15,1,74.0,0.48,0
-Ramon Terrats,Villarreal,MF,23,1200,20,2,2,1000,50,70,0,72.5,0.20,0
-Aissa Mandi,Villarreal,DF,33,1100,18,0,0,900,15,95,1,72.0,0.40,0
-Pepe Reina,Villarreal,GK,42,300,5,0,0,150,0,5,0,66.0,0.60,0
+Ramon Terrats,Villarreal,MF,23,1200,20,2,2,1000,50,70,0,72.5,0.2,0
+Aissa Mandi,Villarreal,DF,33,1100,18,0,0,900,15,95,1,72.0,0.4,0
+Pepe Reina,Villarreal,GK,42,300,5,0,0,150,0,5,0,66.0,0.6,0
 Goncalo Ramos,Benfica,FW,23,3000,36,21,6,1100,210,30,0,90.0,0.28,1
-David Neres-BEN,Benfica,FW,27,2600,34,9,11,1600,170,35,0,86.0,0.30,1
+David Neres-BEN,Benfica,FW,27,2600,34,9,11,1600,170,35,0,86.0,0.3,1
 Fredrik Aursnes,Benfica,MF,28,3200,38,4,7,2800,80,140,0,90.0,0.25,1
 Joao Neves,Benfica,MF,19,3100,37,3,5,2900,70,150,0,91.0,0.18,1
 Angel Di Maria-BEN,Benfica,FW,36,2400,32,10,12,1700,150,25,1,85.0,0.48,1
@@ -661,7 +661,7 @@ Alexander Bah-BEN,Benfica,DF,27,2800,34,1,5,1900,45,135,1,83.0,0.32,1
 Antonio Silva-BEN,Benfica,DF,21,3300,38,2,1,2200,25,185,0,91.0,0.18,1
 Nicolas Otamendi-BEN,Benfica,DF,36,3100,36,4,1,2000,35,175,0,88.0,0.45,1
 Morato-BEN,Benfica,DF,23,2500,32,1,0,1700,20,150,0,83.0,0.22,1
-Anatoliy Trubin-BEN,Benfica,GK,23,3400,38,0,0,900,0,12,0,89.0,0.20,1
+Anatoliy Trubin-BEN,Benfica,GK,23,3400,38,0,0,900,0,12,0,89.0,0.2,1
 Casper Tengstedt-BEN,Benfica,FW,24,1300,22,5,2,650,100,15,0,73.5,0.25,0
 Florentino Luis-BEN,Benfica,MF,25,1500,24,1,2,1300,40,90,0,74.0,0.22,0
 Samuel Soares-BEN,Benfica,GK,22,300,5,0,0,150,0,5,0,66.5,0.18,0
@@ -680,23 +680,23 @@ Jonathan Ikone,Fiorentina,FW,26,1500,24,4,3,800,110,20,0,73.5,0.25,0
 Alfred Duncan,Fiorentina,MF,30,1200,20,1,2,1000,40,70,1,72.0,0.38,0
 Oliver Christensen,Fiorentina,GK,25,300,5,0,0,150,0,5,0,66.0,0.22,0
 Dominik Szoboszlai,RB Salzburg,MF,23,3000,37,10,14,2600,130,85,0,90.0,0.24,1
-Karim Konate,RB Salzburg,FW,20,2600,34,18,6,900,190,25,0,86.5,0.20,1
+Karim Konate,RB Salzburg,FW,20,2600,34,18,6,900,190,25,0,86.5,0.2,1
 Oscar Gloukh,RB Salzburg,MF,20,2800,35,9,10,2400,120,70,0,87.5,0.18,1
-Nene Dorgeles,RB Salzburg,FW,21,2400,32,11,7,1300,170,30,0,83.0,0.20,1
+Nene Dorgeles,RB Salzburg,FW,21,2400,32,11,7,1300,170,30,0,83.0,0.2,1
 Lucas Gourna-Douath,RB Salzburg,MF,21,2900,36,3,4,2600,80,140,0,88.0,0.22,1
 Strahinja Pavlovic,RB Salzburg,DF,23,3100,38,3,1,2000,30,180,0,89.5,0.24,1
 Oumar Solet,RB Salzburg,DF,24,3000,37,2,1,1900,25,175,0,88.0,0.22,1
-Amar Dedic,RB Salzburg,DF,21,2700,34,2,6,2100,60,135,0,85.0,0.20,1
+Amar Dedic,RB Salzburg,DF,21,2700,34,2,6,2100,60,135,0,85.0,0.2,1
 Andreas Ulmer,RB Salzburg,DF,38,2400,30,1,5,1900,40,120,1,82.0,0.55,1
 Alexander Schlager,RB Salzburg,GK,28,3400,38,0,0,900,0,12,0,89.0,0.28,1
 Petar Ratkov,RB Salzburg,FW,20,1200,20,5,2,600,110,15,0,72.5,0.18,0
 Maurits Kjaergaard,RB Salzburg,MF,20,1400,22,3,4,1200,70,60,0,74.0,0.18,0
-Bryan Okoh,RB Salzburg,DF,21,900,15,0,0,700,10,90,0,70.0,0.20,0
+Bryan Okoh,RB Salzburg,DF,21,900,15,0,0,700,10,90,0,70.0,0.2,0
 Nico Mantl,RB Salzburg,GK,23,300,5,0,0,150,0,5,0,66.0,0.18,0
-Hugo Ekitike,PSG,FW,22,1400,22,6,2,700,120,15,1,74.0,0.30,0
+Hugo Ekitike,PSG,FW,22,1400,22,6,2,700,120,15,1,74.0,0.3,0
 Martin Terrier,Lyon,FW,27,3000,36,17,8,1500,200,30,0,89.0,0.26,1
 Alexandre Lacazette,Lyon,FW,33,2900,36,19,6,1000,190,25,0,88.0,0.38,1
-Rayan Cherki,Lyon,MF,21,2700,34,8,11,2300,120,65,0,87.0,0.20,1
+Rayan Cherki,Lyon,MF,21,2700,34,8,11,2300,120,65,0,87.0,0.2,1
 Corentin Tolisso,Lyon,MF,30,2600,33,5,6,2200,90,110,1,84.0,0.35,1
 Maxence Caqueret,Lyon,MF,24,3000,37,3,5,2600,70,130,0,88.5,0.24,1
 Jake OBrien,Lyon,DF,22,3100,38,2,1,2000,25,185,0,90.0,0.22,1
@@ -704,16 +704,16 @@ Duje Caleta-Car,Lyon,DF,28,2900,35,1,0,1900,20,165,0,86.0,0.26,1
 Nicolas Tagliafico,Lyon,DF,31,2700,34,1,6,2100,45,140,1,84.0,0.35,1
 Sael Kumbedi,Lyon,DF,19,2500,32,0,3,1800,30,135,0,81.0,0.18,1
 Anthony Lopes,Lyon,GK,33,3400,38,0,0,900,0,12,0,90.0,0.35,1
-Gift Orban,Lyon,FW,21,1100,18,5,1,500,100,12,0,71.0,0.20,0
+Gift Orban,Lyon,FW,21,1100,18,5,1,500,100,12,0,71.0,0.2,0
 Jeffinho,Lyon,FW,24,1200,20,4,2,650,110,15,0,72.5,0.22,0
-Johann Lepenant,Lyon,MF,21,1000,18,1,2,900,40,65,0,70.0,0.20,0
-Devis Epassy,Lyon,GK,31,300,5,0,0,150,0,5,0,66.0,0.30,0
-Alvaro Negredo,Cadiz,FW,38,2400,32,10,3,800,150,25,1,80.0,0.50,1
+Johann Lepenant,Lyon,MF,21,1000,18,1,2,900,40,65,0,70.0,0.2,0
+Devis Epassy,Lyon,GK,31,300,5,0,0,150,0,5,0,66.0,0.3,0
+Alvaro Negredo,Cadiz,FW,38,2400,32,10,3,800,150,25,1,80.0,0.5,1
 Ruben Alcaraz,Cadiz,MF,33,3000,37,4,5,2500,90,120,0,86.0,0.38,1
 Fede San Emeterio,Cadiz,MF,27,2800,35,2,3,2300,70,110,0,83.5,0.26,1
-Ivan Alejo,Cadiz,FW,29,2600,34,6,6,1400,160,35,0,82.0,0.30,1
+Ivan Alejo,Cadiz,FW,29,2600,34,6,6,1400,160,35,0,82.0,0.3,1
 Chris Ramos,Cadiz,FW,27,2700,35,9,4,900,180,30,0,84.0,0.28,1
-Luis Hernandez,Cadiz,DF,34,3100,38,1,1,2100,20,180,0,87.0,0.40,1
+Luis Hernandez,Cadiz,DF,34,3100,38,1,1,2100,20,180,0,87.0,0.4,1
 Victor Chust,Cadiz,DF,25,3000,37,1,0,2000,25,170,0,86.0,0.25,1
 Isaac Carcelen,Cadiz,DF,30,2800,35,0,3,1900,30,150,1,83.0,0.35,1
 Jorge Mere,Cadiz,DF,27,2600,33,1,0,1800,20,145,0,82.0,0.28,1
@@ -722,12 +722,12 @@ Conan Ledesma,Cadiz,GK,31,3400,38,0,0,900,0,12,0,89.0,0.28,1
 Darwin Machis,Cadiz,FW,31,1400,22,4,2,700,110,18,1,74.0,0.38,0
 Alex Fernandez,Cadiz,MF,31,1200,20,1,1,1000,40,70,0,72.5,0.32,0
 Fali Jimenez,Cadiz,DF,30,1000,16,0,0,800,10,95,1,70.0,0.35,0
-David Gil,Cadiz,GK,30,300,5,0,0,150,0,5,0,66.0,0.30,0
+David Gil,Cadiz,GK,30,300,5,0,0,150,0,5,0,66.0,0.3,0
 Borja Iglesias,Real Betis,FW,31,2900,36,17,5,1000,190,25,0,88.0,0.32,1
 Isco,Real Betis,MF,32,3000,37,7,11,2600,120,85,0,90.0,0.35,1
-Ayoze Perez,Real Betis,FW,30,2600,34,10,7,1500,170,30,0,85.0,0.30,1
-Nabil Fekir,Real Betis,MF,31,2400,30,6,8,2000,140,60,1,84.0,0.40,1
-Guido Rodriguez,Real Betis,MF,30,3200,38,3,4,2800,70,150,0,90.0,0.30,1
+Ayoze Perez,Real Betis,FW,30,2600,34,10,7,1500,170,30,0,85.0,0.3,1
+Nabil Fekir,Real Betis,MF,31,2400,30,6,8,2000,140,60,1,84.0,0.4,1
+Guido Rodriguez,Real Betis,MF,30,3200,38,3,4,2800,70,150,0,90.0,0.3,1
 Marc Bartra,Real Betis,DF,33,2900,35,1,1,2000,25,165,0,86.0,0.38,1
 German Pezzella,Real Betis,DF,32,3100,37,2,0,2100,30,175,0,88.0,0.35,1
 Hector Bellerin,Real Betis,DF,29,2600,33,1,4,1900,45,130,1,83.0,0.35,1
@@ -736,15 +736,15 @@ Rui Silva,Real Betis,GK,30,3400,38,0,0,900,0,12,0,90.0,0.28,1
 Willian Jose,Real Betis,FW,33,1300,22,6,2,650,110,15,0,74.0,0.38,0
 Rodri Sanchez,Real Betis,FW,23,1200,20,3,3,700,100,18,0,72.5,0.22,0
 Andres Guardado,Real Betis,MF,37,900,16,1,2,800,30,75,1,70.0,0.55,0
-Claudio Bravo,Real Betis,GK,41,300,5,0,0,150,0,5,0,66.0,0.60,0
-Victor Lindelof-BEN,Valencia,DF,29,3000,36,1,1,2000,20,175,0,87.0,0.30,1
+Claudio Bravo,Real Betis,GK,41,300,5,0,0,150,0,5,0,66.0,0.6,0
+Victor Lindelof-BEN,Valencia,DF,29,3000,36,1,1,2000,20,175,0,87.0,0.3,1
 Hugo Duro,Valencia,FW,25,2900,35,15,5,1000,190,30,0,86.0,0.26,1
 Diego Lopez Noguerol,Valencia,FW,22,2600,33,8,6,1300,160,35,0,83.0,0.22,1
 Andre Almeida,Valencia,MF,24,3000,37,4,7,2600,90,120,0,88.0,0.24,1
 Pepelu,Valencia,MF,26,3200,38,6,5,2800,80,140,0,90.0,0.25,1
-Javi Guerra,Valencia,MF,21,3100,37,3,4,2700,70,135,0,89.0,0.20,1
+Javi Guerra,Valencia,MF,21,3100,37,3,4,2700,70,135,0,89.0,0.2,1
 Cristhian Mosquera,Valencia,DF,20,3300,38,1,0,2100,15,185,0,90.0,0.18,1
-Gabriel Paulista,Valencia,DF,34,2900,35,2,0,1900,25,170,0,85.0,0.40,1
+Gabriel Paulista,Valencia,DF,34,2900,35,2,0,1900,25,170,0,85.0,0.4,1
 Jose Gaya,Valencia,DF,29,2800,34,1,6,2200,50,140,1,85.0,0.35,1
 Thierry Correia,Valencia,DF,25,2600,33,0,4,2000,40,130,0,83.0,0.24,1
 Giorgi Mamardashvili,Valencia,GK,23,3400,38,0,0,900,0,12,0,91.0,0.22,1
@@ -771,14 +771,14 @@ Federico Dimarco-INT,Inter,DF,26,3000,37,5,10,2200,90,140,0,90.0,0.28,1
 Hakan Calhanoglu-INT,Inter,MF,30,3200,38,12,8,2800,120,85,0,91.0,0.32,1
 Nicolo Barella-INT,Inter,MF,27,3100,38,7,6,2600,100,120,0,90.0,0.26,1
 Marcus Thuram-INT,Inter,FW,27,2900,36,15,9,1400,180,35,0,88.0,0.26,1
-Lautaro Martinez-INT,Inter,FW,27,3200,38,24,6,1300,220,30,0,93.0,0.30,1
+Lautaro Martinez-INT,Inter,FW,27,3200,38,24,6,1300,220,30,0,93.0,0.3,1
 Henrikh Mkhitaryan-INT,Inter,MF,35,2600,34,5,6,2300,80,65,0,85.0,0.45,1
 Alessandro Bastoni-INT,Inter,DF,25,3100,37,1,4,2300,30,170,0,89.0,0.25,1
 Benjamin Pavard-INT,Inter,DF,28,2800,34,2,2,1900,35,145,1,85.0,0.32,1
 Francesco Acerbi-INT,Inter,DF,36,2700,34,1,1,1800,20,160,0,84.0,0.48,1
 Denzel Dumfries-INT,Inter,DF,28,2600,33,4,5,1700,90,130,1,84.0,0.32,1
-Yann Sommer-INT,Inter,GK,35,3400,38,0,0,900,0,12,0,90.0,0.40,1
-Alexis Sanchez-INT,Inter,FW,36,1200,20,5,3,700,80,15,1,74.0,0.50,0
+Yann Sommer-INT,Inter,GK,35,3400,38,0,0,900,0,12,0,90.0,0.4,1
+Alexis Sanchez-INT,Inter,FW,36,1200,20,5,3,700,80,15,1,74.0,0.5,0
 Davide Frattesi-INT,Inter,MF,25,1500,24,4,2,1100,60,55,0,78.0,0.22,0
 Carlos Augusto-INT,Inter,DF,26,1400,22,1,3,1200,30,90,0,76.0,0.25,0
 Emil Audero-INT,Inter,GK,28,300,5,0,0,150,0,5,0,67.0,0.22,0
@@ -791,12 +791,12 @@ Merih Demiral,Al Ahli,DF,26,3000,36,2,1,2000,30,175,0,87.0,0.28,1
 Roger Ibanez,Al Ahli,DF,26,3100,37,3,1,2100,35,180,0,88.0,0.26,1
 Abdulbasit Hindi,Al Ahli,DF,26,2600,33,0,1,1800,15,140,0,82.0,0.25,1
 Ali Majrashi,Al Ahli,DF,27,2500,32,1,3,1700,30,130,0,81.0,0.28,1
-Edouard Mendy,Al Ahli,GK,32,3400,38,0,0,900,0,12,0,90.0,0.30,1
+Edouard Mendy,Al Ahli,GK,32,3400,38,0,0,900,0,12,0,90.0,0.3,1
 Feras Al Brikan,Al Ahli,FW,24,1500,24,6,2,700,120,18,0,75.0,0.22,0
-Ziyad Al Johani,Al Ahli,MF,23,1200,20,2,3,1000,50,75,0,72.5,0.20,0
-Abdullah Otayf,Al Ahli,MF,31,1000,18,1,2,850,40,65,1,71.0,0.40,0
-Abdulrahman Al Sanbi,Al Ahli,GK,24,300,5,0,0,150,0,5,0,66.0,0.20,0
-Domenico Berardi,Sassuolo,FW,30,3100,38,17,9,1500,210,35,0,91.0,0.30,1
+Ziyad Al Johani,Al Ahli,MF,23,1200,20,2,3,1000,50,75,0,72.5,0.2,0
+Abdullah Otayf,Al Ahli,MF,31,1000,18,1,2,850,40,65,1,71.0,0.4,0
+Abdulrahman Al Sanbi,Al Ahli,GK,24,300,5,0,0,150,0,5,0,66.0,0.2,0
+Domenico Berardi,Sassuolo,FW,30,3100,38,17,9,1500,210,35,0,91.0,0.3,1
 Andrea Pinamonti,Sassuolo,FW,25,2900,36,14,3,900,190,25,0,86.0,0.26,1
 Armand Lauriente,Sassuolo,FW,25,2700,34,11,6,1400,180,30,0,84.5,0.24,1
 Kristian Thorstvedt,Sassuolo,MF,25,3000,37,7,6,2600,110,120,0,88.0,0.25,1
@@ -810,7 +810,7 @@ Andrea Consigli,Sassuolo,GK,37,3400,38,0,0,900,0,12,0,89.0,0.48,1
 Samuele Mulattieri,Sassuolo,FW,23,1200,20,5,1,600,110,15,0,73.5,0.22,0
 Uros Racic,Sassuolo,MF,26,1400,22,2,2,1200,50,75,0,74.0,0.24,0
 Filippo Romagna,Sassuolo,DF,27,900,15,0,0,750,10,95,1,70.0,0.35,0
-Gianluca Pegolo,Sassuolo,GK,43,300,5,0,0,150,0,5,0,66.0,0.60,0
+Gianluca Pegolo,Sassuolo,GK,43,300,5,0,0,150,0,5,0,66.0,0.6,0
 Ciro Immobile-TOR,Torino,FW,34,3000,36,19,4,900,210,20,1,89.0,0.45,1
 Duvan Zapata,Torino,FW,33,2900,35,16,5,1000,200,30,0,88.0,0.35,1
 Nikola Vlasic,Torino,MF,26,2800,34,7,6,2300,120,90,0,86.0,0.25,1
@@ -822,7 +822,7 @@ Ricardo Rodriguez,Torino,DF,31,2900,35,1,4,2100,40,150,1,85.0,0.35,1
 Raoul Bellanova,Torino,DF,24,2700,34,0,6,2000,50,140,0,85.0,0.22,1
 Perr Schuurs,Torino,DF,25,3000,36,1,0,2100,20,175,0,88.0,0.25,1
 Vanja Milinkovic-Savic,Torino,GK,27,3400,38,0,0,900,0,12,0,90.0,0.25,1
-Pietro Pellegri,Torino,FW,23,1000,18,4,1,450,90,12,1,71.0,0.30,0
+Pietro Pellegri,Torino,FW,23,1000,18,4,1,450,90,12,1,71.0,0.3,0
 Gvidas Gineitis,Torino,MF,20,900,16,1,2,750,40,65,0,70.0,0.18,0
 David Zima,Torino,DF,23,800,14,0,0,700,10,85,0,69.0,0.22,0
 Etrit Berisha,Torino,GK,35,300,5,0,0,150,0,5,0,66.0,0.45,0
@@ -836,15 +836,15 @@ Leandro Cabrera,Espanyol,DF,33,3200,38,2,0,2100,25,185,0,88.0,0.38,1
 Fernando Calero,Espanyol,DF,28,3000,36,1,1,2000,20,175,0,86.0,0.26,1
 Oscar Gil,Espanyol,DF,26,2700,34,0,3,2000,35,140,0,83.0,0.24,1
 Brian Olivan,Espanyol,DF,29,2600,33,0,4,1900,40,135,1,82.0,0.32,1
-Fernando Pacheco,Espanyol,GK,32,3400,38,0,0,900,0,12,0,89.0,0.30,1
+Fernando Pacheco,Espanyol,GK,32,3400,38,0,0,900,0,12,0,89.0,0.3,1
 Nico Melamed,Espanyol,FW,23,1200,20,4,2,650,100,15,0,73.0,0.22,0
 Pol Lozano,Espanyol,MF,24,1100,18,1,2,900,40,75,0,71.0,0.22,0
-Simo Keddari,Espanyol,DF,22,900,15,0,0,750,10,90,0,69.0,0.20,0
-Joan Garcia,Espanyol,GK,23,300,5,0,0,150,0,5,0,66.0,0.20,0
-Kyogo Furuhashi,Celtic,FW,30,3100,38,25,6,1100,220,30,0,92.0,0.30,1
+Simo Keddari,Espanyol,DF,22,900,15,0,0,750,10,90,0,69.0,0.2,0
+Joan Garcia,Espanyol,GK,23,300,5,0,0,150,0,5,0,66.0,0.2,0
+Kyogo Furuhashi,Celtic,FW,30,3100,38,25,6,1100,220,30,0,92.0,0.3,1
 Daizen Maeda,Celtic,FW,26,3000,37,14,8,1300,190,45,0,88.0,0.24,1
 Matt O'Riley,Celtic,MF,23,3300,38,11,15,2900,120,110,0,93.0,0.22,1
-Callum McGregor,Celtic,MF,31,3200,38,5,8,3000,80,140,0,91.0,0.30,1
+Callum McGregor,Celtic,MF,31,3200,38,5,8,3000,80,140,0,91.0,0.3,1
 Reo Hatate,Celtic,MF,26,2800,34,7,6,2400,100,120,1,87.0,0.32,1
 Alistair Johnston,Celtic,DF,25,3000,36,2,6,2100,50,150,0,86.0,0.24,1
 Cameron Carter-Vickers,Celtic,DF,27,3300,38,3,1,2200,25,190,0,92.0,0.26,1
@@ -854,18 +854,18 @@ Joe Hart,Celtic,GK,37,3400,38,0,0,900,0,12,0,89.0,0.48,1
 Luis Palma,Celtic,FW,24,1600,24,6,4,800,120,20,0,76.0,0.22,0
 Tomoki Iwata,Celtic,MF,27,1400,22,2,2,1200,40,85,0,74.0,0.28,0
 Stephen Welsh,Celtic,DF,24,900,15,0,0,750,10,90,0,70.0,0.22,0
-Scott Bain,Celtic,GK,32,300,5,0,0,150,0,5,0,66.0,0.30,0
+Scott Bain,Celtic,GK,32,300,5,0,0,150,0,5,0,66.0,0.3,0
 James Tavernier,Rangers,DF,33,3300,38,10,14,2500,120,140,0,92.0,0.34,1
 Cyriel Dessers,Rangers,FW,29,3000,36,18,5,1000,210,30,0,88.0,0.28,1
 Todd Cantwell,Rangers,MF,26,2900,35,6,9,2400,110,95,0,86.5,0.25,1
 Nicolas Raskin,Rangers,MF,23,2800,34,3,4,2300,70,130,0,85.0,0.22,1
 John Lundstram,Rangers,MF,31,3100,37,4,3,2600,80,145,0,88.0,0.32,1
 Dujon Sterling,Rangers,DF,25,2700,33,1,4,2000,40,135,0,84.0,0.24,1
-Connor Goldson,Rangers,DF,31,3300,38,4,1,2200,30,185,0,91.0,0.30,1
+Connor Goldson,Rangers,DF,31,3300,38,4,1,2200,30,185,0,91.0,0.3,1
 Leon Balogun,Rangers,DF,35,2600,32,1,0,1800,20,160,1,82.0,0.45,1
 Borna Barisic,Rangers,DF,31,2800,34,1,7,2300,50,140,0,86.0,0.32,1
-Jack Butland,Rangers,GK,31,3400,38,0,0,900,0,12,0,90.0,0.30,1
-Abdallah Sima,Rangers,FW,23,1400,22,6,2,650,110,15,1,74.0,0.30,0
+Jack Butland,Rangers,GK,31,3400,38,0,0,900,0,12,0,90.0,0.3,1
+Abdallah Sima,Rangers,FW,23,1400,22,6,2,650,110,15,1,74.0,0.3,0
 Kieran Dowell,Rangers,MF,26,1200,20,2,3,1000,60,70,0,72.5,0.25,0
 Ben Davies-RAN,Rangers,DF,28,900,15,0,0,750,10,90,1,70.0,0.35,0
 Robbie McCrorie,Rangers,GK,26,300,5,0,0,150,0,5,0,66.0,0.22,0
@@ -877,7 +877,7 @@ Gabriel Sara,Galatasaray,MF,24,3000,37,6,8,2600,110,120,0,88.0,0.24,1
 Hakim Ziyech,Galatasaray,FW,31,2400,30,7,9,1400,160,25,1,84.0,0.38,1
 Victor Nelsson,Galatasaray,DF,25,3200,38,2,1,2100,20,185,0,90.0,0.24,1
 Davinson Sanchez,Galatasaray,DF,28,3000,36,3,0,2000,25,175,0,88.0,0.28,1
-Abdulkerim Bardakci,Galatasaray,DF,29,3100,37,2,1,2100,20,180,0,89.0,0.30,1
+Abdulkerim Bardakci,Galatasaray,DF,29,3100,37,2,1,2100,20,180,0,89.0,0.3,1
 Fernando Muslera,Galatasaray,GK,38,3400,38,0,0,900,0,12,1,88.0,0.55,1
 Baris Alper Yilmaz,Galatasaray,FW,24,1600,24,5,3,800,120,20,0,75.0,0.22,0
 Tanguy Ndombele,Galatasaray,MF,28,1300,20,2,2,1100,60,65,1,73.0,0.35,0
@@ -891,16 +891,16 @@ Gilberto Moraes,Benfica,DF,31,2700,34,1,4,1900,40,135,1,82.0,0.38,1
 Florentino Junior,Benfica,MF,24,2900,36,2,3,2600,60,140,0,88.0,0.24,1
 Helton Leite,Benfica,GK,33,3400,38,0,0,900,0,12,0,89.0,0.35,1
 Yaremchuk Junior,Benfica,FW,23,1400,22,5,2,650,110,15,0,73.5,0.22,0
-Joao Victor,Benfica,DF,25,1200,18,0,0,950,10,90,1,71.0,0.30,0
+Joao Victor,Benfica,DF,25,1200,18,0,0,950,10,90,1,71.0,0.3,0
 Daniel Martins,Benfica,MF,21,900,15,1,2,800,35,60,0,70.0,0.18,0
-Bruno Petkovic,Dinamo Zagreb,FW,29,3000,36,18,7,1100,200,30,0,89.0,0.30,1
+Bruno Petkovic,Dinamo Zagreb,FW,29,3000,36,18,7,1100,200,30,0,89.0,0.3,1
 Luka Ivanusec,Dinamo Zagreb,FW,25,2800,34,12,9,1500,180,35,0,86.0,0.24,1
 Arijan Ademi,Dinamo Zagreb,MF,33,3100,38,4,6,2600,80,135,0,88.0,0.38,1
 Josip Sutalo-DZG,Dinamo Zagreb,DF,24,3200,38,2,1,2100,25,185,0,90.0,0.24,1
 Stefan Ristovski,Dinamo Zagreb,DF,31,2700,34,1,4,2000,40,130,1,83.0,0.35,1
 Dominik Livakovic,Dinamo Zagreb,GK,29,3400,38,0,0,900,0,12,0,91.0,0.28,1
 Petar Bockaj,Dinamo Zagreb,DF,27,1200,20,0,2,1000,20,90,0,72.0,0.25,0
-Marko Bulat,Dinamo Zagreb,MF,22,1100,18,2,2,950,45,70,0,71.5,0.20,0
+Marko Bulat,Dinamo Zagreb,MF,22,1100,18,2,2,950,45,70,0,71.5,0.2,0
 Krunoslav Hendija,Dinamo Zagreb,FW,21,800,14,3,1,450,70,12,0,69.0,0.18,0
 Ivan Nevistic,Dinamo Zagreb,GK,26,300,5,0,0,150,0,5,0,66.0,0.22,0
 Mehdi Taremi,Porto,FW,31,3000,36,22,8,1200,220,30,0,91.0,0.32,1
@@ -909,8 +909,8 @@ Pepê Aquino,Porto,FW,27,2800,34,10,11,1600,170,35,0,86.5,0.24,1
 Zaidu Sanusi,Porto,DF,27,2600,33,1,4,1900,40,135,1,82.0,0.35,1
 Otavio Moraes,Porto,MF,28,3200,38,6,9,2800,110,85,0,90.0,0.26,1
 Diogo Leite,Porto,DF,25,3000,36,2,1,2100,25,170,0,88.0,0.24,1
-Claudio Ramos,Porto,GK,32,3400,38,0,0,900,0,12,0,89.0,0.30,1
-Francisco Conceicao,Porto,FW,21,1500,24,6,4,800,120,18,0,75.0,0.20,0
+Claudio Ramos,Porto,GK,32,3400,38,0,0,900,0,12,0,89.0,0.3,1
+Francisco Conceicao,Porto,FW,21,1500,24,6,4,800,120,18,0,75.0,0.2,0
 Marko Grujic,Porto,MF,28,1300,22,2,2,1100,50,75,1,73.0,0.32,0
 Samuel Lino-PRT,Porto,DF,24,900,15,0,1,750,15,90,0,70.0,0.22,0
 Sebastien Haller-AJA,Ajax,FW,30,3000,36,20,5,1000,210,25,0,89.0,0.35,1
@@ -918,11 +918,11 @@ Davy Klaassen,Ajax,MF,31,2900,35,7,6,2400,100,95,0,86.0,0.32,1
 Brian Brobbey-AJX,Ajax,FW,23,2800,34,18,4,900,200,25,0,87.0,0.25,1
 Calvin Bassey,Ajax,DF,25,3100,38,2,1,2000,20,180,0,89.0,0.24,1
 Kenneth Taylor-AJX,Ajax,MF,22,3000,37,6,6,2600,90,85,0,87.0,0.22,1
-Steven Bergwijn-AJX,Ajax,FW,27,2900,36,17,7,1500,190,30,0,88.0,0.30,1
+Steven Bergwijn-AJX,Ajax,FW,27,2900,36,17,7,1500,190,30,0,88.0,0.3,1
 Jay Gorter,Ajax,GK,24,3400,38,0,0,900,0,12,0,89.0,0.22,1
 Amourricho van Axel Dongen,Ajax,FW,19,800,14,3,1,450,70,12,0,69.0,0.18,0
 Silvano Vos-AJX,Ajax,MF,19,900,16,1,1,750,40,55,0,70.0,0.18,0
-Remko Pasveer,Ajax,GK,41,300,5,0,0,150,0,5,0,66.0,0.60,0
+Remko Pasveer,Ajax,GK,41,300,5,0,0,150,0,5,0,66.0,0.6,0
 Antoine Griezmann,Atletico Madrid,FW,32,3200,38,18,14,1800,200,40,0,93.0,0.32,1
 Alvaro Morata,Atletico Madrid,FW,31,2900,36,16,4,900,210,25,0,88.0,0.35,1
 Marcos Llorente,Atletico Madrid,MF,29,3100,37,8,7,2600,120,130,0,89.0,0.28,1
@@ -933,7 +933,7 @@ Jose Maria Gimenez,Atletico Madrid,DF,29,2900,35,2,0,1900,20,180,1,86.0,0.35,1
 Axel Witsel,Atletico Madrid,MF,35,2600,32,2,2,2300,60,120,0,83.0,0.45,1
 Nahuel Molina,Atletico Madrid,DF,26,2800,34,1,5,2100,50,135,0,85.0,0.26,1
 Mario Hermoso,Atletico Madrid,DF,28,3000,36,1,2,2000,25,170,0,87.0,0.28,1
-Jan Oblak,Atletico Madrid,GK,31,3400,38,0,0,900,0,12,0,91.0,0.30,1
+Jan Oblak,Atletico Madrid,GK,31,3400,38,0,0,900,0,12,0,91.0,0.3,1
 Angel Correa,Atletico Madrid,FW,29,1600,24,6,4,800,120,20,0,76.0,0.28,0
 Saul Niguez,Atletico Madrid,MF,29,1400,22,2,2,1200,60,70,1,74.0,0.35,0
 Cesar Azpilicueta,Atletico Madrid,DF,34,1200,18,0,1,1000,15,95,1,72.0,0.42,0
@@ -943,18 +943,18 @@ N'Golo Kante,Al Ittihad,MF,33,2900,35,3,5,2600,70,150,0,88.0,0.42,1
 Fabinho,Al Ittihad,MF,30,3100,38,2,4,2800,60,160,0,89.0,0.35,1
 Igor Coronado,Al Ittihad,MF,31,2800,34,7,9,2300,120,90,0,87.0,0.34,1
 Abderrazak Hamdallah,Al Ittihad,FW,33,2700,33,18,3,800,220,25,0,88.0,0.38,1
-Ahmed Hegazy,Al Ittihad,DF,33,3000,36,2,0,1900,20,180,0,86.0,0.40,1
+Ahmed Hegazy,Al Ittihad,DF,33,3000,36,2,0,1900,20,180,0,86.0,0.4,1
 Luiz Felipe,Al Ittihad,DF,27,2900,35,1,1,2000,25,170,0,87.0,0.28,1
 Saud Abdulhamid,Al Ittihad,DF,25,2600,33,0,4,1800,35,135,0,83.0,0.24,1
 Zakaria Al Hawsawi,Al Ittihad,DF,31,2500,32,0,2,1700,20,140,1,81.0,0.35,1
-Marcelo Grohe,Al Ittihad,GK,37,3400,38,0,0,900,0,12,0,89.0,0.50,1
+Marcelo Grohe,Al Ittihad,GK,37,3400,38,0,0,900,0,12,0,89.0,0.5,1
 Saleh Al Shehri,Al Ittihad,FW,30,1400,22,5,2,650,110,15,1,74.0,0.35,0
-Awad Al Nashri,Al Ittihad,MF,22,1100,18,1,2,900,40,65,0,71.0,0.20,0
+Awad Al Nashri,Al Ittihad,MF,22,1100,18,1,2,900,40,65,0,71.0,0.2,0
 Omar Hawsawi,Al Ittihad,DF,38,900,15,0,0,700,10,95,1,69.0,0.55,0
 Abdulrahman Al Obud,Al Ittihad,FW,28,1000,17,3,1,500,90,12,0,70.0,0.28,0
 Bono,Al Hilal,GK,33,3400,38,0,0,900,0,12,0,91.0,0.35,1
 Aleksandar Mitrovic,Al Hilal,FW,29,3100,37,25,6,1000,230,30,0,92.0,0.32,1
-Sergej Milinkovic-Savic,Al Hilal,MF,29,3200,38,9,11,2700,120,140,0,91.0,0.30,1
+Sergej Milinkovic-Savic,Al Hilal,MF,29,3200,38,9,11,2700,120,140,0,91.0,0.3,1
 Ruben Neves,Al Hilal,MF,27,3300,38,6,7,2900,110,150,0,92.0,0.28,1
 Malcom,Al Hilal,FW,27,2800,34,11,8,1500,180,30,0,86.0,0.26,1
 Salem Al Dawsari,Al Hilal,FW,32,3000,36,10,9,1600,170,35,0,88.0,0.35,1
@@ -962,14 +962,14 @@ Kalidou Koulibaly,Al Hilal,DF,32,3100,37,3,0,2100,30,185,0,89.0,0.38,1
 Ali Al Bulayhi,Al Hilal,DF,34,2900,35,2,0,1900,20,175,0,85.0,0.42,1
 Yasser Al Shahrani,Al Hilal,DF,31,2700,34,0,4,2000,35,140,1,83.0,0.38,1
 Mohammed Al Burayk,Al Hilal,DF,31,2600,33,1,3,1900,40,135,0,82.5,0.35,1
-Abdullah Al Mayouf,Al Hilal,GK,37,300,5,0,0,150,0,5,0,66.0,0.50,0
+Abdullah Al Mayouf,Al Hilal,GK,37,300,5,0,0,150,0,5,0,66.0,0.5,0
 Victor Osimhen,Napoli,FW,25,3100,36,26,5,900,230,30,1,92.0,0.32,1
 Khvicha Kvaratskhelia,Napoli,FW,23,3000,35,14,11,1600,190,40,0,90.0,0.24,1
-Matteo Politano,Napoli,FW,30,2700,34,8,7,1500,170,30,0,85.0,0.30,1
-Piotr Zielinski,Napoli,MF,30,2900,36,6,8,2600,110,95,0,88.0,0.30,1
+Matteo Politano,Napoli,FW,30,2700,34,8,7,1500,170,30,0,85.0,0.3,1
+Piotr Zielinski,Napoli,MF,30,2900,36,6,8,2600,110,95,0,88.0,0.3,1
 Stanislav Lobotka,Napoli,MF,29,3300,38,2,5,3000,60,160,0,91.0,0.26,1
 Andre-Frank Zambo Anguissa,Napoli,MF,28,3100,37,4,4,2700,90,150,0,90.0,0.28,1
-Giovanni Di Lorenzo,Napoli,DF,30,3300,38,3,6,2300,50,170,0,91.0,0.30,1
+Giovanni Di Lorenzo,Napoli,DF,30,3300,38,3,6,2300,50,170,0,91.0,0.3,1
 Amir Rrahmani,Napoli,DF,30,3200,38,2,0,2100,25,185,0,90.0,0.32,1
 Alessandro Buongiorno-NAP,Napoli,DF,25,3000,36,2,1,2000,20,180,0,88.0,0.25,1
 Mathias Olivera,Napoli,DF,26,2600,33,1,4,1900,40,140,1,84.0,0.32,1
@@ -977,12 +977,12 @@ Alex Meret,Napoli,GK,27,3400,38,0,0,900,0,12,0,90.0,0.26,1
 Giacomo Raspadori,Napoli,FW,24,1400,22,5,3,700,120,15,0,75.0,0.22,0
 Jesper Lindstrom,Napoli,FW,24,1200,20,3,2,650,100,18,0,72.5,0.22,0
 Leo Ostigard,Napoli,DF,25,900,15,0,0,750,10,95,0,70.0,0.22,0
-Pierluigi Gollini,Napoli,GK,29,300,5,0,0,150,0,5,0,66.0,0.30,0
+Pierluigi Gollini,Napoli,GK,29,300,5,0,0,150,0,5,0,66.0,0.3,0
 Paulo Dybala-ROM,Juventus,FW,31,2800,34,15,9,1500,180,25,1,88.0,0.38,1
 Dusan Vlahovic,Juventus,FW,25,3100,38,18,4,900,220,30,0,89.0,0.28,1
 Federico Chiesa,Juventus,FW,27,2700,33,10,8,1400,190,35,1,86.0,0.32,1
 Manuel Locatelli,Juventus,MF,26,3200,38,3,5,2800,70,150,0,90.0,0.26,1
-Adrien Rabiot,Juventus,MF,29,3000,36,5,4,2600,90,140,0,88.0,0.30,1
+Adrien Rabiot,Juventus,MF,29,3000,36,5,4,2600,90,140,0,88.0,0.3,1
 Weston McKennie,Juventus,MF,25,2900,35,4,6,2400,100,130,0,87.0,0.24,1
 Danilo Luiz,Juventus,DF,33,3100,37,2,2,2100,25,175,0,88.0,0.35,1
 Bremer,Juventus,DF,27,3300,38,3,0,2200,20,190,0,92.0,0.26,1
@@ -990,9 +990,9 @@ Alex Sandro,Juventus,DF,33,2600,33,1,3,2000,40,140,1,83.0,0.38,1
 Andrea Cambiaso,Juventus,DF,24,2700,34,2,5,2100,50,145,0,85.0,0.24,1
 Wojciech Szczesny,Juventus,GK,34,3400,38,0,0,900,0,12,0,90.0,0.35,1
 Arkadiusz Milik,Juventus,FW,30,1200,20,6,1,600,120,15,1,74.0,0.35,0
-Fabio Miretti,Juventus,MF,21,1100,18,1,2,900,40,70,0,71.0,0.20,0
+Fabio Miretti,Juventus,MF,21,1100,18,1,2,900,40,70,0,71.0,0.2,0
 Daniele Rugani,Juventus,DF,30,900,15,0,0,750,10,90,0,70.0,0.32,0
-Mattia Perin,Juventus,GK,31,300,5,0,0,150,0,5,0,66.0,0.30,0
+Mattia Perin,Juventus,GK,31,300,5,0,0,150,0,5,0,66.0,0.3,0
 Bukayo Saka,Arsenal,FW,23,3300,38,16,12,1700,200,45,0,92.0,0.22,1
 Gabriel Martinelli,Arsenal,FW,23,3000,36,14,7,1500,190,40,0,88.0,0.24,1
 Martin Odegaard,Arsenal,MF,26,3200,38,8,11,2900,130,85,0,91.0,0.24,1
@@ -1005,33 +1005,33 @@ Ben White,Arsenal,DF,26,3200,37,1,5,2400,50,160,0,90.0,0.26,1
 Oleksandr Zinchenko,Arsenal,DF,27,2600,32,1,4,2100,40,135,1,84.0,0.35,1
 David Raya,Arsenal,GK,28,3400,38,0,0,900,0,12,0,90.0,0.25,1
 Leandro Trossard,Arsenal,FW,29,1600,24,7,4,800,120,20,0,76.0,0.28,0
-Emile Smith Rowe,Arsenal,MF,23,1200,20,3,2,900,60,55,1,72.5,0.30,0
-Takehiro Tomiyasu,Arsenal,DF,25,1000,18,0,1,800,15,90,1,71.0,0.30,0
+Emile Smith Rowe,Arsenal,MF,23,1200,20,3,2,900,60,55,1,72.5,0.3,0
+Takehiro Tomiyasu,Arsenal,DF,25,1000,18,0,1,800,15,90,1,71.0,0.3,0
 Aaron Ramsdale,Arsenal,GK,26,300,5,0,0,150,0,5,0,66.0,0.22,0
 Jamal Musiala,Bayern Munich,MF,21,3200,38,12,14,2900,150,90,0,93.0,0.22,1
 Harry Kane-BAY,Bayern Munich,FW,31,3300,38,32,9,1200,260,25,0,94.0,0.32,1
 Leroy Sane,Bayern Munich,FW,28,2900,35,10,11,1600,190,35,0,88.0,0.28,1
 Kingsley Coman,Bayern Munich,FW,28,2600,33,9,8,1500,170,30,1,85.0,0.35,1
 Joshua Kimmich,Bayern Munich,MF,29,3400,38,6,10,3300,120,160,0,93.0,0.26,1
-Leon Goretzka,Bayern Munich,MF,29,3000,36,7,5,2600,110,145,0,89.0,0.30,1
+Leon Goretzka,Bayern Munich,MF,29,3000,36,7,5,2600,110,145,0,89.0,0.3,1
 Dayot Upamecano,Bayern Munich,DF,25,3200,38,2,1,2200,25,190,0,91.0,0.24,1
-Matthijs de Ligt,Bayern Munich,DF,24,3000,36,3,1,2100,30,185,1,89.0,0.30,1
+Matthijs de Ligt,Bayern Munich,DF,24,3000,36,3,1,2100,30,185,1,89.0,0.3,1
 Alphonso Davies,Bayern Munich,DF,23,2900,35,2,6,2400,60,150,0,88.0,0.24,1
-Manuel Neuer,Bayern Munich,GK,38,3200,36,0,0,850,0,10,1,88.0,0.50,1
+Manuel Neuer,Bayern Munich,GK,38,3200,36,0,0,850,0,10,1,88.0,0.5,1
 Thomas Muller,Bayern Munich,FW,34,1800,26,8,7,900,120,25,0,78.0,0.42,0
 Eric Maxim Choupo-Moting,Bayern Munich,FW,35,1200,20,5,2,600,110,15,1,74.0,0.45,0
 Raphael Guerreiro,Bayern Munich,DF,30,1400,22,1,4,1200,40,95,1,75.0,0.38,0
 Sven Ulreich,Bayern Munich,GK,35,300,5,0,0,150,0,5,0,66.0,0.45,0
 Rodrygo Goes,Real Madrid,FW,23,3000,36,17,9,1600,200,35,0,91.0,0.24,1
 Jude Bellingham,Real Madrid,MF,21,3300,38,19,10,3000,150,140,0,94.0,0.22,1
-Vinicius Junior,Real Madrid,FW,24,2900,34,18,12,1500,220,40,1,92.0,0.30,1
+Vinicius Junior,Real Madrid,FW,24,2900,34,18,12,1500,220,40,1,92.0,0.3,1
 Federico Valverde,Real Madrid,MF,25,3400,38,8,9,3100,130,170,0,93.0,0.24,1
 Eduardo Camavinga,Real Madrid,MF,21,3000,36,4,6,2800,90,160,0,89.0,0.22,1
 Aurelien Tchouameni,Real Madrid,MF,24,3100,37,3,4,2900,80,175,0,90.0,0.24,1
-Antonio Rudiger,Real Madrid,DF,31,3300,38,2,1,2200,25,195,0,92.0,0.30,1
+Antonio Rudiger,Real Madrid,DF,31,3300,38,2,1,2200,25,195,0,92.0,0.3,1
 Eder Militao,Real Madrid,DF,26,3000,35,3,0,2100,30,185,1,88.0,0.35,1
 Dani Carvajal,Real Madrid,DF,32,2800,34,1,5,2300,45,150,1,85.0,0.38,1
-Thibaut Courtois,Real Madrid,GK,32,3200,36,0,0,850,0,10,1,90.0,0.40,1
+Thibaut Courtois,Real Madrid,GK,32,3200,36,0,0,850,0,10,1,90.0,0.4,1
 Brahim Diaz,Real Madrid,FW,24,1500,24,6,4,800,120,20,0,76.0,0.24,0
 Lucas Vazquez,Real Madrid,DF,32,1400,22,1,3,1100,35,95,0,75.0,0.35,0
 Nacho Fernandez,Real Madrid,DF,34,1200,20,0,1,1000,15,110,0,74.0,0.42,0
@@ -1042,13 +1042,13 @@ Diogo Jota,Liverpool,FW,27,2600,32,15,5,1000,200,25,1,86.0,0.32,1
 Alexis Mac Allister,Liverpool,MF,25,3200,38,6,8,3000,110,150,0,92.0,0.24,1
 Dominik Szoboszlai-LIV,Liverpool,MF,23,3100,37,7,9,2800,120,140,0,90.0,0.22,1
 Wataru Endo,Liverpool,MF,31,3000,36,2,4,2600,70,155,0,88.0,0.32,1
-Virgil van Dijk-LIV,Liverpool,DF,33,3400,38,4,2,2300,35,200,0,93.0,0.30,1
+Virgil van Dijk-LIV,Liverpool,DF,33,3400,38,4,2,2300,35,200,0,93.0,0.3,1
 Ibrahima Konate,Liverpool,DF,25,3000,35,2,1,2100,25,185,1,88.0,0.32,1
 Trent Alexander-Arnold,Liverpool,DF,25,2900,34,3,11,2600,90,140,1,90.0,0.35,1
 Alisson Becker,Liverpool,GK,31,3400,38,0,0,900,0,12,0,91.0,0.28,1
 Curtis Jones,Liverpool,MF,23,1600,25,3,4,1400,60,75,0,77.0,0.22,0
-Harvey Elliott,Liverpool,MF,21,1500,24,4,5,1300,70,65,0,76.0,0.20,0
-Joe Gomez,Liverpool,DF,27,1200,20,0,1,1000,20,95,1,74.0,0.30,0
+Harvey Elliott,Liverpool,MF,21,1500,24,4,5,1300,70,65,0,76.0,0.2,0
+Joe Gomez,Liverpool,DF,27,1200,20,0,1,1000,20,95,1,74.0,0.3,0
 Caoimhin Kelleher,Liverpool,GK,25,300,5,0,0,150,0,5,0,66.0,0.22,0
 Erling Haaland,Man City,FW,24,3200,38,36,8,900,280,20,0,95.0,0.26,1
 Phil Foden,Man City,FW,24,3100,37,19,12,1900,210,35,0,93.0,0.24,1
@@ -1059,20 +1059,20 @@ Bernardo Silva,Man City,MF,29,3200,37,6,10,2900,130,160,0,92.0,0.28,1
 Mateo Kovacic,Man City,MF,30,2600,33,4,6,2400,90,135,0,87.0,0.32,1
 Ruben Dias,Man City,DF,27,3300,38,2,1,2200,25,195,0,93.0,0.26,1
 John Stones,Man City,DF,30,2800,34,3,2,2100,30,170,1,88.0,0.35,1
-Kyle Walker,Man City,DF,34,3000,36,1,3,2000,40,160,0,87.0,0.40,1
+Kyle Walker,Man City,DF,34,3000,36,1,3,2000,40,160,0,87.0,0.4,1
 Ederson Moraes,Man City,GK,30,3400,38,0,0,900,0,12,0,90.0,0.28,1
-Jeremy Doku,Man City,FW,22,1600,24,5,6,900,130,25,0,77.0,0.20,0
+Jeremy Doku,Man City,FW,22,1600,24,5,6,900,130,25,0,77.0,0.2,0
 Jack Grealish,Man City,FW,28,1500,23,4,5,1000,120,30,1,76.0,0.32,0
 Nathan Ake,Man City,DF,29,1400,22,1,1,1200,20,100,1,75.0,0.32,0
-Stefan Ortega,Man City,GK,31,300,5,0,0,150,0,5,0,66.0,0.30,0
+Stefan Ortega,Man City,GK,31,300,5,0,0,150,0,5,0,66.0,0.3,0
 Cole Palmer,Chelsea,FW,22,3300,38,22,11,1800,230,40,0,93.0,0.22,1
 Nicolas Jackson,Chelsea,FW,23,3000,36,16,7,1200,210,35,0,88.0,0.24,1
-Raheem Sterling,Chelsea,FW,29,2800,34,10,8,1500,190,30,0,85.0,0.30,1
+Raheem Sterling,Chelsea,FW,29,2800,34,10,8,1500,190,30,0,85.0,0.3,1
 Christopher Nkunku,Chelsea,FW,27,2000,26,9,6,1100,150,25,2,82.0,0.42,1
 Enzo Fernandez,Chelsea,MF,23,3200,38,5,8,3000,100,155,0,91.0,0.24,1
 Moises Caicedo,Chelsea,MF,22,3300,38,3,5,2900,90,180,0,92.0,0.22,1
 Conor Gallagher,Chelsea,MF,24,3000,36,6,5,2600,110,170,0,90.0,0.24,1
-Levi Colwill,Chelsea,DF,21,3100,37,1,2,2100,20,185,0,89.0,0.20,1
+Levi Colwill,Chelsea,DF,21,3100,37,1,2,2100,20,185,0,89.0,0.2,1
 Axel Disasi,Chelsea,DF,26,3000,36,2,1,2000,30,175,0,87.0,0.26,1
 Ben Chilwell,Chelsea,DF,27,2400,30,2,6,1900,50,130,2,82.0,0.45,1
 Robert Sanchez,Chelsea,GK,26,3400,38,0,0,900,0,12,0,89.0,0.24,1
@@ -1081,14 +1081,14 @@ Niclas Fullkrug,Borussia Dortmund,FW,31,3000,36,16,6,900,210,25,0,88.0,0.35,1
 Donyell Malen,Borussia Dortmund,FW,25,2800,34,13,5,1400,190,30,0,86.0,0.26,1
 Karim Adeyemi,Borussia Dortmund,FW,22,2600,32,8,7,1300,170,35,0,83.0,0.22,1
 Emre Can,Borussia Dortmund,MF,30,3100,37,5,4,2600,80,155,0,89.0,0.32,1
-Marcel Sabitzer,Borussia Dortmund,MF,30,2900,35,6,6,2500,100,135,0,88.0,0.30,1
+Marcel Sabitzer,Borussia Dortmund,MF,30,2900,35,6,6,2500,100,135,0,88.0,0.3,1
 Mats Hummels,Borussia Dortmund,DF,35,3000,36,3,1,2000,25,185,0,88.0,0.45,1
 Nico Schlotterbeck,Borussia Dortmund,DF,24,3200,38,2,2,2200,30,190,0,91.0,0.24,1
 Julian Ryerson,Borussia Dortmund,DF,26,2800,34,1,4,2000,40,150,0,85.0,0.25,1
 Gregor Kobel,Borussia Dortmund,GK,26,3400,38,0,0,900,0,12,0,91.0,0.26,1
 Samuel Chukwueze,Milan,FW,25,2600,33,8,6,1400,180,30,0,84.0,0.24,1
 Christian Pulisic,Milan,FW,26,3000,36,15,9,1600,200,35,1,89.0,0.32,1
-Olivier Giroud,Milan,FW,38,2900,35,14,6,900,210,20,0,86.0,0.50,1
+Olivier Giroud,Milan,FW,38,2900,35,14,6,900,210,20,0,86.0,0.5,1
 Rafael Leao,Milan,FW,25,3100,37,16,11,1500,220,40,0,92.0,0.26,1
 Tijjani Reijnders,Milan,MF,25,3300,38,4,7,3000,90,150,0,91.0,0.24,1
 Ismael Bennacer,Milan,MF,27,2600,32,2,5,2400,70,145,1,85.0,0.35,1
@@ -1097,38 +1097,38 @@ Fikayo Tomori,Milan,DF,26,3100,37,2,0,2100,25,185,0,90.0,0.24,1
 Davide Calabria,Milan,DF,28,2700,33,1,3,2000,40,140,1,83.0,0.32,1
 Mike Maignan,Milan,GK,29,3400,38,0,0,900,0,12,1,91.0,0.38,1
 Lionel Messi,Inter Miami,FW,37,2600,30,20,16,2100,180,25,1,94.0,0.45,1
-Luis Suarez,Inter Miami,FW,38,2500,30,18,10,1200,200,20,0,88.0,0.50,1
+Luis Suarez,Inter Miami,FW,38,2500,30,18,10,1200,200,20,0,88.0,0.5,1
 Jordi Alba,Inter Miami,DF,35,2800,33,2,9,2300,50,130,1,85.0,0.45,1
 Sergio Busquets,Inter Miami,MF,36,3000,34,1,6,3100,40,160,0,90.0,0.48,1
 Diego Gomez,Inter Miami,MF,21,2700,32,5,6,2400,90,140,0,85.0,0.22,1
 DeAndre Yedlin,Inter Miami,DF,31,2600,32,1,4,2000,45,135,0,83.0,0.32,1
-Tomas Aviles,Inter Miami,DF,20,2900,34,1,1,1900,20,175,0,86.0,0.20,1
-David Ruiz,Inter Miami,MF,21,2500,30,3,4,2200,70,120,0,82.0,0.20,1
+Tomas Aviles,Inter Miami,DF,20,2900,34,1,1,1900,20,175,0,86.0,0.2,1
+David Ruiz,Inter Miami,MF,21,2500,30,3,4,2200,70,120,0,82.0,0.2,1
 Drake Callender,Inter Miami,GK,26,3400,38,0,0,900,0,12,0,88.0,0.24,1
 Victor Boniface-B04,Bayer Leverkusen,FW,24,2900,35,19,6,1100,210,30,0,90.0,0.26,1
-Florian Wirtz-B04,Bayer Leverkusen,MF,21,3100,38,11,14,2800,140,90,0,93.0,0.20,1
+Florian Wirtz-B04,Bayer Leverkusen,MF,21,3100,38,11,14,2800,140,90,0,93.0,0.2,1
 Jeremie Frimpong-B04,Bayer Leverkusen,DF,24,3200,38,9,10,2200,120,150,0,92.0,0.24,1
-Alex Grimaldo-B04,Bayer Leverkusen,DF,29,3300,38,10,13,2400,110,145,0,93.0,0.30,1
+Alex Grimaldo-B04,Bayer Leverkusen,DF,29,3300,38,10,13,2400,110,145,0,93.0,0.3,1
 Granit Xhaka-B04,Bayer Leverkusen,MF,32,3400,38,4,7,3100,80,150,0,92.0,0.35,1
 Exequiel Palacios-B04,Bayer Leverkusen,MF,26,3000,36,3,6,2600,70,120,0,88.0,0.25,1
 Jonathan Tah-B04,Bayer Leverkusen,DF,28,3300,38,2,1,2200,25,190,0,91.0,0.26,1
 Edmond Tapsoba-B04,Bayer Leverkusen,DF,26,3100,37,1,1,2100,20,185,0,90.0,0.24,1
 Piero Hincapie-B04,Bayer Leverkusen,DF,22,2900,35,1,2,2000,30,165,0,87.0,0.22,1
-Lukas Hradecky-B04,Bayer Leverkusen,GK,35,3400,38,0,0,900,0,12,0,89.0,0.40,1
+Lukas Hradecky-B04,Bayer Leverkusen,GK,35,3400,38,0,0,900,0,12,0,89.0,0.4,1
 Amine Adli-B04,Bayer Leverkusen,FW,24,2400,32,7,6,1400,160,25,0,83.0,0.24,1
 Patrik Schick-B04,Bayer Leverkusen,FW,29,1500,22,8,2,650,120,15,1,76.0,0.35,0
 Jonas Hofmann-B04,Bayer Leverkusen,MF,32,1600,24,4,4,1300,80,55,1,77.0,0.38,0
 Nathan Tella-B04,Bayer Leverkusen,FW,25,1300,21,5,3,750,110,18,0,74.5,0.25,0
-Matej Kovar-B04,Bayer Leverkusen,GK,24,300,5,0,0,150,0,5,0,66.5,0.20,0
+Matej Kovar-B04,Bayer Leverkusen,GK,24,300,5,0,0,150,0,5,0,66.5,0.2,0
 Kim Min-jae,Bayern Munich,DF,27,3200,38,2,1,2100,25,195,0,92.0,0.26,1
 Noussair Mazraoui,Bayern Munich,DF,26,2600,33,1,4,2000,45,135,1,84.0,0.32,1
 Aleksandar Pavlovic,Bayern Munich,MF,20,2800,34,3,5,2500,80,140,0,88.0,0.18,1
 Mathys Tel,Bayern Munich,FW,19,1500,24,7,3,700,130,20,0,76.0,0.18,0
-Bryan Zaragoza,Bayern Munich,FW,22,1200,20,4,3,600,110,18,0,73.5,0.20,0
+Bryan Zaragoza,Bayern Munich,FW,22,1200,20,4,3,600,110,18,0,73.5,0.2,0
 Jerome Boateng,Bayern Munich,DF,35,900,15,0,0,750,10,95,1,70.0,0.48,0
 Rasmus Kristensen,Roma,DF,26,2800,34,1,4,2000,40,150,0,84.0,0.25,1
-Nicola Zalewski,Roma,MF,22,2600,33,3,5,2200,90,130,0,83.0,0.20,1
-Bryan Cristante-ROM,Roma,MF,30,3200,38,4,5,2800,80,150,0,90.0,0.30,1
+Nicola Zalewski,Roma,MF,22,2600,33,3,5,2200,90,130,0,83.0,0.2,1
+Bryan Cristante-ROM,Roma,MF,30,3200,38,4,5,2800,80,150,0,90.0,0.3,1
 Evan Ndicka-ROM,Roma,DF,25,3300,38,1,1,2200,25,190,0,91.0,0.24,1
 Zeki Celik,Roma,DF,27,2500,32,0,3,1900,30,135,0,82.0,0.28,1
 Lorenzo Spinazzola,Roma,DF,31,2400,30,1,5,2000,50,130,1,83.0,0.38,1
@@ -1144,41 +1144,41 @@ Ramiz Zerrouki,Feyenoord,MF,26,2900,35,3,4,2600,70,145,0,88.0,0.26,1
 David Hancko,Feyenoord,DF,26,3300,38,4,2,2200,35,190,0,92.0,0.24,1
 Gernot Trauner,Feyenoord,DF,32,3000,36,2,1,2000,25,175,0,88.0,0.34,1
 Lutsharel Geertruida,Feyenoord,DF,23,3200,38,3,5,2400,50,165,0,91.0,0.22,1
-Quilindschy Hartman,Feyenoord,DF,22,2800,34,1,6,2100,45,150,0,85.0,0.20,1
+Quilindschy Hartman,Feyenoord,DF,22,2800,34,1,6,2100,45,150,0,85.0,0.2,1
 Justin Bijlow,Feyenoord,GK,26,3400,38,0,0,900,0,12,1,90.0,0.35,1
 Ayase Ueda,Feyenoord,FW,26,1400,22,6,2,650,120,18,0,75.0,0.28,0
 Ondrej Lingr,Feyenoord,MF,25,1200,20,3,2,1000,50,75,0,73.0,0.24,0
 Bart Nieuwkoop,Feyenoord,DF,28,1000,18,0,2,900,20,95,1,71.0,0.35,0
-Timon Wellenreuther,Feyenoord,GK,29,300,5,0,0,150,0,5,0,66.0,0.30,0
+Timon Wellenreuther,Feyenoord,GK,29,300,5,0,0,150,0,5,0,66.0,0.3,0
 Benjamin Sesko-RBL,RB Leipzig,FW,21,2700,34,17,5,950,200,28,0,87.0,0.22,1
 Xaver Schlager,RB Leipzig,MF,26,3000,36,2,4,2700,70,155,0,89.0,0.26,1
 El Chadaille Bitshiabu,RB Leipzig,DF,19,2800,34,1,0,2000,15,180,0,86.0,0.18,1
 Benjamin Henrichs-RBL,RB Leipzig,DF,27,2900,35,1,3,2100,40,150,0,85.0,0.26,1
-Castello Lukeba-RBL,RB Leipzig,DF,21,3000,36,1,1,2100,20,185,0,88.0,0.20,1
+Castello Lukeba-RBL,RB Leipzig,DF,21,3000,36,1,1,2100,20,185,0,88.0,0.2,1
 Janis Blaswich-RBL,RB Leipzig,GK,33,3400,38,0,0,900,0,12,0,89.0,0.35,1
-Fabio Carvalho,RB Leipzig,FW,21,1200,20,4,3,700,110,15,0,72.5,0.20,0
+Fabio Carvalho,RB Leipzig,FW,21,1200,20,4,3,700,110,15,0,72.5,0.2,0
 Amadou Haidara,RB Leipzig,MF,26,1300,22,1,2,1100,50,85,0,73.5,0.24,0
 Christopher Lenz,RB Leipzig,DF,29,900,15,0,1,750,15,90,1,70.0,0.35,0
-Leopold Zingerle,RB Leipzig,GK,30,300,5,0,0,150,0,5,0,66.0,0.30,0
+Leopold Zingerle,RB Leipzig,GK,30,300,5,0,0,150,0,5,0,66.0,0.3,0
 Lorenzo Insigne,Toronto FC,FW,33,2800,34,14,10,1600,190,30,0,88.0,0.38,1
 Federico Bernardeschi,Toronto FC,FW,30,3000,36,12,11,1700,180,35,0,87.0,0.32,1
 Jonathan Osorio,Toronto FC,MF,31,2900,35,8,6,2500,100,120,0,86.0,0.35,1
 Alonso Coello,Toronto FC,MF,25,3000,37,3,4,2700,70,150,0,88.0,0.26,1
 Richie Laryea,Toronto FC,DF,29,2800,34,1,5,2100,45,145,1,83.0,0.35,1
-Matt Hedges,Toronto FC,DF,33,3000,36,2,0,1900,20,175,0,85.0,0.40,1
+Matt Hedges,Toronto FC,DF,33,3000,36,2,0,1900,20,175,0,85.0,0.4,1
 Raoul Petretta,Toronto FC,DF,27,2600,33,0,3,2000,35,140,0,82.0,0.28,1
 Kevin Long,Toronto FC,DF,33,2700,34,1,0,1800,15,165,1,82.5,0.42,1
 Sean Johnson,Toronto FC,GK,35,3400,38,0,0,900,0,12,0,89.0,0.45,1
-Prince Owusu,Toronto FC,FW,27,1200,20,5,2,600,110,15,0,73.0,0.30,0
-Denis Bouanga,LAFC,FW,29,3200,38,24,9,1500,230,35,0,92.0,0.30,1
+Prince Owusu,Toronto FC,FW,27,1200,20,5,2,600,110,15,0,73.0,0.3,0
+Denis Bouanga,LAFC,FW,29,3200,38,24,9,1500,230,35,0,92.0,0.3,1
 Carlos Vela,LAFC,FW,35,2600,32,12,11,1700,180,25,1,86.0,0.48,1
 Mateusz Bogusz,LAFC,MF,22,3000,37,7,8,2600,120,110,0,88.0,0.22,1
 Ilie Sanchez,LAFC,MF,33,3100,38,2,4,2800,60,155,0,89.0,0.38,1
 Eduard Atuesta,LAFC,MF,27,2900,35,4,6,2500,90,140,0,87.0,0.28,1
-Jesus Murillo,LAFC,DF,30,3200,38,2,1,2100,25,185,0,90.0,0.30,1
-Giorgio Chiellini,LAFC,DF,39,2500,30,1,0,1600,15,170,1,83.0,0.60,1
+Jesus Murillo,LAFC,DF,30,3200,38,2,1,2100,25,185,0,90.0,0.3,1
+Giorgio Chiellini,LAFC,DF,39,2500,30,1,0,1600,15,170,1,83.0,0.6,1
 Ryan Hollingshead,LAFC,DF,32,2800,34,3,5,2000,50,150,0,86.0,0.35,1
-Maxime Crepeau,LAFC,GK,30,3400,38,0,0,900,0,12,0,90.0,0.30,1
+Maxime Crepeau,LAFC,GK,30,3400,38,0,0,900,0,12,0,90.0,0.3,1
 Cristian Olivera,LAFC,FW,22,1300,22,4,3,700,120,18,0,73.5,0.22,0
 Hirving Lozano,PSV,FW,28,3000,36,15,9,1600,200,35,0,89.0,0.28,1
 Noa Lang,PSV,FW,25,2800,34,11,10,1500,180,30,1,86.0,0.32,1
@@ -1189,38 +1189,38 @@ Goncalo Guedes,Valencia,FW,27,2600,32,10,5,1200,170,25,1,83.0,0.35,1
 Edinson Cavani,Boca Juniors,FW,37,2900,34,17,4,800,210,20,1,86.0,0.55,1
 Luis Advincula,Boca Juniors,DF,34,2800,33,2,4,2000,40,150,0,84.0,0.38,1
 Pol Fernandez,Boca Juniors,MF,32,3000,36,3,5,2600,70,145,0,87.0,0.35,1
-Sergio Romero,Boca Juniors,GK,37,3400,38,0,0,900,0,12,1,88.0,0.50,1
+Sergio Romero,Boca Juniors,GK,37,3400,38,0,0,900,0,12,1,88.0,0.5,1
 Rasmus Hojlund,Manchester United,FW,21,2900,35,15,4,900,200,25,0,87.0,0.24,1
 Bruno Fernandes-MUN,Manchester United,MF,29,3300,38,10,15,3000,140,120,0,93.0,0.28,1
 Marcus Rashford-MUN,Manchester United,FW,26,3000,36,17,6,1400,210,35,1,88.0,0.32,1
-Casemiro-MUN,Manchester United,MF,32,2800,34,5,4,2400,90,160,1,86.0,0.40,1
+Casemiro-MUN,Manchester United,MF,32,2800,34,5,4,2400,90,160,1,86.0,0.4,1
 Kobbie Mainoo,Manchester United,MF,19,2600,33,3,4,2300,80,140,0,84.0,0.18,1
 Lisandro Martinez-MUN,Manchester United,DF,26,3000,35,2,1,2100,25,185,1,88.0,0.32,1
-Raphael Varane-MUN,Manchester United,DF,31,2900,34,1,0,2000,20,175,1,85.0,0.40,1
+Raphael Varane-MUN,Manchester United,DF,31,2900,34,1,0,2000,20,175,1,85.0,0.4,1
 Diogo Dalot-MUN,Manchester United,DF,25,3100,37,1,4,2300,45,155,0,87.0,0.26,1
 Luke Shaw-MUN,Manchester United,DF,28,2400,30,1,5,2000,50,140,2,82.0,0.45,1
 Andre Onana-MUN,Manchester United,GK,28,3400,38,0,0,900,0,12,0,89.0,0.26,1
 Alejandro Garnacho-MUN,Manchester United,FW,20,1700,26,6,5,800,130,20,0,77.0,0.18,0
 Scott McTominay-MUN,Manchester United,MF,27,1600,25,5,2,1300,70,110,0,76.0,0.26,0
 Harry Maguire-MUN,Manchester United,DF,31,1500,24,2,0,1200,15,135,1,75.0,0.38,0
-Victor Lindelof-MUN,Manchester United,DF,29,1400,22,0,1,1100,10,125,0,74.0,0.30,0
+Victor Lindelof-MUN,Manchester United,DF,29,1400,22,0,1,1100,10,125,0,74.0,0.3,0
 Altay Bayindir-MUN,Manchester United,GK,26,300,5,0,0,150,0,5,0,66.0,0.22,0
-Antony-MUN,Manchester United,FW,24,1500,24,4,3,900,140,25,1,75.0,0.30,0
+Antony-MUN,Manchester United,FW,24,1500,24,4,3,900,140,25,1,75.0,0.3,0
 Mason Mount-MUN,Manchester United,MF,25,1200,20,2,3,1000,60,90,2,72.0,0.42,0
 Jonny Evans-MUN,Manchester United,DF,36,800,14,0,0,700,10,95,1,69.0,0.48,0
 Youssef En-Nesyri,Sevilla,FW,26,3000,36,18,4,900,210,25,0,88.0,0.28,1
-Lucas Ocampos,Sevilla,FW,29,2900,35,9,7,1400,180,35,0,85.0,0.30,1
+Lucas Ocampos,Sevilla,FW,29,2900,35,9,7,1400,180,35,0,85.0,0.3,1
 Suso Fernandez,Sevilla,FW,30,2500,32,6,8,1500,160,30,1,82.0,0.35,1
 Ivan Rakitic,Sevilla,MF,36,3000,36,5,7,2800,90,120,0,87.0,0.45,1
-Fernando Reges,Sevilla,MF,36,2800,34,2,3,2600,60,150,1,84.0,0.50,1
+Fernando Reges,Sevilla,MF,36,2800,34,2,3,2600,60,150,1,84.0,0.5,1
 Boubakary Soumare,Sevilla,MF,25,2700,33,2,4,2400,70,135,0,84.0,0.26,1
 Sergio Ramos,Sevilla,DF,38,2600,32,3,1,1800,30,170,1,85.0,0.55,1
 Loic Bade,Sevilla,DF,24,3100,37,2,0,2100,20,185,0,90.0,0.24,1
 Jesus Navas,Sevilla,DF,38,2800,34,1,6,2200,50,140,1,84.0,0.52,1
-Marko Dmitrovic,Sevilla,GK,32,3400,38,0,0,900,0,12,0,89.0,0.30,1
-Mariano Diaz,Sevilla,FW,30,900,16,3,1,400,80,10,1,70.0,0.40,0
+Marko Dmitrovic,Sevilla,GK,32,3400,38,0,0,900,0,12,0,89.0,0.3,1
+Mariano Diaz,Sevilla,FW,30,900,16,3,1,400,80,10,1,70.0,0.4,0
 Djibril Sow,Sevilla,MF,27,1200,20,1,2,1000,40,75,0,72.0,0.26,0
-Gonzalo Montiel,Sevilla,DF,27,1100,18,0,2,900,25,95,1,71.0,0.30,0
+Gonzalo Montiel,Sevilla,DF,27,1100,18,0,2,900,25,95,1,71.0,0.3,0
 Alberto Flores,Sevilla,GK,21,300,5,0,0,150,0,5,0,66.0,0.18,0
 Mikel Oyarzabal,Real Sociedad,FW,27,3000,36,15,8,1400,190,30,0,89.0,0.28,1
 Takefusa Kubo,Real Sociedad,FW,23,2900,35,11,9,1600,200,35,0,88.0,0.24,1
@@ -1233,31 +1233,43 @@ Aihen Munoz,Real Sociedad,DF,26,2700,33,0,3,2000,35,145,0,83.0,0.24,1
 Hamari Traore,Real Sociedad,DF,32,2800,34,1,4,2100,45,150,1,84.0,0.38,1
 Alex Remiro,Real Sociedad,GK,29,3400,38,0,0,900,0,12,0,90.0,0.26,1
 Carlos Fernandez,Real Sociedad,FW,28,1200,20,4,1,600,100,15,1,73.0,0.35,0
-Jon Ander Olasagasti,Real Sociedad,MF,23,1000,18,1,2,900,40,65,0,70.5,0.20,0
+Jon Ander Olasagasti,Real Sociedad,MF,23,1000,18,1,2,900,40,65,0,70.5,0.2,0
 Aritz Elustondo,Real Sociedad,DF,30,900,15,0,0,800,10,95,1,70.0,0.35,0
-Unai Marrero,Real Sociedad,GK,23,300,5,0,0,150,0,5,0,66.0,0.20,0
+Unai Marrero,Real Sociedad,GK,23,300,5,0,0,150,0,5,0,66.0,0.2,0
 Gerard Moreno,Villarreal,FW,32,2900,35,16,6,1100,200,30,1,88.0,0.38,1
-Alexander Sorloth,Villarreal,FW,28,3000,36,18,5,900,220,25,0,89.0,0.30,1
-Yeremy Pino,Villarreal,FW,21,2700,33,8,7,1500,170,35,1,84.0,0.30,1
+Alexander Sorloth,Villarreal,FW,28,3000,36,18,5,900,220,25,0,89.0,0.3,1
+Yeremy Pino,Villarreal,FW,21,2700,33,8,7,1500,170,35,1,84.0,0.3,1
 Dani Parejo,Villarreal,MF,35,3100,37,4,8,3000,80,130,0,88.0,0.45,1
 Alex Baena,Villarreal,MF,22,3200,38,6,9,2800,110,140,0,91.0,0.22,1
 Etienne Capoue,Villarreal,MF,35,2800,34,2,3,2400,60,155,1,85.0,0.48,1
 Raul Albiol,Villarreal,DF,38,2900,35,1,0,1900,15,175,1,84.0,0.55,1
 Pau Torres,Villarreal,DF,27,3300,38,2,1,2200,25,190,0,92.0,0.26,1
 Juan Foyth,Villarreal,DF,26,3000,36,1,3,2100,40,160,1,87.0,0.32,1
-Filip Jorgensen,Villarreal,GK,21,3400,38,0,0,900,0,12,0,89.0,0.20,1
+Filip Jorgensen,Villarreal,GK,21,3400,38,0,0,900,0,12,0,89.0,0.2,1
 Lautaro Giannetti,Udinese,DF,31,3000,36,2,1,2000,20,175,0,86.0,0.34,1
-Roberto Pereyra,Udinese,MF,33,2800,34,6,7,2400,110,120,1,85.0,0.40,1
+Roberto Pereyra,Udinese,MF,33,2800,34,6,7,2400,110,120,1,85.0,0.4,1
 Lazar Samardzic,Udinese,MF,22,2900,35,7,6,2500,120,95,0,87.0,0.22,1
 Beto Betuncal,Everton,FW,26,2600,32,11,3,900,190,25,0,84.0,0.26,1
 Abdoulaye Doucoure,Everton,MF,31,3000,36,7,4,2600,100,150,0,88.0,0.34,1
 James Tarkowski,Everton,DF,31,3300,38,3,1,2200,25,195,0,92.0,0.32,1
-Jordan Pickford,Everton,GK,30,3400,38,0,0,900,0,12,0,90.0,0.30,1
+Jordan Pickford,Everton,GK,30,3400,38,0,0,900,0,12,0,90.0,0.3,1
 Dominic Calvert-Lewin,Everton,FW,27,2100,28,8,2,700,160,20,2,80.0,0.45,1
 Amadou Onana,Everton,MF,22,2700,33,3,3,2400,80,145,0,86.0,0.22,1
 Vitaliy Mykolenko,Everton,DF,25,2800,34,1,3,2100,40,150,0,85.0,0.24,1
 Ashley Young,Everton,DF,38,1800,25,1,2,1500,30,110,1,78.0,0.55,0
-Joao Virginia,Everton,GK,24,300,5,0,0,150,0,5,0,66.0,0.20,0
-
-
-
+Joao Virginia,Everton,GK,24,300,5,0,0,150,0,5,0,66.0,0.2,0
+Sergio Almirón,Boca Juniors,MF,27,1800,20,3,5,800,45,120,1,76.5,0.15,1
+Cristian Medina,Boca Juniors,MF,23,2100,24,2,3,950,30,140,0,79.0,0.1,1
+Oscar Benedetti,Boca Juniors,DF,28,2250,25,1,1,1200,15,180,1,75.0,0.2,1
+Javier García,Boca Juniors,DF,30,2400,27,0,0,1400,5,200,2,72.0,0.25,1
+Leandro Paredes,Boca Juniors,MF,29,1950,22,4,6,1100,55,110,0,81.5,0.12,1
+Luis Advíncula,Boca Juniors,DF,32,2350,26,1,2,1250,20,160,1,73.5,0.22,1
+Sergio Romero,Boca Juniors,GK,36,2700,30,0,0,800,0,80,0,74.0,0.15,1
+Chris Smalling,Roma,DF,34,2300,26,1,0,1300,10,190,1,75.5,0.18,1
+Gianluca Mancini,Roma,DF,28,2400,27,2,1,1450,25,210,0,78.0,0.14,1
+Yerry Mina,Everton,DF,29,2200,25,1,1,1200,30,170,2,72.5,0.28,1
+James Tarkowski,Everton,DF,31,2550,28,2,0,1350,35,200,0,75.0,0.12,1
+Prince Owusu,Toronto FC,FW,25,1650,19,6,2,600,85,50,0,78.5,0.1,1
+Sébastien Ihle,LAFC,DF,26,2000,23,0,1,1100,15,140,0,74.0,0.15,1
+Dani Olmo,Dinamo Zagreb,MF,26,2150,24,7,4,950,95,85,0,82.0,0.12,1
+Davide Calabria,Milan,DF,27,2200,25,1,3,1150,40,130,1,76.0,0.16,1

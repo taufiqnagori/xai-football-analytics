@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from backend.config import DATASET_PATH
 
 _df = None
@@ -8,6 +9,57 @@ def _load_df():
     if _df is None:
         _df = pd.read_csv(DATASET_PATH)
     return _df
+
+def engineer_features(df_row):
+    """
+    Apply feature engineering to a single player row (Series)
+    Returns the enhanced row with engineered features
+    """
+    row = df_row.copy() if isinstance(df_row, pd.Series) else pd.Series(df_row)
+    
+    # Handle division by zero with safe division
+    def safe_divide(numerator, denominator, default=0):
+        if denominator == 0:
+            return default
+        return numerator / denominator
+    
+    # 1. FORM FEATURES (Goals/Assists per game)
+    matches_played = row.get('matches_played', 1) or 1
+    minutes_played = row.get('minutes_played', 1) or 1
+    
+    row['goals_per_match'] = safe_divide(row.get('goals', 0), matches_played)
+    row['assists_per_match'] = safe_divide(row.get('assists', 0), matches_played)
+    row['passes_per_match'] = safe_divide(row.get('passes', 0), matches_played)
+    
+    # 2. INVOLVEMENT FEATURES
+    row['total_actions'] = row.get('goals', 0) + row.get('assists', 0) + row.get('tackles', 0)
+    row['actions_per_90'] = safe_divide(row['total_actions'] * 90, minutes_played)
+    
+    # 3. EFFICIENCY FEATURES
+    row['shot_accuracy'] = safe_divide(row.get('goals', 0), row.get('shots', 1))
+    row['pass_success_rate'] = safe_divide(
+        row.get('passes', 0),
+        row.get('passes', 0) + row.get('shots', 0) + 1
+    )
+    
+    # 4. INJURY RISK FEATURES
+    row['injury_frequency'] = safe_divide(row.get('injuries_last_season', 0), matches_played)
+    row['is_injury_prone'] = 1 if row.get('injuries_last_season', 0) > 1 else 0
+    
+    # 5. EXPERIENCE & POSITION FEATURES
+    age = row.get('age', 0)
+    row['is_young'] = 1 if age < 25 else 0
+    row['is_veteran'] = 1 if age > 32 else 0
+    
+    # 6. WORKLOAD FEATURES
+    # For single row, estimate based on the value itself
+    row['high_workload'] = 1 if minutes_played > 2000 else 0  # Roughly top 25%
+    row['full_season'] = 1 if matches_played > 30 else 0
+    
+    # 7. STARTING XI INDICATOR
+    row['is_starter'] = int(row.get('is_starting_xi', 0)) if pd.notna(row.get('is_starting_xi')) else 0
+    
+    return row
 
 def get_player_row(player_name: str):
     """

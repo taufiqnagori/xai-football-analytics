@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260120_162712",
+  "deployed_version": "2.0",
+  "previous_backup": "C:\\Users\\baig8\\xai-football-analytics\\models\\backups\\v1_backup_20260120_162712",
+  "status": "SUCCESS",
+  "models_deployed": {
+    "performance": {
+      "algorithm": "XGBoost",
+      "features": 17
+    },
+    "injury_risk": {
+      "algorithm": "XGBoost",
+      "features": 10
+    },
+    "match_outcome": {
+      "algorithm": "XGBoost Classifier",
+      "features": 10
+    }
+  },
+  "metrics": {
+    "performance_r2": 0.9885,
+    "injury_risk_r2": 0.9398,
+    "match_accuracy": 0.475
+  }
+}

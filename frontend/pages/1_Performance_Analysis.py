@@ -1,5 +1,6 @@
 import streamlit as st
 from utils.api_client import get_players, predict_performance
+from utils.explanation_helper import translate_feature_name, create_insight_text, format_explanation_text
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -200,35 +201,35 @@ if predict_btn:
             key_factors = explanation.get("key_factors", [])
             
             if top_features:
-                # Create visualization
+                # Create visualization with user-friendly labels
                 df_shap = pd.DataFrame([
-                    {"Feature": k.replace("_", " ").title(), "SHAP Value": v}
+                    {"Feature": translate_feature_name(k), "Importance": v}
                     for k, v in top_features.items()
                 ])
                 
                 # Sort by absolute value
-                df_shap["Abs Value"] = df_shap["SHAP Value"].abs()
+                df_shap["Abs Value"] = df_shap["Importance"].abs()
                 df_shap = df_shap.sort_values("Abs Value", ascending=True)
                 
                 # Create horizontal bar chart
                 fig = go.Figure()
                 
-                colors = ['#22c55e' if x > 0 else '#ef4444' for x in df_shap["SHAP Value"]]
+                colors = ['#22c55e' if x > 0 else '#ef4444' for x in df_shap["Importance"]]
                 
                 fig.add_trace(go.Bar(
                     y=df_shap["Feature"],
-                    x=df_shap["SHAP Value"],
+                    x=df_shap["Importance"],
                     orientation='h',
                     marker_color=colors,
-                    text=[f"{x:.3f}" for x in df_shap["SHAP Value"]],
+                    text=[f"{x:.1%}" for x in df_shap["Importance"]],
                     textposition='outside',
                     textfont=dict(color='white', size=12)
                 ))
                 
                 fig.update_layout(
-                    title="Feature Importance (SHAP Values)",
-                    xaxis_title="SHAP Value",
-                    yaxis_title="Feature",
+                    title="What Factors Drive This Player's Performance?",
+                    xaxis_title="Importance (%)",
+                    yaxis_title="",
                     height=400,
                     showlegend=False,
                     plot_bgcolor='rgba(0,0,0,0)',
@@ -239,20 +240,24 @@ if predict_btn:
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
-            
-            if key_factors:
-                st.markdown("""
-                    <div class="main-card">
-                        <h3>📊 Key Factors</h3>
+                
+                # Add insight box
+                insight = create_insight_text(result, "performance")
+                st.markdown(f"""
+                    <div class="info-box">
+                        <h4>💡 Summary</h4>
+                        <p>{insight}</p>
                     </div>
                 """, unsafe_allow_html=True)
                 
-                for factor in key_factors:
-                    st.markdown(f"""
-                        <div class="player-card">
-                            <p style="margin: 0; color: white;">• {factor}</p>
-                        </div>
-                    """, unsafe_allow_html=True)
+                # Add detailed explanation
+                explanation_text = format_explanation_text(explanation, "performance")
+                st.markdown(f"""
+                    <div class="main-card">
+                        <h3>📖 Detailed Analysis</h3>
+                        <p>{explanation_text}</p>
+                    </div>
+                """, unsafe_allow_html=True)
         else:
             st.markdown("""
                 <div class="info-box">

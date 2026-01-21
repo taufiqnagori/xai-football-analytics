@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "timestamp": "2026-01-20T16:24:59.456236",
+  "data_shape": {
+    "rows": 1259,
+    "columns": 29
+  },
+  "performance_model": {
+    "algorithm": "XGBoost",
+    "features": [
+      "minutes_played",
+      "matches_played",
+      "goals",
+      "assists",
+      "passes",
+      "shots",
+      "tackles",
+      "goals_per_match",
+      "assists_per_match",
+      "actions_per_90",
+      "shot_accuracy",
+      "pass_success_rate",
+      "age",
+      "is_young",
+      "is_veteran",
+      "is_starter",
+      "full_season"
+    ],
+    "metrics": {
+      "r2": 0.9885429749375367,
+      "rmse": 0.8127844886333175,
+      "mae": 0.5732532985626705,
+      "cv_mean": 0.9838222167950985,
+      "cv_std": 0.007486570615343797
+    }
+  },
+  "injury_model": {
+    "algorithm": "XGBoost",
+    "features": [
+      "age",
+      "minutes_played",
+      "matches_played",
+      "injuries_last_season",
+      "injury_frequency",
+      "is_injury_prone",
+      "is_young",
+      "is_veteran",
+      "high_workload",
+      "full_season"
+    ],
+    "metrics": {
+      "r2": 0.9397779963189339,
+      "rmse": 0.021954431954351067,
+      "mae": 0.015392479118373657,
+      "cv_mean": 0.9367048954956632,
+      "cv_std": 0.02818038908141931
+    }
+  },
+  "match_model": {
+    "algorithm": "XGBoost Classifier",
+    "features": [
+      "team_a_performance",
+      "team_a_injury_risk",
+      "team_a_goals",
+      "team_a_starters",
+      "team_a_goals_per_match",
+      "team_b_performance",
+      "team_b_injury_risk",
+      "team_b_goals",
+      "team_b_starters",
+      "team_b_goals_per_match"
+    ],
+    "metrics": {
+      "accuracy": 0.475,
+      "auc_roc": 0.4904148334380892,
+      "cv_mean": 0.5,
+      "cv_std": 0.02200852107707377
+    }
+  }
+}

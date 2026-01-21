@@ -1,5 +1,6 @@
 import streamlit as st
 from utils.api_client import get_teams, get_default_squad, get_team_players, get_players, predict_match
+from utils.explanation_helper import translate_feature_name, create_insight_text, format_explanation_text
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -192,7 +193,7 @@ if st.session_state.team_a or st.session_state.team_b:
             st.session_state.team_a_squad = st.session_state.team_a_squad[:11]
             
             # Get available players for Team A (team players + all players)
-            team_a_available = [p["name"] for p in st.session_state.team_a_players_list] if st.session_state.team_a_players_list else []
+            team_a_available = [p["player_name"] for p in st.session_state.team_a_players_list] if st.session_state.team_a_players_list else []
             available_for_a = sorted(list(set(team_a_available + all_players)))
             
             new_squad_a = []
@@ -202,13 +203,13 @@ if st.session_state.team_a or st.session_state.team_b:
                 # Get player info if exists
                 player_info = None
                 if current_player and st.session_state.team_a_players_list:
-                    player_info = next((p for p in st.session_state.team_a_players_list if p["name"] == current_player), None)
+                    player_info = next((p for p in st.session_state.team_a_players_list if p["player_name"] == current_player), None)
                 
                 # Player selection dropdown
                 def format_player_name(x):
                     if not x:
                         return "Select Player"
-                    player_info = next((p for p in st.session_state.team_a_players_list if p['name'] == x), None)
+                    player_info = next((p for p in st.session_state.team_a_players_list if p['player_name'] == x), None)
                     if player_info:
                         return f"{x} ({player_info['position']}) - {player_info['performance_score']:.1f}"
                     return x
@@ -258,7 +259,7 @@ if st.session_state.team_a or st.session_state.team_b:
             st.session_state.team_b_squad = st.session_state.team_b_squad[:11]
             
             # Get available players for Team B
-            team_b_available = [p["name"] for p in st.session_state.team_b_players_list] if st.session_state.team_b_players_list else []
+            team_b_available = [p["player_name"] for p in st.session_state.team_b_players_list] if st.session_state.team_b_players_list else []
             available_for_b = sorted(list(set(team_b_available + all_players)))
             
             new_squad_b = []
@@ -268,13 +269,13 @@ if st.session_state.team_a or st.session_state.team_b:
                 # Get player info if exists
                 player_info = None
                 if current_player and st.session_state.team_b_players_list:
-                    player_info = next((p for p in st.session_state.team_b_players_list if p["name"] == current_player), None)
+                    player_info = next((p for p in st.session_state.team_b_players_list if p["player_name"] == current_player), None)
                 
                 # Player selection dropdown
                 def format_player_name_b(x):
                     if not x:
                         return "Select Player"
-                    player_info = next((p for p in st.session_state.team_b_players_list if p['name'] == x), None)
+                    player_info = next((p for p in st.session_state.team_b_players_list if p['player_name'] == x), None)
                     if player_info:
                         return f"{x} ({player_info['position']}) - {player_info['performance_score']:.1f}"
                     return x
@@ -479,10 +480,19 @@ if predict_button:
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown("""
                 <div class="main-card">
-                    <h2>🔍 XAI Explanation (SHAP)</h2>
+                    <h2>🔍 What Determines This Prediction?</h2>
                     <p style="color: rgba(255, 255, 255, 0.7);">
-                        Understanding which factors influence the match prediction
+                        Understanding which team strengths influence the match outcome
                     </p>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            # Add insight box
+            insight = create_insight_text(result, "match")
+            st.markdown(f"""
+                <div class="info-box">
+                    <h4>💡 Summary</h4>
+                    <p>{insight}</p>
                 </div>
             """, unsafe_allow_html=True)
             
@@ -491,34 +501,34 @@ if predict_button:
             influential_players = explanation.get("influential_players", [])
             
             if top_features:
-                # Create visualization
+                # Create visualization with user-friendly labels
                 df_shap = pd.DataFrame([
-                    {"Feature": k.replace("_", " ").title(), "SHAP Value": v}
+                    {"Feature": translate_feature_name(k), "Importance": v}
                     for k, v in top_features.items()
                 ])
                 
                 # Sort by absolute value
-                df_shap["Abs Value"] = df_shap["SHAP Value"].abs()
+                df_shap["Abs Value"] = df_shap["Importance"].abs()
                 df_shap = df_shap.sort_values("Abs Value", ascending=True)
                 
                 # Create horizontal bar chart
                 fig = go.Figure()
                 
-                colors = ['#2ecc71' if x > 0 else '#e74c3c' for x in df_shap["SHAP Value"]]
+                colors = ['#2ecc71' if x > 0 else '#e74c3c' for x in df_shap["Importance"]]
                 
                 fig.add_trace(go.Bar(
                     y=df_shap["Feature"],
-                    x=df_shap["SHAP Value"],
+                    x=df_shap["Importance"],
                     orientation='h',
                     marker_color=colors,
-                    text=[f"{x:.3f}" for x in df_shap["SHAP Value"]],
+                    text=[f"{x:.1%}" for x in df_shap["Importance"]],
                     textposition='outside'
                 ))
                 
                 fig.update_layout(
-                    title="Feature Importance (SHAP Values)",
-                    xaxis_title="SHAP Value",
-                    yaxis_title="Feature",
+                    title="Team Factors Most Important to Match Outcome",
+                    xaxis_title="Importance (%)",
+                    yaxis_title="",
                     height=500,
                     showlegend=False,
                     plot_bgcolor='rgba(0,0,0,0)',
@@ -529,14 +539,24 @@ if predict_button:
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
+                
+                # Add detailed explanation
+                explanation_text = format_explanation_text(explanation, "match")
+                st.markdown(f"""
+                    <div class="main-card">
+                        <h3>📖 Detailed Analysis</h3>
+                        <p>{explanation_text}</p>
+                    </div>
+                """, unsafe_allow_html=True)
             
             if key_factors:
                 st.markdown("""
                     <div class="main-card">
-                        <h3>📊 Key Factors Influencing Prediction</h3>
+                        <h3>✨ Key Statistics Influencing Prediction</h3>
                     </div>
                 """, unsafe_allow_html=True)
                 for factor in key_factors:
+                    # Parse and improve readability of factor text
                     st.markdown(f"""
                         <div class="player-card">
                             <p style="margin: 0; color: white;">• {factor}</p>
