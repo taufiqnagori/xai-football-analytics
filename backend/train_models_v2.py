@@ -374,7 +374,7 @@ metadata = {
     }
 }
 
-with open(METADATA_DIR / f"model_metadata_v{VERSION}.json", "w") as f:
+with open(METADATA_DIR / f"model_metadata_v{VERSION}.json", "w", encoding="utf-8") as f:
     json.dump(metadata, f, indent=2)
 
 print("✅ Metadata saved to model_metadata_v{}.json".format(VERSION))
@@ -426,6 +426,6 @@ summary = f"""
 
 print(summary)
 
-# Save summary
-with open(METADATA_DIR / f"training_summary_v{VERSION}.txt", "w") as f:
+# Save summary with UTF-8 encoding to handle emojis
+with open(METADATA_DIR / f"training_summary_v{VERSION}.txt", "w", encoding="utf-8") as f:
     f.write(summary)
