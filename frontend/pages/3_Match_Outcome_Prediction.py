@@ -53,10 +53,14 @@ with st.sidebar:
 st.markdown(get_theme_styles(), unsafe_allow_html=True)
 
 # Header
-st.markdown("""
+theme = st.session_state.get('theme', 'dark')
+text_color = '#1a1a1a' if theme == 'light' else 'white'
+subtitle_color = '#1a1a1a' if theme == 'light' else 'rgba(255, 255, 255, 0.8)'
+
+st.markdown(f"""
     <div style="text-align: center; padding: 2rem 0;">
-        <h1>🏆 Match Outcome Prediction</h1>
-        <p class="page-subtitle" style="font-size: 1.2rem;">
+        <h1 style="background: none; -webkit-text-fill-color: {text_color}; color: {text_color}; display: inline-block; white-space: nowrap; font-size: 2.5rem; margin: 0; font-weight: 700;">🏆 Match Outcome Prediction</h1>
+        <p class="page-subtitle" style="font-size: 1.2rem; color: {subtitle_color};">
             Predict match results with AI-powered analytics and XAI explanations
         </p>
     </div>
@@ -77,6 +81,8 @@ if 'team_a_players_list' not in st.session_state:
     st.session_state.team_a_players_list = []
 if 'team_b_players_list' not in st.session_state:
     st.session_state.team_b_players_list = []
+if 'match_prediction_result' not in st.session_state:
+    st.session_state.match_prediction_result = None
 
 # Get teams
 teams = get_teams()
@@ -126,6 +132,7 @@ with col1:
     
     if team_a_selected and team_a_selected != st.session_state.team_a:
         st.session_state.team_a = team_a_selected
+        st.session_state.match_prediction_result = None  # Clear old prediction
         # Load default squad
         squad_data = get_default_squad(team_a_selected)
         st.session_state.team_a_squad = squad_data.get("squad", [])
@@ -147,6 +154,7 @@ with col2:
     
     if team_b_selected and team_b_selected != st.session_state.team_b:
         st.session_state.team_b = team_b_selected
+        st.session_state.match_prediction_result = None  # Clear old prediction
         # Load default squad
         squad_data = get_default_squad(team_b_selected)
         st.session_state.team_b_squad = squad_data.get("squad", [])
@@ -192,57 +200,55 @@ if st.session_state.team_a or st.session_state.team_b:
                 st.session_state.team_a_squad.append(None)
             st.session_state.team_a_squad = st.session_state.team_a_squad[:11]
             
-            # Get available players for Team A (team players + all players)
-            team_a_available = [p["player_name"] for p in st.session_state.team_a_players_list] if st.session_state.team_a_players_list else []
-            available_for_a = sorted(list(set(team_a_available + all_players)))
+            # Get available players for Team A (ONLY team-specific players)
+            team_a_available = st.session_state.team_a_players_list if isinstance(st.session_state.team_a_players_list, list) and (not st.session_state.team_a_players_list or isinstance(st.session_state.team_a_players_list[0], str)) else []
+            available_for_a = sorted(team_a_available)  # Only team A players
             
-            new_squad_a = []
-            for i in range(11):
-                current_player = st.session_state.team_a_squad[i] if i < len(st.session_state.team_a_squad) else None
-                
-                # Get player info if exists
-                player_info = None
-                if current_player and st.session_state.team_a_players_list:
-                    player_info = next((p for p in st.session_state.team_a_players_list if p["player_name"] == current_player), None)
-                
-                # Player selection dropdown
-                def format_player_name(x):
-                    if not x:
-                        return "Select Player"
-                    player_info = next((p for p in st.session_state.team_a_players_list if p['player_name'] == x), None)
-                    if player_info:
-                        return f"{x} ({player_info['position']}) - {player_info['performance_score']:.1f}"
-                    return x
-                
-                selected = st.selectbox(
-                    f"Player {i+1}",
-                    [None] + available_for_a,
-                    key=f"team_a_player_{i}",
-                    index=0 if not current_player else available_for_a.index(current_player) + 1 if current_player in available_for_a else 0,
-                    format_func=format_player_name
-                )
-                
-                if selected:
-                    new_squad_a.append(selected)
-                    # Display player info
-                    if player_info:
-                        st.caption(f"⚽ {player_info['position']} | 📊 {player_info['performance_score']:.1f} | ⚠️ Risk: {player_info['injury_risk']*100:.1f}%")
-            
-            st.session_state.team_a_squad = new_squad_a
-            
-            # Squad summary
-            if len(st.session_state.team_a_squad) == 11:
-                st.markdown(f"""
-                    <div class="success-box">
-                        <p>✅ {st.session_state.team_a}: 11 players selected</p>
-                    </div>
-                """, unsafe_allow_html=True)
+            if not available_for_a:
+                st.warning(f"⚠️ No players found for {st.session_state.team_a}")
             else:
-                st.markdown(f"""
-                    <div class="warning-box">
-                        <p>⚠️ {st.session_state.team_a}: {len(st.session_state.team_a_squad)}/11 players</p>
-                    </div>
-                """, unsafe_allow_html=True)
+                new_squad_a = []
+                for i in range(11):
+                    current_player = st.session_state.team_a_squad[i] if i < len(st.session_state.team_a_squad) else None
+                    
+                    # Format player name for display
+                    def format_player_name(x):
+                        if not x:
+                            return "Select Player"
+                        return x
+                    
+                    # Get current index safely
+                    try:
+                        current_index = available_for_a.index(current_player) + 1 if current_player and current_player in available_for_a else 0
+                    except (ValueError, IndexError):
+                        current_index = 0
+                    
+                    selected = st.selectbox(
+                        f"Player {i+1}",
+                        [None] + available_for_a,
+                        key=f"team_a_player_{i}",
+                        index=current_index,
+                        format_func=format_player_name
+                    )
+                    
+                    if selected:
+                        new_squad_a.append(selected)
+                
+                st.session_state.team_a_squad = new_squad_a
+                
+                # Squad summary
+                if len(st.session_state.team_a_squad) == 11:
+                    st.markdown(f"""
+                        <div class="success-box">
+                            <p>✅ {st.session_state.team_a}: 11 players selected</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"""
+                        <div class="warning-box">
+                            <p>⚠️ {st.session_state.team_a}: {len(st.session_state.team_a_squad)}/11 players</p>
+                        </div>
+                    """, unsafe_allow_html=True)
     
     # Team B Squad
     with col2:
@@ -258,57 +264,55 @@ if st.session_state.team_a or st.session_state.team_b:
                 st.session_state.team_b_squad.append(None)
             st.session_state.team_b_squad = st.session_state.team_b_squad[:11]
             
-            # Get available players for Team B
-            team_b_available = [p["player_name"] for p in st.session_state.team_b_players_list] if st.session_state.team_b_players_list else []
-            available_for_b = sorted(list(set(team_b_available + all_players)))
+            # Get available players for Team B (ONLY team-specific players)
+            team_b_available = st.session_state.team_b_players_list if isinstance(st.session_state.team_b_players_list, list) and (not st.session_state.team_b_players_list or isinstance(st.session_state.team_b_players_list[0], str)) else []
+            available_for_b = sorted(team_b_available)  # Only team B players
             
-            new_squad_b = []
-            for i in range(11):
-                current_player = st.session_state.team_b_squad[i] if i < len(st.session_state.team_b_squad) else None
-                
-                # Get player info if exists
-                player_info = None
-                if current_player and st.session_state.team_b_players_list:
-                    player_info = next((p for p in st.session_state.team_b_players_list if p["player_name"] == current_player), None)
-                
-                # Player selection dropdown
-                def format_player_name_b(x):
-                    if not x:
-                        return "Select Player"
-                    player_info = next((p for p in st.session_state.team_b_players_list if p['player_name'] == x), None)
-                    if player_info:
-                        return f"{x} ({player_info['position']}) - {player_info['performance_score']:.1f}"
-                    return x
-                
-                selected = st.selectbox(
-                    f"Player {i+1}",
-                    [None] + available_for_b,
-                    key=f"team_b_player_{i}",
-                    index=0 if not current_player else available_for_b.index(current_player) + 1 if current_player in available_for_b else 0,
-                    format_func=format_player_name_b
-                )
-                
-                if selected:
-                    new_squad_b.append(selected)
-                    # Display player info
-                    if player_info:
-                        st.caption(f"⚽ {player_info['position']} | 📊 {player_info['performance_score']:.1f} | ⚠️ Risk: {player_info['injury_risk']*100:.1f}%")
-            
-            st.session_state.team_b_squad = new_squad_b
-            
-            # Squad summary
-            if len(st.session_state.team_b_squad) == 11:
-                st.markdown(f"""
-                    <div class="success-box">
-                        <p>✅ {st.session_state.team_b}: 11 players selected</p>
-                    </div>
-                """, unsafe_allow_html=True)
+            if not available_for_b:
+                st.warning(f"⚠️ No players found for {st.session_state.team_b}")
             else:
-                st.markdown(f"""
-                    <div class="warning-box">
-                        <p>⚠️ {st.session_state.team_b}: {len(st.session_state.team_b_squad)}/11 players</p>
-                    </div>
-                """, unsafe_allow_html=True)
+                new_squad_b = []
+                for i in range(11):
+                    current_player = st.session_state.team_b_squad[i] if i < len(st.session_state.team_b_squad) else None
+                    
+                    # Format player name for display
+                    def format_player_name_b(x):
+                        if not x:
+                            return "Select Player"
+                        return x
+                    
+                    # Get current index safely
+                    try:
+                        current_index = available_for_b.index(current_player) + 1 if current_player and current_player in available_for_b else 0
+                    except (ValueError, IndexError):
+                        current_index = 0
+                    
+                    selected = st.selectbox(
+                        f"Player {i+1}",
+                        [None] + available_for_b,
+                        key=f"team_b_player_{i}",
+                        index=current_index,
+                        format_func=format_player_name_b
+                    )
+                    
+                    if selected:
+                        new_squad_b.append(selected)
+                
+                st.session_state.team_b_squad = new_squad_b
+                
+                # Squad summary
+                if len(st.session_state.team_b_squad) == 11:
+                    st.markdown(f"""
+                        <div class="success-box">
+                            <p>✅ {st.session_state.team_b}: 11 players selected</p>
+                        </div>
+                    """, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"""
+                        <div class="warning-box">
+                            <p>⚠️ {st.session_state.team_b}: {len(st.session_state.team_b_squad)}/11 players</p>
+                        </div>
+                    """, unsafe_allow_html=True)
 
 # Validation checks
 validation_errors = []
@@ -357,252 +361,318 @@ if predict_button:
         time.sleep(0.5)  # Small delay for UX
         result = predict_match(st.session_state.team_a_squad, st.session_state.team_b_squad)
     
-    # Check if result is valid
-    if not result:
-        st.markdown("""
-            <div class="error-box">
-                <h3>❌ Error</h3>
-                <p>No result returned from prediction</p>
-            </div>
-        """, unsafe_allow_html=True)
-    elif "error" in result:
-        st.markdown(f"""
-            <div class="error-box">
-                <h3>❌ Error</h3>
-                <p>{result['error']}</p>
-            </div>
-        """, unsafe_allow_html=True)
+    # Save result to session state for persistence across reruns
+    if result and "error" not in result:
+        st.session_state.match_prediction_result = result
+        st.success("✓ Prediction complete!")
     else:
-        # Prediction Results Section
-        st.markdown("---")
-        st.header("🎯 Prediction Results")
-        
-        team_a_prob = result.get("team_a_win_probability", 0)
-        team_b_prob = result.get("team_b_win_probability", 0)
-        predicted_winner = result.get("predicted_winner", "Unknown")
-        
-        # Winner announcement
-        winner_team = st.session_state.team_a if predicted_winner == "Team A" else st.session_state.team_b
+        # Check if result is valid
+        if not result:
+            st.error("❌ No result returned from prediction")
+        elif "error" in result:
+            st.error(f"❌ Error: {result['error']}")
+
+# Display results from session state if prediction was made previously  
+if st.session_state.match_prediction_result is not None:
+    result = st.session_state.match_prediction_result
+    
+    team_a_prob = float(result.get("team_a_win_probability", 0))
+    team_b_prob = float(result.get("team_b_win_probability", 0))
+    predicted_winner = str(result.get("predicted_winner", "Unknown"))
+    winner_team_name = st.session_state.team_a if predicted_winner == "Team A" else st.session_state.team_b
+    team_a_stats = result.get("team_a_stats", {})
+    team_b_stats = result.get("team_b_stats", {})
+    
+    # ============================================================================
+    # RESULTS SECTION - CONSISTENT WITH OTHER DASHBOARDS
+    # ============================================================================
+    st.markdown("---")
+    st.markdown("""
+        <div class="prediction-result slide-in">
+            <h2>🎯 Prediction Results</h2>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Metrics Row - Match Prediction Results
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
         st.markdown(f"""
-        <div class="prediction-result">
-            <h2>🏆 Predicted Winner: {winner_team}</h2>
-            <p style="font-size: 1.2em; margin-top: 1rem;">
-                {st.session_state.team_a}: <strong>{team_a_prob}%</strong> | 
-                {st.session_state.team_b}: <strong>{team_b_prob}%</strong>
+            <div class="metric-container">
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Match Up</div>
+                <div style="font-size: 1.3rem; font-weight: 600; color: white;">{st.session_state.team_a} vs {st.session_state.team_b}</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown(f"""
+            <div class="metric-container">
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Predicted Winner</div>
+                <div class="metric-value">{winner_team_name}</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        winner_prob = team_a_prob if predicted_winner == "Team A" else team_b_prob
+        st.markdown(f"""
+            <div class="metric-container">
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Win Probability</div>
+                <div class="metric-value">{winner_prob:.1f}%</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    # Win Probability Chart
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+        <div class="main-card">
+            <h3>📊 Win Probability Comparison</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Create win probability bar chart
+    fig_prob = go.Figure()
+    
+    fig_prob.add_trace(go.Bar(
+        x=[st.session_state.team_a],
+        y=[team_a_prob],
+        marker_color='#3498db',
+        text=[f"{team_a_prob:.1f}%"],
+        textposition='outside',
+        textfont=dict(size=14, color='white'),
+        hovertemplate=f"<b>{st.session_state.team_a}</b><br>Win Probability: %{{y:.1f}}%<extra></extra>"
+    ))
+    
+    fig_prob.add_trace(go.Bar(
+        x=[st.session_state.team_b],
+        y=[team_b_prob],
+        marker_color='#ef4444',
+        text=[f"{team_b_prob:.1f}%"],
+        textposition='outside',
+        textfont=dict(size=14, color='white'),
+        hovertemplate=f"<b>{st.session_state.team_b}</b><br>Win Probability: %{{y:.1f}}%<extra></extra>"
+    ))
+    
+    fig_prob.update_layout(
+        xaxis_title="",
+        yaxis_title="Win Probability (%)",
+        yaxis_range=[0, 105],
+        height=280,
+        showlegend=False,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white', size=11),
+        margin=dict(t=20, b=40, l=60, r=40),
+        xaxis=dict(showgrid=False, zeroline=False, showline=False),
+        yaxis=dict(showgrid=True, gridwidth=1, gridcolor='rgba(255,255,255,0.08)', zeroline=False, showline=False)
+    )
+    
+    st.plotly_chart(fig_prob, use_container_width=True, key='session_win_prob')
+    
+    # Team Statistics Comparison
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+        <div class="main-card">
+            <h3>📊 Team Statistics Comparison</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2, gap="medium")
+    
+    with col1:
+        st.markdown(f"""
+            <div class="main-card">
+                <h4 style="color: #3498db; margin: 0 0 1.5rem 0;">■ {st.session_state.team_a}</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Avg Performance</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #3498db;">{team_a_stats.get('avg_performance', 0):.2f}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Avg Injury Risk</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #3498db;">{team_a_stats.get('avg_injury_risk', 0):.2f}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Total Goals</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #3498db;">{int(team_a_stats.get('total_goals', 0))}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Total Assists</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #3498db;">{int(team_a_stats.get('total_assists', 0))}</p>
+                    </div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown(f"""
+            <div class="main-card">
+                <h4 style="color: #ef4444; margin: 0 0 1.5rem 0;">■ {st.session_state.team_b}</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Avg Performance</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #ef4444;">{team_b_stats.get('avg_performance', 0):.2f}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Avg Injury Risk</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #ef4444;">{team_b_stats.get('avg_injury_risk', 0):.2f}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Total Goals</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #ef4444;">{int(team_b_stats.get('total_goals', 0))}</p>
+                    </div>
+                    <div>
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); font-weight: 600;">Total Assists</p>
+                        <p style="margin: 0; font-size: 1.6rem; font-weight: 700; color: #ef4444;">{int(team_b_stats.get('total_assists', 0))}</p>
+                    </div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    # ============================================================================
+    # DETAILED MATCH ANALYSIS - SIMPLE & EASY TO UNDERSTAND
+    # ============================================================================
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Generate detailed analysis based on team stats
+    def generate_match_analysis(team_a_name, team_b_name, team_a_stats, team_b_stats, team_a_prob, team_b_prob):
+        """Generate human-readable match analysis based on team statistics"""
+        
+        perf_a = team_a_stats.get('avg_performance', 0)
+        perf_b = team_b_stats.get('avg_performance', 0)
+        injury_a = team_a_stats.get('avg_injury_risk', 0)
+        injury_b = team_b_stats.get('avg_injury_risk', 0)
+        goals_a = team_a_stats.get('total_goals', 0)
+        goals_b = team_b_stats.get('total_goals', 0)
+        assists_a = team_a_stats.get('total_assists', 0)
+        assists_b = team_b_stats.get('total_assists', 0)
+        
+        analysis = []
+        
+        # Performance analysis
+        if perf_a > perf_b:
+            perf_diff = ((perf_a - perf_b) / perf_b * 100) if perf_b > 0 else 0
+            analysis.append(f"✓ {team_a_name} has **stronger player performance** - players are in better form with {perf_diff:.0f}% higher average performance rating")
+        else:
+            perf_diff = ((perf_b - perf_a) / perf_a * 100) if perf_a > 0 else 0
+            analysis.append(f"✓ {team_b_name} has **stronger player performance** - players are in better form with {perf_diff:.0f}% higher average performance rating")
+        
+        # Injury analysis
+        if injury_a < injury_b:
+            analysis.append(f"✓ {team_a_name} has **fewer injury concerns** - lower injury risk ({injury_a:.1f}%) means more players available and in better condition")
+        else:
+            analysis.append(f"✓ {team_b_name} has **fewer injury concerns** - lower injury risk ({injury_b:.1f}%) means more players available and in better condition")
+        
+        # Attacking power
+        if goals_a > goals_b:
+            analysis.append(f"✓ {team_a_name} has **stronger attacking power** - team has scored more goals ({int(goals_a)} vs {int(goals_b)}) showing better offensive capability")
+        else:
+            analysis.append(f"✓ {team_b_name} has **stronger attacking power** - team has scored more goals ({int(goals_b)} vs {int(goals_a)}) showing better offensive capability")
+        
+        # Team creativity
+        if assists_a > assists_b:
+            analysis.append(f"✓ {team_a_name} has **better team play** - more assists ({int(assists_a)} vs {int(assists_b)}) indicates good coordination and creativity")
+        else:
+            analysis.append(f"✓ {team_b_name} has **better team play** - more assists ({int(assists_b)} vs {int(assists_a)}) indicates good coordination and creativity")
+        
+        # Winner prediction explanation
+        if team_a_prob > team_b_prob:
+            prob_margin = team_a_prob - team_b_prob
+            analysis.append(f"\n🏆 **Why {team_a_name} is favored:** Based on the statistics above, our AI model predicts {team_a_name} has a {prob_margin:.0f}% higher chance of winning this match. The combination of better player form, fewer injuries, and stronger attacking metrics gives {team_a_name} the advantage.")
+        else:
+            prob_margin = team_b_prob - team_a_prob
+            analysis.append(f"\n🏆 **Why {team_b_name} is favored:** Based on the statistics above, our AI model predicts {team_b_name} has a {prob_margin:.0f}% higher chance of winning this match. The combination of better player form, fewer injuries, and stronger attacking metrics gives {team_b_name} the advantage.")
+        
+        return analysis
+    
+    analysis_points = generate_match_analysis(
+        st.session_state.team_a, st.session_state.team_b,
+        team_a_stats, team_b_stats,
+        team_a_prob, team_b_prob
+    )
+    
+    st.markdown("""
+        <div class="main-card">
+            <h3>📋 Detailed Match Analysis</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 1.5rem;">
+                Here's what our AI model found when analyzing these two teams:
             </p>
         </div>
-        """, unsafe_allow_html=True)
-        
-        # Win Probability Visualization
-        st.subheader("📊 Win Probability Comparison")
-        
-        fig = go.Figure()
-        
-        # Team A bar
-        fig.add_trace(go.Bar(
-            x=[st.session_state.team_a],
-            y=[team_a_prob],
-            name=st.session_state.team_a,
-            marker_color='#3498db',
-            text=[f"{team_a_prob}%"],
-            textposition='outside',
-            textfont=dict(size=16, color='white', family='Arial Black')
-        ))
-        
-        # Team B bar
-        fig.add_trace(go.Bar(
-            x=[st.session_state.team_b],
-            y=[team_b_prob],
-            name=st.session_state.team_b,
-            marker_color='#e74c3c',
-            text=[f"{team_b_prob}%"],
-            textposition='outside',
-            textfont=dict(size=16, color='white', family='Arial Black')
-        ))
-        
-        fig.update_layout(
-            title=f"{st.session_state.team_a} vs {st.session_state.team_b} - Win Probability",
-            yaxis_title="Win Probability (%)",
-            yaxis_range=[0, 100],
-            height=400,
-            showlegend=False,
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)'
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
-        
-        # Team Statistics
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.markdown("""
-            <div class="main-card">
-                <h2>📈 Team Statistics Comparison</h2>
-            </div>
-        """, unsafe_allow_html=True)
-        
-        team_a_stats = result.get("team_a_stats", {})
-        team_b_stats = result.get("team_b_stats", {})
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown(f"""
-                <div class="team-card">
-                    <h3>🟦 {st.session_state.team_a}</h3>
-                </div>
-            """, unsafe_allow_html=True)
-            col1a, col1b = st.columns(2)
-            with col1a:
-                st.metric("Avg Performance", f"{team_a_stats.get('avg_performance', 0):.2f}", delta=None)
-                st.metric("Total Goals", team_a_stats.get('total_goals', 0), delta=None)
-            with col1b:
-                st.metric("Avg Injury Risk", f"{team_a_stats.get('avg_injury_risk', 0):.2f}", delta=None)
-                st.metric("Total Assists", team_a_stats.get('total_assists', 0), delta=None)
-        
-        with col2:
-            st.markdown(f"""
-                <div class="team-card">
-                    <h3>🟥 {st.session_state.team_b}</h3>
-                </div>
-            """, unsafe_allow_html=True)
-            col2a, col2b = st.columns(2)
-            with col2a:
-                st.metric("Avg Performance", f"{team_b_stats.get('avg_performance', 0):.2f}", delta=None)
-                st.metric("Total Goals", team_b_stats.get('total_goals', 0), delta=None)
-            with col2b:
-                st.metric("Avg Injury Risk", f"{team_b_stats.get('avg_injury_risk', 0):.2f}", delta=None)
-                st.metric("Total Assists", team_b_stats.get('total_assists', 0), delta=None)
-        
-        # XAI Explanation
-        explanation = result.get("explanation", {})
-        
-        if explanation:
-            st.markdown("<br>", unsafe_allow_html=True)
-            st.markdown("""
-                <div class="main-card">
-                    <h2>🔍 What Determines This Prediction?</h2>
-                    <p style="color: rgba(255, 255, 255, 0.7);">
-                        Understanding which team strengths influence the match outcome
-                    </p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            # Add insight box
-            insight = create_insight_text(result, "match")
-            st.markdown(f"""
-                <div class="info-box">
-                    <h4>💡 Summary</h4>
-                    <p>{insight}</p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            top_features = explanation.get("top_features", {})
-            key_factors = explanation.get("key_factors", [])
-            influential_players = explanation.get("influential_players", [])
-            
-            if top_features:
-                # Create visualization with user-friendly labels
-                df_shap = pd.DataFrame([
-                    {"Feature": translate_feature_name(k), "Importance": v}
-                    for k, v in top_features.items()
-                ])
-                
-                # Sort by absolute value
-                df_shap["Abs Value"] = df_shap["Importance"].abs()
-                df_shap = df_shap.sort_values("Abs Value", ascending=True)
-                
-                # Create horizontal bar chart
-                fig = go.Figure()
-                
-                colors = ['#2ecc71' if x > 0 else '#e74c3c' for x in df_shap["Importance"]]
-                
-                fig.add_trace(go.Bar(
-                    y=df_shap["Feature"],
-                    x=df_shap["Importance"],
-                    orientation='h',
-                    marker_color=colors,
-                    text=[f"{x:.1%}" for x in df_shap["Importance"]],
-                    textposition='outside'
-                ))
-                
-                fig.update_layout(
-                    title="Team Factors Most Important to Match Outcome",
-                    xaxis_title="Importance (%)",
-                    yaxis_title="",
-                    height=500,
-                    showlegend=False,
-                    plot_bgcolor='rgba(0,0,0,0)',
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    font=dict(color='white'),
-                    xaxis=dict(gridcolor='rgba(255, 255, 255, 0.1)'),
-                    yaxis=dict(gridcolor='rgba(255, 255, 255, 0.1)')
-                )
-                
-                st.plotly_chart(fig, use_container_width=True)
-                
-                # Add detailed explanation
-                explanation_text = format_explanation_text(explanation, "match")
-                st.markdown(f"""
-                    <div class="main-card">
-                        <h3>📖 Detailed Analysis</h3>
-                        <p>{explanation_text}</p>
-                    </div>
-                """, unsafe_allow_html=True)
-            
-            if key_factors:
-                st.markdown("""
-                    <div class="main-card">
-                        <h3>✨ Key Statistics Influencing Prediction</h3>
-                    </div>
-                """, unsafe_allow_html=True)
-                for factor in key_factors:
-                    # Parse and improve readability of factor text
-                    st.markdown(f"""
-                        <div class="player-card">
-                            <p style="margin: 0; color: white;">• {factor}</p>
-                        </div>
-                    """, unsafe_allow_html=True)
-            
-            if influential_players:
-                st.markdown("""
-                    <div class="main-card">
-                        <h3>⭐ Most Influential Players</h3>
-                    </div>
-                """, unsafe_allow_html=True)
-                for player_info in influential_players:
-                    team_name = st.session_state.team_a if player_info.get('team') == 'Team A' else st.session_state.team_b
-                    st.markdown(f"""
-                        <div class="player-card">
-                            <p style="margin: 0; color: white;">
-                                • <strong>{player_info.get('player', 'Unknown')}</strong> ({team_name}): {player_info.get('reason', 'N/A')}
-                            </p>
-                        </div>
-                    """, unsafe_allow_html=True)
-        else:
-            st.markdown("""
-                <div class="info-box">
-                    <p>ℹ️ No explanation data available</p>
-                </div>
-            """, unsafe_allow_html=True)
-
-# Back to Home
-st.markdown("<br>", unsafe_allow_html=True)
-if st.button("🏠 Back to Home", use_container_width=True):
-    st.switch_page("app.py")
-
-# JavaScript to manage sidebar visibility
-st.markdown("""
-<script>
-    // Keep sidebar collapsed by default
-    const observer = new MutationObserver(() => {
-        const sidebar = document.querySelector('section[data-testid="stSidebar"]');
-        const button = document.querySelector('button[aria-label="Close sidebar"]');
-        
-        if (sidebar && sidebar.style.display !== 'none') {
-            // Sidebar is open, this is fine - Streamlit's hamburger menu controls it
-        }
-    });
+    """, unsafe_allow_html=True)
     
-    observer.observe(document.body, { subtree: true, attributes: true });
-</script>
-""", unsafe_allow_html=True)
+    for point in analysis_points:
+        if point.startswith("\n🏆"):
+            # Winner explanation
+            st.markdown(f"""
+                <div class="info-box" style="margin-top: 1.5rem;">
+                    <p>{point}</p>
+                </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown(f"""
+                <div style="background: rgba(52, 152, 219, 0.08); border-left: 4px solid #3498db; padding: 1rem; margin-bottom: 0.8rem; border-radius: 4px;">
+                    <p style="color: rgba(255, 255, 255, 0.9); margin: 0; font-size: 0.95rem;">{point}</p>
+                </div>
+            """, unsafe_allow_html=True)
+    
+    # Key Match Insights
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+        <div class="main-card">
+            <h3>💡 Key Insights</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    insights = []
+    
+    # Generate dynamic insights based on stats
+    perf_diff = abs(team_a_stats.get('avg_performance', 0) - team_b_stats.get('avg_performance', 0))
+    if perf_diff > 0.3:
+        stronger_team = st.session_state.team_a if team_a_stats.get('avg_performance', 0) > team_b_stats.get('avg_performance', 0) else st.session_state.team_b
+        insights.append(f"**Big Performance Gap** - {stronger_team} has significantly better player form")
+    
+    injury_diff = abs(team_a_stats.get('avg_injury_risk', 0) - team_b_stats.get('avg_injury_risk', 0))
+    if injury_diff > 10:
+        safer_team = st.session_state.team_a if team_a_stats.get('avg_injury_risk', 0) < team_b_stats.get('avg_injury_risk', 0) else st.session_state.team_b
+        insights.append(f"**Health Advantage** - {safer_team} has significantly lower injury risk")
+    
+    goals_diff = abs(team_a_stats.get('total_goals', 0) - team_b_stats.get('total_goals', 0))
+    if goals_diff > 5:
+        attacking_team = st.session_state.team_a if team_a_stats.get('total_goals', 0) > team_b_stats.get('total_goals', 0) else st.session_state.team_b
+        insights.append(f"**Attacking Edge** - {attacking_team} has scored significantly more goals")
+    
+    assists_diff = abs(team_a_stats.get('total_assists', 0) - team_b_stats.get('total_assists', 0))
+    if assists_diff > 5:
+        teamplay_team = st.session_state.team_a if team_a_stats.get('total_assists', 0) > team_b_stats.get('total_assists', 0) else st.session_state.team_b
+        insights.append(f"**Team Play Quality** - {teamplay_team} has more assists showing better coordination")
+    
+    if team_a_prob > 55 or team_b_prob > 55:
+        favorite = st.session_state.team_a if team_a_prob > team_b_prob else st.session_state.team_b
+        confidence = max(team_a_prob, team_b_prob)
+        insights.append(f"**Clear Favorite** - Our model is {confidence:.0f}% confident in {favorite}'s victory")
+    else:
+        insights.append(f"**Competitive Match** - Both teams are evenly matched with winning chances close")
+    
+    col1, col2 = st.columns(2, gap="medium")
+    
+    for idx, insight in enumerate(insights):
+        if idx < 2:
+            with col1:
+                st.markdown(f"""
+                    <div class="info-box">
+                        <p>{insight}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+        else:
+            with col2:
+                st.markdown(f"""
+                    <div class="info-box">
+                        <p>{insight}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+    
+    # Back to Home
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 1.5, 1])
+    with col2:
+        if st.button("🏠 Back to Home", use_container_width=True, key="back_to_home_btn", type="primary"):
+            st.switch_page("app.py")

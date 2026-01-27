@@ -63,11 +63,15 @@ def engineer_features(df_row):
 
 def get_player_row(player_name: str):
     """
-    Get a single player's data row
+    Get a single player's data row with engineered features
     """
     df = _load_df()
     row = df[df["player_name"] == player_name]
-    return None if row.empty else row.iloc[0]
+    if row.empty:
+        return None
+    player_row = row.iloc[0]
+    # Apply feature engineering to the row
+    return engineer_features(player_row)
 
 def get_players():
     """

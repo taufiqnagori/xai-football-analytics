@@ -46,12 +46,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Emoji fix for headers - ensure emojis render properly */
+h1, h2, h3 {
+    word-break: break-word;
+}
+
+/* Page headers with emoji and text - single line */
+.page-header {
+    text-align: center;
+    color: white;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.page-header h1 {
+    display: inline-block;
+    white-space: nowrap;
+    word-spacing: normal;
+    background: none;
+    -webkit-text-fill-color: white;
+    background-clip: unset;
 }
 
 /* ================================

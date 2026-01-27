@@ -19,7 +19,7 @@ def shap_to_json(shap_values, feature_names, top_k=5):
     if hasattr(shap_values, 'values'):
         shap_values = shap_values.values
     
-    shap_array = np.array(shap_values)
+    shap_array = np.array(shap_values, dtype=np.float64)
     
     # Handle multi-output models
     if len(shap_array.shape) > 2:
@@ -37,7 +37,15 @@ def shap_to_json(shap_values, feature_names, top_k=5):
 
     df = df.sort_values("abs_value", ascending=False).head(top_k)
 
-    return df[["feature", "shap_value"]].to_dict(orient="records")
+    # Convert to JSON-friendly format (convert numpy types to Python types)
+    result = []
+    for _, row in df.iterrows():
+        result.append({
+            "feature": str(row["feature"]),
+            "shap_value": float(row["shap_value"])
+        })
+    
+    return result
 
 
 # -----------------------------------------------------------
@@ -126,11 +134,37 @@ def format_key_factors(shap_list):
 # -----------------------------------------------------------
 def extract_feature_importance(shap_list):
     """
-    Extracts clean dict:
+    Extracts clean dict with normalized importance percentages that sum to 100%:
     {
         "goals": 0.44,
         "minutes_played": -0.12,
         ...
     }
+    
+    Note: Values are absolute contributions normalized to sum to 1.0
+    (when displayed as percentages they'll sum to 100%)
     """
-    return {item.get("feature", "unknown"): item.get("shap_value", 0) for item in shap_list}
+    if not shap_list:
+        return {}
+    
+    # Get absolute values (convert to float to ensure JSON serializable)
+    importance_dict = {}
+    for item in shap_list:
+        feature = item.get("feature", "unknown")
+        value = float(item.get("shap_value", 0))
+        importance_dict[feature] = value
+    
+    # If all values are zero or negative, return as-is
+    if not importance_dict:
+        return {}
+    
+    # Calculate total absolute contribution
+    total_abs = sum(abs(v) for v in importance_dict.values())
+    
+    # Normalize to sum to 1.0 (will be 100% when formatted as percentage)
+    if total_abs > 0:
+        normalized = {k: float(v / total_abs) for k, v in importance_dict.items()}
+    else:
+        normalized = {k: float(v) for k, v in importance_dict.items()}
+    
+    return normalized

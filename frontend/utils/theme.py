@@ -280,6 +280,19 @@ def get_theme_styles():
                 color: rgba(255, 255, 255, 0.6) !important;
             }
             
+            /* Key Features and other text visibility in dark theme */
+            h2, h3, h4, h5, h6 {
+                color: white !important;
+            }
+            
+            .feature-card h3 {
+                color: white !important;
+            }
+            
+            .feature-card p {
+                color: rgba(255, 255, 255, 0.85) !important;
+            }
+            
             /* Theme toggle button - dark theme */
             button[key="theme_toggle"] {
                 background: rgba(0, 0, 0, 0.4) !important;
@@ -293,40 +306,77 @@ def get_theme_styles():
                 border-color: rgba(255, 255, 255, 0.3) !important;
             }
             
-            /* Selectbox/Dropdown - Dark theme */
+            /* Selectbox/Dropdown - Dark theme with dashboard-matching background */
             .stSelectbox > div > div,
-            div[data-baseweb="select"] > div {
-                background-color: rgba(255, 255, 255, 0.1) !important;
-                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            .stSelectbox > div > div > button,
+            div[data-baseweb="select"] > div,
+            div[data-baseweb="select"] button {
+                background-color: rgba(20, 18, 45, 0.95) !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
                 color: white !important;
             }
             
             .stSelectbox > div > div:hover,
-            div[data-baseweb="select"] > div:hover {
-                background-color: rgba(255, 255, 255, 0.15) !important;
-                border-color: rgba(255, 255, 255, 0.3) !important;
+            .stSelectbox > div > div > button:hover,
+            div[data-baseweb="select"] > div:hover,
+            div[data-baseweb="select"] button:hover {
+                background-color: rgba(30, 28, 60, 0.95) !important;
+                border-color: rgba(255, 255, 255, 0.25) !important;
             }
             
             .stSelectbox label,
             div[data-baseweb="select"] label {
-                color: rgba(255, 255, 255, 0.9) !important;
+                color: white !important;
             }
             
-            /* Dropdown options - dark theme */
+            /* Dropdown options - dark theme with dashboard background */
             ul[role="listbox"],
-            div[data-baseweb="popover"] {
+            div[role="listbox"],
+            div[data-baseweb="popover"],
+            div[data-baseweb="listbox"],
+            div[data-baseweb="menu"] {
                 background-color: rgba(20, 18, 45, 0.98) !important;
-                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
             }
             
             ul[role="listbox"] li,
-            div[data-baseweb="popover"] li {
-                color: rgba(255, 255, 255, 0.9) !important;
+            ul[role="listbox"] > li,
+            div[role="listbox"] li,
+            div[role="listbox"] span,
+            div[data-baseweb="popover"] li,
+            div[data-baseweb="popover"] > div,
+            div[data-baseweb="listbox"] li,
+            div[data-baseweb="listbox"] > div,
+            div[data-baseweb="option"],
+            div[data-baseweb="option"] span,
+            div[data-baseweb="menuListItem"] {
+                background-color: rgba(20, 18, 45, 0.98) !important;
+                color: white !important;
             }
             
             ul[role="listbox"] li:hover,
-            div[data-baseweb="popover"] li:hover {
+            ul[role="listbox"] > li:hover,
+            div[role="listbox"] li:hover,
+            div[role="listbox"] > div:hover,
+            div[data-baseweb="popover"] li:hover,
+            div[data-baseweb="popover"] > div:hover,
+            div[data-baseweb="listbox"] li:hover,
+            div[data-baseweb="listbox"] > div:hover,
+            div[data-baseweb="option"]:hover,
+            div[data-baseweb="menuListItem"]:hover {
                 background-color: rgba(102, 126, 234, 0.2) !important;
+                color: white !important;
+            }
+            
+            /* Ensure dropdown text stays white */
+            ul[role="listbox"] li *,
+            div[role="listbox"] li *,
+            div[role="listbox"] *,
+            div[data-baseweb="popover"] *,
+            div[data-baseweb="listbox"] *,
+            div[data-baseweb="option"] *,
+            div[data-baseweb="menuListItem"] * {
+                color: white !important;
             }
             
             /* Dark theme sidebar */

@@ -52,10 +52,14 @@ with st.sidebar:
 st.markdown(get_theme_styles(), unsafe_allow_html=True)
 
 # Header
-st.markdown("""
+theme = st.session_state.get('theme', 'dark')
+text_color = '#1a1a1a' if theme == 'light' else 'white'
+subtitle_color = '#1a1a1a' if theme == 'light' else 'rgba(255, 255, 255, 0.8)'
+
+st.markdown(f"""
     <div style="text-align: center; padding: 2rem 0;">
-        <h1>🩺 Injury Risk Prediction</h1>
-        <p class="page-subtitle" style="font-size: 1.2rem;">
+        <h1 style="background: none; -webkit-text-fill-color: {text_color}; color: {text_color}; display: inline-block; white-space: nowrap; font-size: 2.5rem; margin: 0; font-weight: 700;">🩺 Injury Risk Prediction</h1>
+        <p class="page-subtitle" style="font-size: 1.2rem; color: {subtitle_color};">
             Assess injury risk for players using ML models with XAI explanations
         </p>
     </div>
@@ -223,7 +227,7 @@ if predict_btn:
                 'borderwidth': 1,
                 'bordercolor': 'rgba(255, 255, 255, 0.1)'
             },
-            number = {'font': {'color': 'rgba(255, 255, 255, 0.9)', 'size': 32}}
+            number = {'suffix': ' %', 'font': {'color': 'rgba(255, 255, 255, 0.9)', 'size': 32}}
         ))
         
         fig.update_layout(
