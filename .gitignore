@@ -36,9 +36,9 @@ ENV/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Model files (too large for git)
-*.pkl
-models/*.pkl
+# Model files (allow models/ for deployment)
+# *.pkl
+# models/*.pkl
 !models/.gitkeep
 
 # Data files (keep dataset, ignore others)
@@ -56,8 +56,8 @@ Thumbs.db
 .env
 .env.local
 
-# Streamlit
-.streamlit/
+# Streamlit (allow config for deployment)
+# .streamlit/
 
 # Temporary files
 *.tmp

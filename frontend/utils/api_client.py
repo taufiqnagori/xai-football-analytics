@@ -1,7 +1,8 @@
+import os
 import requests
 from typing import List, Dict, Any
 
-BASE = "http://127.0.0.1:8000/api"
+BASE = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000/api")
 
 def get_players() -> List[str]:
     """Get list of all players"""
