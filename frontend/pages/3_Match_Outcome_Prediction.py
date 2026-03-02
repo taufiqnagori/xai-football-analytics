@@ -393,9 +393,34 @@ if st.session_state.match_prediction_result is not None:
         </div>
     """, unsafe_allow_html=True)
     
+    # VS Banner - Visual head-to-head display
+    team_a_color = "#3498db"
+    team_b_color = "#ef4444"
+    st.markdown(f"""
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 1.5rem 2rem; margin: 0.5rem 0 1.5rem 0;
+                    background: linear-gradient(135deg, rgba(52,152,219,0.12) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(239,68,68,0.12) 100%);
+                    border-radius: 20px; border: 1px solid rgba(255,255,255,0.06);">
+            <div style="text-align: center; flex: 1;">
+                <div style="font-size: 2.4rem; font-weight: 800; color: {team_a_color}; letter-spacing: -0.5px; line-height: 1.2;">{st.session_state.team_a}</div>
+                <div style="font-size: 1.6rem; font-weight: 700; color: rgba(52,152,219,0.8); margin-top: 0.2rem;">{team_a_prob:.1f}%</div>
+            </div>
+            <div style="text-align: center; flex-shrink: 0;">
+                <div style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.15);
+                            display: flex; align-items: center; justify-content: center;
+                            background: rgba(255,255,255,0.04);">
+                    <span style="font-size: 1.4rem; font-weight: 900; color: rgba(255,255,255,0.25); letter-spacing: 3px;">VS</span>
+                </div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+                <div style="font-size: 2.4rem; font-weight: 800; color: {team_b_color}; letter-spacing: -0.5px; line-height: 1.2;">{st.session_state.team_b}</div>
+                <div style="font-size: 1.6rem; font-weight: 700; color: rgba(239,68,68,0.8); margin-top: 0.2rem;">{team_b_prob:.1f}%</div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
     # Metrics Row - Match Prediction Results
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
         st.markdown(f"""
             <div class="metric-container">
@@ -467,7 +492,67 @@ if st.session_state.match_prediction_result is not None:
     )
     
     st.plotly_chart(fig_prob, use_container_width=True, key='session_win_prob')
-    
+
+    # Win Probability Donut Chart
+    donut_col1, donut_col2 = st.columns([1, 1])
+
+    with donut_col1:
+        fig_donut = go.Figure(data=[go.Pie(
+            labels=[st.session_state.team_a, st.session_state.team_b],
+            values=[team_a_prob, team_b_prob],
+            hole=0.6,
+            marker=dict(colors=['#3498db', '#ef4444'], line=dict(color='rgba(0,0,0,0.3)', width=2)),
+            textinfo='label+percent',
+            textfont=dict(size=13, color='white'),
+            hovertemplate="<b>%{label}</b><br>Win Probability: %{value:.1f}%<extra></extra>"
+        )])
+        fig_donut.update_layout(
+            height=320,
+            showlegend=False,
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            margin=dict(t=30, b=30, l=30, r=30),
+            annotations=[dict(
+                text=f"<b>{winner_team_name}</b><br>Wins",
+                x=0.5, y=0.5, font_size=16, font_color='white',
+                showarrow=False
+            )]
+        )
+        st.plotly_chart(fig_donut, use_container_width=True, key='win_donut')
+
+    with donut_col2:
+        # Probability breakdown with visual bars
+        st.markdown(f"""
+            <div style="padding: 1.5rem 1rem;">
+                <h4 style="color: white !important; margin-bottom: 1.5rem; font-size: 1.1rem;">Win Probability Breakdown</h4>
+                <div style="margin-bottom: 1.2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span style="color: #3498db; font-weight: 600;">{st.session_state.team_a}</span>
+                        <span style="color: #3498db; font-weight: 700;">{team_a_prob:.1f}%</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 8px; height: 14px; overflow: hidden;">
+                        <div style="background: linear-gradient(90deg, #3498db, #2980b9); width: {team_a_prob}%; height: 100%; border-radius: 8px; transition: width 0.5s;"></div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span style="color: #ef4444; font-weight: 600;">{st.session_state.team_b}</span>
+                        <span style="color: #ef4444; font-weight: 700;">{team_b_prob:.1f}%</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 8px; height: 14px; overflow: hidden;">
+                        <div style="background: linear-gradient(90deg, #ef4444, #dc2626); width: {team_b_prob}%; height: 100%; border-radius: 8px; transition: width 0.5s;"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">Probability Margin</span>
+                        <span style="color: white; font-weight: 700; font-size: 1.3rem;">{abs(team_a_prob - team_b_prob):.1f}%</span>
+                    </div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
     # Team Statistics Comparison
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
@@ -528,6 +613,118 @@ if st.session_state.match_prediction_result is not None:
             </div>
         """, unsafe_allow_html=True)
     
+    # Radar Chart - Visual Team Comparison
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+        <div class="main-card">
+            <h3>🕸️ Team Comparison Radar</h3>
+            <p style="color: rgba(255, 255, 255, 0.7);">Visual comparison of key team metrics</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Normalize stats for radar chart (0-100 scale)
+    perf_a = team_a_stats.get('avg_performance', 0)
+    perf_b = team_b_stats.get('avg_performance', 0)
+    injury_a = team_a_stats.get('avg_injury_risk', 0)
+    injury_b = team_b_stats.get('avg_injury_risk', 0)
+    goals_a = team_a_stats.get('total_goals', 0)
+    goals_b = team_b_stats.get('total_goals', 0)
+    assists_a = team_a_stats.get('total_assists', 0)
+    assists_b = team_b_stats.get('total_assists', 0)
+
+    # Scale values to comparable range for radar
+    max_goals = max(goals_a, goals_b, 1)
+    max_assists = max(assists_a, assists_b, 1)
+
+    radar_categories = ['Performance', 'Fitness', 'Goals', 'Assists', 'Win Chance']
+
+    radar_a = [
+        perf_a,
+        max(0, (1 - injury_a) * 100),
+        (goals_a / max_goals) * 100,
+        (assists_a / max_assists) * 100,
+        team_a_prob
+    ]
+    radar_b = [
+        perf_b,
+        max(0, (1 - injury_b) * 100),
+        (goals_b / max_goals) * 100,
+        (assists_b / max_assists) * 100,
+        team_b_prob
+    ]
+
+    fig_radar = go.Figure()
+    fig_radar.add_trace(go.Scatterpolar(
+        r=radar_a + [radar_a[0]],
+        theta=radar_categories + [radar_categories[0]],
+        fill='toself',
+        fillcolor='rgba(52, 152, 219, 0.15)',
+        line=dict(color='#3498db', width=2),
+        name=st.session_state.team_a,
+        hovertemplate="%{theta}: %{r:.1f}<extra>" + st.session_state.team_a + "</extra>"
+    ))
+    fig_radar.add_trace(go.Scatterpolar(
+        r=radar_b + [radar_b[0]],
+        theta=radar_categories + [radar_categories[0]],
+        fill='toself',
+        fillcolor='rgba(239, 68, 68, 0.15)',
+        line=dict(color='#ef4444', width=2),
+        name=st.session_state.team_b,
+        hovertemplate="%{theta}: %{r:.1f}<extra>" + st.session_state.team_b + "</extra>"
+    ))
+    fig_radar.update_layout(
+        polar=dict(
+            bgcolor='rgba(0,0,0,0)',
+            radialaxis=dict(visible=True, range=[0, 100], showticklabels=False, gridcolor='rgba(255,255,255,0.08)'),
+            angularaxis=dict(gridcolor='rgba(255,255,255,0.08)', color='rgba(255,255,255,0.7)')
+        ),
+        showlegend=True,
+        legend=dict(
+            orientation="h", yanchor="bottom", y=-0.15, xanchor="center", x=0.5,
+            font=dict(color='white', size=12)
+        ),
+        height=420,
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        margin=dict(t=40, b=60, l=80, r=80)
+    )
+    st.plotly_chart(fig_radar, use_container_width=True, key='team_radar')
+
+    # Head-to-Head Stat Bars
+    st.markdown("""
+        <div class="main-card">
+            <h3>📏 Head-to-Head Comparison</h3>
+        </div>
+    """, unsafe_allow_html=True)
+
+    h2h_stats = [
+        ("Performance", perf_a, perf_b, f"{perf_a:.1f}", f"{perf_b:.1f}"),
+        ("Fitness (1 - Injury Risk)", max(0, (1 - injury_a) * 100), max(0, (1 - injury_b) * 100), f"{max(0, (1 - injury_a) * 100):.0f}%", f"{max(0, (1 - injury_b) * 100):.0f}%"),
+        ("Total Goals", goals_a, goals_b, str(int(goals_a)), str(int(goals_b))),
+        ("Total Assists", assists_a, assists_b, str(int(assists_a)), str(int(assists_b))),
+    ]
+
+    for stat_name, val_a, val_b, disp_a, disp_b in h2h_stats:
+        total = val_a + val_b if (val_a + val_b) > 0 else 1
+        pct_a = (val_a / total) * 100
+        pct_b = (val_b / total) * 100
+        winner_a = "font-weight: 700;" if val_a > val_b else ""
+        winner_b = "font-weight: 700;" if val_b > val_a else ""
+        st.markdown(f"""
+            <div style="margin-bottom: 1rem; padding: 0.8rem 1rem; background: rgba(255,255,255,0.02); border-radius: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                    <span style="color: #3498db; font-size: 0.95rem; {winner_a}">{disp_a}</span>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.8rem; font-weight: 600;">{stat_name}</span>
+                    <span style="color: #ef4444; font-size: 0.95rem; {winner_b}">{disp_b}</span>
+                </div>
+                <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; gap: 3px;">
+                    <div style="background: #3498db; width: {pct_a}%; border-radius: 4px;"></div>
+                    <div style="background: #ef4444; width: {pct_b}%; border-radius: 4px;"></div>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+
     # ============================================================================
     # DETAILED MATCH ANALYSIS - SIMPLE & EASY TO UNDERSTAND
     # ============================================================================
@@ -614,6 +811,81 @@ if st.session_state.match_prediction_result is not None:
                 </div>
             """, unsafe_allow_html=True)
     
+    # SHAP XAI Explanation Chart
+    explanation = result.get("explanation", {})
+    shap_top_features = explanation.get("top_features", {})
+
+    if shap_top_features:
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("""
+            <div class="main-card">
+                <h3>🔍 XAI Explanation (SHAP)</h3>
+                <p style="color: rgba(255, 255, 255, 0.7);">
+                    Which factors most influenced the AI's prediction
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        shap_col1, shap_col2 = st.columns([3, 2])
+
+        with shap_col1:
+            # Create SHAP bar chart with team-aware labels
+            df_shap = pd.DataFrame([
+                {
+                    "Feature": translate_feature_name(k).replace("Team A", st.session_state.team_a).replace("Team B", st.session_state.team_b),
+                    "Importance": v
+                }
+                for k, v in shap_top_features.items()
+            ])
+            df_shap["Abs Value"] = df_shap["Importance"].abs()
+            df_shap = df_shap.sort_values("Abs Value", ascending=True)
+
+            fig_shap = go.Figure()
+            colors_shap = ['#22c55e' if x > 0 else '#ef4444' for x in df_shap["Importance"]]
+
+            fig_shap.add_trace(go.Bar(
+                y=df_shap["Feature"],
+                x=df_shap["Importance"],
+                orientation='h',
+                marker_color=colors_shap,
+                text=[f"{x:.1%}" for x in df_shap["Importance"]],
+                textposition='outside',
+                textfont=dict(color='white', size=12)
+            ))
+            fig_shap.update_layout(
+                title="Feature Influence on Prediction",
+                xaxis_title="Importance (%)",
+                yaxis_title="",
+                height=max(250, len(df_shap) * 55),
+                showlegend=False,
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='white'),
+                margin=dict(t=40, b=40, l=10, r=40),
+                xaxis=dict(gridcolor='rgba(255, 255, 255, 0.08)', zeroline=True, zerolinecolor='rgba(255,255,255,0.15)'),
+                yaxis=dict(gridcolor='rgba(255, 255, 255, 0.05)')
+            )
+            st.plotly_chart(fig_shap, use_container_width=True, key='match_shap')
+
+        with shap_col2:
+            # Explanation narrative
+            explanation_text = format_explanation_text(explanation, "match")
+            st.markdown(f"""
+                <div style="padding: 1rem 0.5rem;">
+                    <h4 style="color: white !important; margin-bottom: 1rem; font-size: 1rem;">📖 What This Means</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.92rem;">{explanation_text}</p>
+                </div>
+            """, unsafe_allow_html=True)
+
+            st.markdown(f"""
+                <div style="margin-top: 1rem; padding: 1rem; background: rgba(34,197,94,0.08); border-left: 4px solid #22c55e; border-radius: 4px;">
+                    <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.85rem;">
+                        <span style="color: #22c55e;">Green bars</span> = pushes prediction toward {st.session_state.team_a}<br>
+                        <span style="color: #ef4444;">Red bars</span> = pushes prediction toward {st.session_state.team_b}
+                    </p>
+                </div>
+            """, unsafe_allow_html=True)
+
     # Key Match Insights
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""

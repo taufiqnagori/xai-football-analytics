@@ -30,7 +30,7 @@ def load_all_models(app):
         print("Performance SHAP explainer not found")
     
     # Load performance features
-    perf_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "performance_features.pkl"
+    perf_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "performance_features_v2.pkl"
     if perf_features_path.exists():
         app.state.performance_features = joblib.load(perf_features_path)
     else:
@@ -53,7 +53,7 @@ def load_all_models(app):
         print("Injury SHAP explainer not found")
     
     # Load injury features
-    injury_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "injury_features.pkl"
+    injury_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "injury_features_v2.pkl"
     if injury_features_path.exists():
         app.state.injury_features = joblib.load(injury_features_path)
     else:
@@ -76,7 +76,7 @@ def load_all_models(app):
         print("Match SHAP explainer not found")
     
     # Load match features
-    match_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "match_features.pkl"
+    match_features_path = Path(__file__).resolve().parent.parent.parent / "models" / "match_features_v2.pkl"
     if match_features_path.exists():
         app.state.match_features = joblib.load(match_features_path)
     else:
