@@ -13,8 +13,9 @@ st.set_page_config(
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSS_PATH = os.path.join(BASE_DIR, "style.css")
 
-# Set page configuration using Streamlit's supported API
-st.set_page_config(page_title="XAI Football Analytics", layout="wide")
+# Google Search Console verification
+st.markdown('<meta name="google-site-verification" content="-6CECMNOpUVkGgAZHeI2h-UNyzCjU40HCvkQVCui_Yo" />', unsafe_allow_html=True)
+st.markdown('<meta name="viewport" content="width=device-width, initial-scale=1.0">', unsafe_allow_html=True)
 
 # Load CSS
 with open(CSS_PATH, encoding='utf-8') as f:
