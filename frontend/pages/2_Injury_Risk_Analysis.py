@@ -58,7 +58,7 @@ subtitle_color = '#1a1a1a' if theme == 'light' else 'rgba(255, 255, 255, 0.8)'
 
 st.markdown(f"""
     <div style="text-align: center; padding: 2rem 0;">
-        <h1 style="background: none; -webkit-text-fill-color: {text_color}; color: {text_color}; display: inline-block; white-space: nowrap; font-size: 2.5rem; margin: 0; font-weight: 700;">🩺 Injury Risk Prediction</h1>
+        <h1 style="background: none; -webkit-text-fill-color: {text_color}; color: {text_color}; display: inline-block; white-space: normal; word-wrap: break-word; font-size: 2.5rem; margin: 0; font-weight: 700;">🩺 Injury Risk Prediction</h1>
         <p class="page-subtitle" style="font-size: 1.2rem; color: {subtitle_color};">
             Assess injury risk for players using ML models with XAI explanations
         </p>
