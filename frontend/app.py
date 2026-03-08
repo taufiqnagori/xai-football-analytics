@@ -13,8 +13,10 @@ st.set_page_config(
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSS_PATH = os.path.join(BASE_DIR, "style.css")
 
-st.markdown('<meta name="viewport" content="width=device-width, initial-scale=1.0">', unsafe_allow_html=True)
+# Set page configuration using Streamlit's supported API
+st.set_page_config(page_title="XAI Football Analytics", layout="wide")
 
+# Load CSS
 with open(CSS_PATH, encoding='utf-8') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
