@@ -79,11 +79,8 @@ if not players:
         </div>
     """, unsafe_allow_html=True)
     st.info("""
-    **To start the backend:**
-    1. Open a new terminal
-    2. Activate virtual environment: `venv\\Scripts\\activate`
-    3. Run: `uvicorn backend.main:app --reload`
-    4. Backend should be available at: http://127.0.0.1:8000
+    **The backend API is waking up.** On free hosting, the first request can take up to 30 seconds.
+    Please refresh the page in a moment.
     """)
     st.stop()
 

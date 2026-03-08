@@ -2,12 +2,14 @@ import os
 import requests
 from typing import List, Dict, Any
 
-BASE = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000/api")
+_backend = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000")
+BASE = _backend.rstrip("/") + "/api"
+TIMEOUT = 30  # Render free tier cold starts can take ~30s
 
 def get_players() -> List[str]:
     """Get list of all players"""
     try:
-        r = requests.get(f"{BASE}/performance/players", timeout=5)
+        r = requests.get(f"{BASE}/performance/players", timeout=TIMEOUT)
         r.raise_for_status()
         return r.json()
     except requests.exceptions.ConnectionError:
@@ -24,7 +26,7 @@ def get_players() -> List[str]:
 def get_teams() -> List[str]:
     """Get list of all teams"""
     try:
-        r = requests.get(f"{BASE}/match/teams", timeout=5)
+        r = requests.get(f"{BASE}/match/teams", timeout=TIMEOUT)
         r.raise_for_status()
         return r.json()
     except requests.exceptions.ConnectionError:
@@ -37,7 +39,7 @@ def get_teams() -> List[str]:
 def get_team_players(team_name: str) -> List[Dict[str, Any]]:
     """Get all players for a team"""
     try:
-        r = requests.get(f"{BASE}/match/teams/{team_name}/players", timeout=5)
+        r = requests.get(f"{BASE}/match/teams/{team_name}/players", timeout=TIMEOUT)
         r.raise_for_status()
         return r.json()
     except Exception as e:
@@ -47,7 +49,7 @@ def get_team_players(team_name: str) -> List[Dict[str, Any]]:
 def get_default_squad(team_name: str) -> Dict[str, Any]:
     """Get default Playing XI for a team"""
     try:
-        r = requests.get(f"{BASE}/match/teams/{team_name}/squad", timeout=5)
+        r = requests.get(f"{BASE}/match/teams/{team_name}/squad", timeout=TIMEOUT)
         r.raise_for_status()
         return r.json()
     except Exception as e:
